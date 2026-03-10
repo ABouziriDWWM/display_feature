@@ -475,6 +475,7 @@
 
   function renderChips({ allCapabilities, counts, activeCapabilities }) {
     const chipsEl = document.getElementById("capabilityChips");
+    if (!chipsEl) return;
     chipsEl.innerHTML = allCapabilities
       .map((cap) => {
         const count = counts.get(cap) ?? 0;
@@ -669,7 +670,7 @@
     const activeCapabilities = new Set();
 
     const rerender = () => {
-      const query = applyQuery(searchEl.value);
+      const query = applyQuery(searchEl ? searchEl.value : "");
       renderChips({ allCapabilities, counts, activeCapabilities });
       render({ features: indexed, query, activeCapabilities });
       applySourceText?.();
@@ -685,17 +686,21 @@
       }
     };
 
-    searchEl.addEventListener("input", rerender);
-    clearEl.addEventListener("click", () => {
-      searchEl.value = "";
-      activeCapabilities.clear();
-      rerender();
-    });
-    expandAllEl.addEventListener("click", () => setAllDetailsOpen(true));
-    collapseAllEl.addEventListener("click", () => setAllDetailsOpen(false));
+    if (searchEl) searchEl.addEventListener("input", rerender);
+    if (clearEl && searchEl) {
+      clearEl.addEventListener("click", () => {
+        searchEl.value = "";
+        activeCapabilities.clear();
+        rerender();
+      });
+    }
+    if (expandAllEl) expandAllEl.addEventListener("click", () => setAllDetailsOpen(true));
+    if (collapseAllEl) collapseAllEl.addEventListener("click", () => setAllDetailsOpen(false));
 
     rerender();
   }
 
+  window.addEventListener("error", (event) => setError(event.error || event.message));
+  window.addEventListener("unhandledrejection", (event) => setError(event.reason));
   main();
 })();

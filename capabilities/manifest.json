@@ -1,0 +1,15 @@
+{
+  "files": [
+    "capabilities/auth/pin_access.feature",
+    "capabilities/competition/competition_setup.feature",
+    "capabilities/i18n/language_toggle.feature",
+    "capabilities/judge_input/judge_scoring_flow.feature",
+    "capabilities/judges/judge_management.feature",
+    "capabilities/public_display/public_results.feature",
+    "capabilities/pwa/pwa.feature",
+    "capabilities/scoreboard/scoreboard_table.feature",
+    "capabilities/scoring/poomsae_scoring.feature",
+    "capabilities/scoring/score_calculation.feature",
+    "capabilities/sync/offline_queue.feature"
+  ]
+}

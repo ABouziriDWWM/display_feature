@@ -4,14 +4,27 @@ Feature: Language toggle
   I want to switch the UI between French and English
 
   @wip @javascript
-  Scenario: Default language is French
+  Scenario: [Defaults] Default language is French
     Given I am on the home page
     Then the UI language should be "fr"
 
   @wip @javascript
-  Scenario: User switches to English and it applies to the whole UI
+  Scenario: [Switching] User switches to English and it applies to the whole UI
     Given I am on the home page
     When I switch the language to "en"
     Then the UI language should be "en"
     And I should see "Current score"
     And I should see a button "Reset"
+
+  @wip @javascript
+  Scenario: [Persistence] Language choice is persisted after refresh
+    Given I am on the home page
+    When I switch the language to "en"
+    And I refresh the page
+    Then the UI language should be "en"
+
+  @wip @javascript
+  Scenario: [Fallback] Unsupported language falls back to French
+    Given I am on the home page
+    When I switch the language to "es"
+    Then the UI language should be "fr"

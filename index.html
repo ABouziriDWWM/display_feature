@@ -482,6 +482,225 @@
         background: color-mix(in oklab, var(--panel) 70%, transparent);
       }
 
+      .top-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      @media (min-width: 900px) {
+        .top-grid {
+          grid-template-columns: 1.15fr 0.85fr;
+        }
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        background: linear-gradient(
+          180deg,
+          color-mix(in oklab, var(--panel) 92%, transparent),
+          color-mix(in oklab, var(--panel-2) 98%, transparent)
+        );
+        border-radius: var(--radius);
+        box-shadow: 0 8px 24px var(--shadow);
+        overflow: hidden;
+      }
+
+      .card-inner {
+        padding: 14px;
+      }
+
+      .title-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: baseline;
+      }
+
+      .title-row h2 {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 760;
+        letter-spacing: 0.2px;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .kpis {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      @media (min-width: 680px) {
+        .kpis {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .kpi {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--panel);
+        padding: 10px 10px 8px;
+      }
+
+      .kpi .label {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .kpi .value {
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .bar {
+        height: 10px;
+        border-radius: 999px;
+        background: color-mix(in oklab, var(--panel-2) 86%, transparent);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        margin-top: 10px;
+      }
+
+      .bar > .seg {
+        height: 100%;
+        float: left;
+      }
+
+      .seg.ok {
+        background: color-mix(in oklab, var(--accent-2) 70%, transparent);
+      }
+      .seg.bad {
+        background: color-mix(in oklab, #ff5c7a 85%, transparent);
+      }
+      .seg.warn {
+        background: color-mix(in oklab, var(--warning) 85%, transparent);
+      }
+      .seg.other {
+        background: color-mix(in oklab, var(--accent) 55%, transparent);
+      }
+
+      details.feature.report {
+        border-radius: var(--radius);
+      }
+
+      .feature-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+
+      .feature-head .name {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 760;
+        letter-spacing: 0.2px;
+      }
+
+      .feature-head .counts {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: baseline;
+        color: var(--muted);
+        font-size: 12px;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+
+      .feature-sub {
+        color: var(--muted);
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .scenario-list.report {
+        border-top: 1px solid var(--border);
+        padding: 10px 12px 12px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .scenario.report {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 10px 10px 9px;
+        background: color-mix(in oklab, var(--panel-2) 82%, transparent);
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: baseline;
+      }
+
+      .scenario.report .name {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        font-weight: 650;
+      }
+
+      .badge {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
+        border-radius: 999px;
+        padding: 3px 8px;
+        border: 1px solid var(--border);
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+
+      .badge.ok {
+        color: color-mix(in oklab, var(--accent-2) 85%, var(--text));
+        background: color-mix(in oklab, var(--accent-2) 14%, transparent);
+        border-color: color-mix(in oklab, var(--accent-2) 55%, var(--border));
+      }
+
+      .badge.bad {
+        color: color-mix(in oklab, #ff5c7a 90%, var(--text));
+        background: color-mix(in oklab, #ff5c7a 12%, transparent);
+        border-color: color-mix(in oklab, #ff5c7a 55%, var(--border));
+      }
+
+      .badge.warn {
+        color: color-mix(in oklab, var(--warning) 92%, var(--text));
+        background: color-mix(in oklab, var(--warning) 16%, transparent);
+        border-color: color-mix(in oklab, var(--warning) 55%, var(--border));
+      }
+
+      .badge.other {
+        color: color-mix(in oklab, var(--accent) 90%, var(--text));
+        background: color-mix(in oklab, var(--accent) 12%, transparent);
+        border-color: color-mix(in oklab, var(--accent) 55%, var(--border));
+      }
+
+      .summary-badges {
+        display: inline-flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .summary-badges .badge {
+        font-size: 11px;
+        padding: 2px 7px;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         * {
           scroll-behavior: auto !important;
@@ -492,7 +711,7 @@
     </style>
   </head>
   <body>
-    <a class="skip-link" href="#content">Aller au contenu</a>
+    <a class="skip-link" href="#mainContent">Aller au contenu</a>
     <header>
       <div class="header-inner">
         <div class="brand">
@@ -508,14 +727,61 @@
           <div class="row">
             <div id="capabilityChips" class="chips" role="list"></div>
             <button id="pickDir" class="btn" type="button">Choisir capabilities/</button>
-            <a class="btn" href="./report.html">Dashboard</a>
           </div>
         </div>
       </div>
     </header>
 
     <div class="container">
-      <main>
+      <main id="mainContent">
+        <section id="dashboard">
+          <div class="top-grid">
+            <section class="card" aria-label="Résumé">
+              <div class="card-inner">
+                <div class="title-row">
+                  <h2>Dashboard</h2>
+                  <div id="dashboardRunMeta" class="meta"></div>
+                </div>
+                <div class="kpis">
+                  <div class="kpi">
+                    <div class="label">Scénarios</div>
+                    <div id="dashboardKpiScenarios" class="value">—</div>
+                  </div>
+                  <div class="kpi">
+                    <div class="label">Features</div>
+                    <div id="dashboardKpiFeatures" class="value">—</div>
+                  </div>
+                  <div class="kpi">
+                    <div class="label">État</div>
+                    <div id="dashboardKpiState" class="value">—</div>
+                  </div>
+                  <div class="kpi">
+                    <div class="label">Durée</div>
+                    <div id="dashboardKpiDuration" class="value">—</div>
+                  </div>
+                </div>
+                <div class="bar" aria-label="Répartition des statuts">
+                  <div id="dashboardBarPassed" class="seg ok"></div>
+                  <div id="dashboardBarFailed" class="seg bad"></div>
+                  <div id="dashboardBarSkipped" class="seg warn"></div>
+                  <div id="dashboardBarOther" class="seg other"></div>
+                </div>
+                <div id="dashboardBarLegend" class="meta" style="margin-top: 8px"></div>
+              </div>
+            </section>
+
+            <section class="card" aria-label="Aperçu">
+              <div class="card-inner">
+                <div class="title-row">
+                  <h2>Preview</h2>
+                  <div id="dashboardUpdatedMeta" class="meta"></div>
+                </div>
+                <div id="dashboardOverview" class="meta" style="margin-top: 10px"></div>
+              </div>
+            </section>
+          </div>
+        </section>
+
         <p id="summary" class="summary"></p>
         <div id="content" class="grid"></div>
       </main>

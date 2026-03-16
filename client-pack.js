@@ -1,5 +1,6 @@
 (() => {
   const DEFAULT_CAPABILITIES_PATH = "./capabilities/";
+  const DEFAULT_STATUS_SOURCE = "./capabilities/behat_status.json";
   const DB_NAME = "client-pack";
   const DB_VERSION = 1;
   const KV_STORE = "kv";
@@ -31,6 +32,53 @@
   const normalizeNewlines = (text) => String(text).replaceAll("\r\n", "\n");
 
   const applyQuery = (value) => String(value ?? "").trim().toLowerCase();
+
+  const statusLabel = (status) => {
+    const s = applyQuery(status);
+    if (!s) return "unknown";
+    return s;
+  };
+
+  const statusClass = (status) => {
+    const s = statusLabel(status);
+    if (s === "passed" || s === "pass") return "ok";
+    if (s === "failed" || s === "fail") return "bad";
+    if (s === "skipped") return "warn";
+    return "other";
+  };
+
+  const parseIso = (value) => {
+    const date = new Date(String(value ?? ""));
+    if (Number.isNaN(date.getTime())) return null;
+    return date;
+  };
+
+  const formatDateTime = (date) => {
+    try {
+      return new Intl.DateTimeFormat("fr-FR", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      }).format(date);
+    } catch {
+      return date.toISOString();
+    }
+  };
+
+  const formatDuration = (ms) => {
+    if (!Number.isFinite(ms) || ms < 0) return "—";
+    const totalSeconds = Math.round(ms / 1000);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    if (minutes <= 0) return `${seconds}s`;
+    return `${minutes}m ${String(seconds).padStart(2, "0")}s`;
+  };
+
+  const statusKey = ({ featureTitle, scenarioTitle }) =>
+    `${applyQuery(featureTitle)}||${applyQuery(scenarioTitle)}`;
 
   const highlightHtml = (text, query) => {
     const safe = escapeHtml(text);
@@ -193,6 +241,94 @@
       return await res.json();
     } catch {
       return null;
+    }
+  }
+
+  async function safeTryFetchJson(url) {
+    try {
+      return await tryFetchJson(url);
+    } catch {
+      return null;
+    }
+  }
+
+  function buildStatusContext(statusData) {
+    const map = new Map();
+    const scenarios = Array.isArray(statusData?.scenarios) ? statusData.scenarios : [];
+    for (const s of scenarios) {
+      const featureTitle = s?.feature?.title ?? "";
+      const scenarioTitle = s?.title ?? "";
+      map.set(statusKey({ featureTitle, scenarioTitle }), statusLabel(s?.status));
+    }
+    return { data: statusData ?? null, map };
+  }
+
+  function renderDashboard({ statusContext, featureCount, scenarioCount, statusCounts }) {
+    const data = statusContext?.data ?? null;
+
+    const runMetaEl = document.getElementById("dashboardRunMeta");
+    const updatedMetaEl = document.getElementById("dashboardUpdatedMeta");
+    const kpiScenariosEl = document.getElementById("dashboardKpiScenarios");
+    const kpiFeaturesEl = document.getElementById("dashboardKpiFeatures");
+    const kpiStateEl = document.getElementById("dashboardKpiState");
+    const kpiDurationEl = document.getElementById("dashboardKpiDuration");
+    const barPassedEl = document.getElementById("dashboardBarPassed");
+    const barFailedEl = document.getElementById("dashboardBarFailed");
+    const barSkippedEl = document.getElementById("dashboardBarSkipped");
+    const barOtherEl = document.getElementById("dashboardBarOther");
+    const barLegendEl = document.getElementById("dashboardBarLegend");
+    const overviewEl = document.getElementById("dashboardOverview");
+
+    if (kpiScenariosEl) kpiScenariosEl.textContent = String(scenarioCount);
+    if (kpiFeaturesEl) kpiFeaturesEl.textContent = String(featureCount);
+
+    const startedAt = parseIso(data?.startedAt);
+    const updatedAt = parseIso(data?.updatedAt);
+    const durationMs = startedAt && updatedAt ? updatedAt.getTime() - startedAt.getTime() : null;
+
+    if (kpiStateEl) kpiStateEl.textContent = data?.state ? String(data.state) : "—";
+    if (kpiDurationEl) kpiDurationEl.textContent = formatDuration(durationMs);
+
+    if (runMetaEl) {
+      const bits = [];
+      if (data?.suite) bits.push(`suite: ${data.suite}`);
+      if (data?.runId) bits.push(`runId: ${data.runId}`);
+      runMetaEl.textContent = bits.join(" · ");
+    }
+
+    if (updatedMetaEl) {
+      const bits = [];
+      if (startedAt) bits.push(`début: ${formatDateTime(startedAt)}`);
+      if (updatedAt) bits.push(`fin: ${formatDateTime(updatedAt)}`);
+      updatedMetaEl.textContent = bits.join(" · ");
+    }
+
+    const passed = statusCounts.passed;
+    const failed = statusCounts.failed;
+    const skipped = statusCounts.skipped;
+    const other = statusCounts.other;
+    const total = scenarioCount;
+
+    const pct = (v) => (total <= 0 ? 0 : (v / total) * 100);
+
+    if (barPassedEl) barPassedEl.style.width = `${pct(passed)}%`;
+    if (barFailedEl) barFailedEl.style.width = `${pct(failed)}%`;
+    if (barSkippedEl) barSkippedEl.style.width = `${pct(skipped)}%`;
+    if (barOtherEl) barOtherEl.style.width = `${pct(other)}%`;
+
+    if (barLegendEl) {
+      const parts = [`${passed} passed`, `${failed} failed`, `${skipped} skipped`, `${other} autres`];
+      barLegendEl.textContent = parts.join(" · ");
+    }
+
+    if (overviewEl) {
+      if (!data) {
+        overviewEl.textContent = `Source: ${DEFAULT_STATUS_SOURCE} (non disponible)`;
+      } else if (failed > 0) {
+        overviewEl.textContent = `${failed} échec${failed === 1 ? "" : "s"} détecté${failed === 1 ? "" : "s"}.`;
+      } else {
+        overviewEl.textContent = scenarioCount > 0 ? "Aucun échec détecté." : "Aucun scénario.";
+      }
     }
   }
 
@@ -363,9 +499,10 @@
     return buildIndex(features);
   }
 
-  function render({ features, query, activeCapabilities }) {
+  function render({ features, query, activeCapabilities, statusContext, sourceLabel }) {
     const content = document.getElementById("content");
     const summary = document.getElementById("summary");
+    const statusMap = statusContext?.map ?? new Map();
 
     const filtered = features.filter((f) => {
       if (activeCapabilities.size > 0 && !activeCapabilities.has(f.capability)) return false;
@@ -381,9 +518,44 @@
 
     const featureCount = filtered.length;
     const scenarioCount = filtered.reduce((sum, f) => sum + f.scenarios.length, 0);
-    summary.textContent = `${featureCount} feature${featureCount === 1 ? "" : "s"}, ${scenarioCount} scénario${
+
+    let passed = 0;
+    let failed = 0;
+    let skipped = 0;
+    let other = 0;
+
+    for (const f of filtered) {
+      const featureTitle = f.featureName || "";
+      for (const s of f.scenarios) {
+        const status = statusMap.get(statusKey({ featureTitle, scenarioTitle: s.name || "" })) ?? "unknown";
+        const normalized = statusLabel(status);
+        if (normalized === "passed") passed += 1;
+        else if (normalized === "failed") failed += 1;
+        else if (normalized === "skipped") skipped += 1;
+        else other += 1;
+      }
+    }
+
+    const prefix = String(sourceLabel ?? "").trim();
+    const prefixHtml = prefix ? `${escapeHtml(prefix)} · ` : "";
+    summary.innerHTML = `
+      <span>${prefixHtml}${featureCount} feature${featureCount === 1 ? "" : "s"}, ${scenarioCount} scénario${
       scenarioCount === 1 ? "" : "s"
-    }`;
+    }</span>
+      <span class="summary-badges" aria-label="Statuts">
+        <span class="badge ok">${passed} passed</span>
+        <span class="badge bad">${failed} failed</span>
+        <span class="badge warn">${skipped} skipped</span>
+        <span class="badge other">${other} autres</span>
+      </span>
+    `;
+
+    renderDashboard({
+      statusContext,
+      featureCount,
+      scenarioCount,
+      statusCounts: { passed, failed, skipped, other },
+    });
 
     if (filtered.length === 0) {
       content.innerHTML = `<div class="empty">Aucun résultat. Essayez une autre recherche ou effacez les filtres.</div>`;
@@ -419,6 +591,10 @@
                 const stepsText = (s.steps ?? []).join("\n").trimEnd();
                 const stepCount = (s.steps ?? []).filter((line) => line.trim().length > 0).length;
                 const scenarioId = `${featureId}-s${idx + 1}-${toSlug(s.name || String(idx + 1))}`;
+                const status = statusMap.get(statusKey({ featureTitle: f.featureName || "", scenarioTitle: s.name || "" }));
+                const statusBadge = status
+                  ? `<span class="badge ${statusClass(status)}">${escapeHtml(statusLabel(status))}</span>`
+                  : "";
                 return `
                   <details class="scenario" id="${escapeHtml(scenarioId)}">
                     <summary>
@@ -428,6 +604,7 @@
                         ${tagsHtml}
                       </div>
                       <div class="scenario-meta">
+                        ${statusBadge}
                         <span class="pill">${stepCount} step${stepCount === 1 ? "" : "s"}</span>
                         ${hasWip ? `<span class="pill warn">WIP</span>` : ""}
                       </div>
@@ -568,15 +745,9 @@
     const setSourceText = (text) => {
       sourceLabel = String(text ?? "").trim();
     };
-    const applySourceText = () => {
-      if (!sourceLabel) return;
-      const summary = document.getElementById("summary");
-      if (!summary) return;
-      const prefix = `${sourceLabel} · `;
-      const current = summary.textContent || "";
-      if (current.startsWith(prefix)) return;
-      summary.textContent = prefix + current;
-    };
+
+    const statusData = await safeTryFetchJson(new URL(DEFAULT_STATUS_SOURCE, window.location.href).toString());
+    const statusContext = buildStatusContext(statusData);
 
     if (pickDirEl) {
       pickDirEl.addEventListener("click", async () => {
@@ -585,7 +756,15 @@
             setLoading("Chargement depuis le dossier sélectionné…");
             const indexed = await loadFeaturesFromDirectoryPicker({ setSourceText });
             if (!indexed) throw new Error("Sélection de dossier indisponible dans ce navigateur.");
-            startUi({ indexed, searchEl, clearEl, expandAllEl, collapseAllEl, applySourceText });
+            startUi({
+              indexed,
+              searchEl,
+              clearEl,
+              expandAllEl,
+              collapseAllEl,
+              getSourceLabel: () => sourceLabel,
+              statusContext,
+            });
             return;
           }
           if (pickDirInputEl) {
@@ -607,7 +786,15 @@
         setLoading("Chargement depuis le dossier sélectionné…");
         try {
           const indexed = await loadFeaturesFromFileList(pickDirInputEl.files, { setSourceText });
-          startUi({ indexed, searchEl, clearEl, expandAllEl, collapseAllEl, applySourceText });
+          startUi({
+            indexed,
+            searchEl,
+            clearEl,
+            expandAllEl,
+            collapseAllEl,
+            getSourceLabel: () => sourceLabel,
+            statusContext,
+          });
         } catch (err) {
           setError(err);
         }
@@ -631,7 +818,15 @@
         setLoading("Chargement des fichiers .feature…");
         try {
           const indexed = await loadFeaturesFromFileList(pickFilesInputEl.files, { setSourceText });
-          startUi({ indexed, searchEl, clearEl, expandAllEl, collapseAllEl, applySourceText });
+          startUi({
+            indexed,
+            searchEl,
+            clearEl,
+            expandAllEl,
+            collapseAllEl,
+            getSourceLabel: () => sourceLabel,
+            statusContext,
+          });
         } catch (err) {
           setError(err);
         }
@@ -659,10 +854,18 @@
       return;
     }
 
-    startUi({ indexed, searchEl, clearEl, expandAllEl, collapseAllEl, applySourceText });
+    startUi({
+      indexed,
+      searchEl,
+      clearEl,
+      expandAllEl,
+      collapseAllEl,
+      getSourceLabel: () => sourceLabel,
+      statusContext,
+    });
   }
 
-  function startUi({ indexed, searchEl, clearEl, expandAllEl, collapseAllEl, applySourceText }) {
+  function startUi({ indexed, searchEl, clearEl, expandAllEl, collapseAllEl, getSourceLabel, statusContext }) {
     const allCapabilities = [...new Set(indexed.map((f) => f.capability))].sort((a, b) => a.localeCompare(b));
     const counts = new Map();
     for (const cap of allCapabilities) counts.set(cap, indexed.filter((f) => f.capability === cap).length);
@@ -672,8 +875,13 @@
     const rerender = () => {
       const query = applyQuery(searchEl ? searchEl.value : "");
       renderChips({ allCapabilities, counts, activeCapabilities });
-      render({ features: indexed, query, activeCapabilities });
-      applySourceText?.();
+      render({
+        features: indexed,
+        query,
+        activeCapabilities,
+        statusContext,
+        sourceLabel: getSourceLabel?.(),
+      });
 
       for (const btn of document.querySelectorAll(".chip[data-cap]")) {
         btn.addEventListener("click", () => {

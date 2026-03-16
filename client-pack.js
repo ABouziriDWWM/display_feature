@@ -578,11 +578,13 @@
       </span>
     `;
 
+    const dashboardFeatureCount = decorated.length;
+    const dashboardScenarioCount = totals.passed + totals.failed + totals.skipped + totals.other;
     renderDashboard({
       statusContext,
-      featureCount,
-      scenarioCount,
-      statusCounts: visibleCounts,
+      featureCount: dashboardFeatureCount,
+      scenarioCount: dashboardScenarioCount,
+      statusCounts: totals,
     });
 
     if (visibleFeatures.length === 0) {

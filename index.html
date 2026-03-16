@@ -247,6 +247,12 @@
         align-items: center;
       }
 
+      @media (max-width: 899px) {
+        .summary {
+          margin-bottom: 18px;
+        }
+      }
+
       .grid {
         display: grid;
         gap: 14px;
@@ -723,20 +729,37 @@
       }
 
       .summary-badges {
-        display: inline-flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: 100%;
       }
 
       .summary-badges .summary-badge {
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 850;
-        padding: 6px 10px;
-        min-height: 40px;
+        padding: 8px 12px;
+        min-height: 44px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
+      }
+
+      @media (min-width: 900px) {
+        .summary-badges {
+          display: inline-flex;
+          gap: 12px;
+          flex-wrap: wrap;
+          align-items: center;
+          width: auto;
+        }
+
+        .summary-badges .summary-badge {
+          font-size: 12px;
+          padding: 6px 10px;
+          min-height: 40px;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {

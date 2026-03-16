@@ -317,7 +317,7 @@
     if (barOtherEl) barOtherEl.style.width = `${pct(other)}%`;
 
     if (barLegendEl) {
-      const parts = [`${passed} passed`, `${failed} failed`, `${skipped} skipped`, `${other} autres`];
+      const parts = [`${passed} passed`, `${failed} failed`, `${skipped} skipped`, `${other} other`];
       barLegendEl.textContent = parts.join(" · ");
     }
 
@@ -499,10 +499,17 @@
     return buildIndex(features);
   }
 
-  function render({ features, query, activeCapabilities, statusContext, sourceLabel }) {
+  function render({ features, query, activeCapabilities, statusContext, sourceLabel, statusFilter }) {
     const content = document.getElementById("content");
     const summary = document.getElementById("summary");
     const statusMap = statusContext?.map ?? new Map();
+
+    const normalizedFilter = statusFilter ? statusLabel(statusFilter) : "";
+    const matchesStatusFilter = (normalizedStatus) => {
+      if (!normalizedFilter) return true;
+      if (normalizedFilter === "other") return !["passed", "failed", "skipped"].includes(normalizedStatus);
+      return normalizedStatus === normalizedFilter;
+    };
 
     const filtered = features.filter((f) => {
       if (activeCapabilities.size > 0 && !activeCapabilities.has(f.capability)) return false;
@@ -510,29 +517,42 @@
       return f._index.includes(query);
     });
 
-    const capabilityGroups = new Map();
-    for (const f of filtered) {
-      if (!capabilityGroups.has(f.capability)) capabilityGroups.set(f.capability, []);
-      capabilityGroups.get(f.capability).push(f);
-    }
+    const totals = { passed: 0, failed: 0, skipped: 0, other: 0 };
+    const visibleCounts = { passed: 0, failed: 0, skipped: 0, other: 0 };
 
-    const featureCount = filtered.length;
-    const scenarioCount = filtered.reduce((sum, f) => sum + f.scenarios.length, 0);
-
-    let passed = 0;
-    let failed = 0;
-    let skipped = 0;
-    let other = 0;
-
-    for (const f of filtered) {
+    const decorated = filtered.map((f) => {
       const featureTitle = f.featureName || "";
-      for (const s of f.scenarios) {
-        const status = statusMap.get(statusKey({ featureTitle, scenarioTitle: s.name || "" })) ?? "unknown";
-        const normalized = statusLabel(status);
-        if (normalized === "passed") passed += 1;
-        else if (normalized === "failed") failed += 1;
-        else if (normalized === "skipped") skipped += 1;
-        else other += 1;
+      const decoratedScenarios = f.scenarios.map((s) => {
+        const raw =
+          statusMap.get(statusKey({ featureTitle, scenarioTitle: s.name || "" })) ??
+          statusMap.get(statusKey({ featureTitle, scenarioTitle: s.name || "" }).replace(/\s+/g, " ")) ??
+          null;
+        const normalized = statusLabel(raw ?? "unknown");
+        if (normalized === "passed") totals.passed += 1;
+        else if (normalized === "failed") totals.failed += 1;
+        else if (normalized === "skipped") totals.skipped += 1;
+        else totals.other += 1;
+        return { ...s, _statusRaw: raw, _status: normalized };
+      });
+
+      const shownScenarios = decoratedScenarios.filter((s) => matchesStatusFilter(s._status));
+      return { ...f, _scenariosAll: decoratedScenarios, _scenariosShown: shownScenarios };
+    });
+
+    const visibleFeatures = normalizedFilter
+      ? decorated.filter((f) => (f._scenariosShown ?? []).length > 0)
+      : decorated;
+
+    const featureCount = visibleFeatures.length;
+    const scenarioCount = visibleFeatures.reduce((sum, f) => sum + (f._scenariosShown?.length ?? 0), 0);
+
+    for (const f of visibleFeatures) {
+      for (const s of f._scenariosShown ?? []) {
+        const normalized = s._status;
+        if (normalized === "passed") visibleCounts.passed += 1;
+        else if (normalized === "failed") visibleCounts.failed += 1;
+        else if (normalized === "skipped") visibleCounts.skipped += 1;
+        else visibleCounts.other += 1;
       }
     }
 
@@ -543,10 +563,18 @@
       scenarioCount === 1 ? "" : "s"
     }</span>
       <span class="summary-badges" aria-label="Statuts">
-        <span class="badge ok">${passed} passed</span>
-        <span class="badge bad">${failed} failed</span>
-        <span class="badge warn">${skipped} skipped</span>
-        <span class="badge other">${other} autres</span>
+        <button class="badge ok badge-filter" type="button" data-status="passed" data-active="${
+          normalizedFilter === "passed" ? "true" : "false"
+        }" aria-pressed="${normalizedFilter === "passed" ? "true" : "false"}">${totals.passed} passed</button>
+        <button class="badge bad badge-filter" type="button" data-status="failed" data-active="${
+          normalizedFilter === "failed" ? "true" : "false"
+        }" aria-pressed="${normalizedFilter === "failed" ? "true" : "false"}">${totals.failed} failed</button>
+        <button class="badge warn badge-filter" type="button" data-status="skipped" data-active="${
+          normalizedFilter === "skipped" ? "true" : "false"
+        }" aria-pressed="${normalizedFilter === "skipped" ? "true" : "false"}">${totals.skipped} skipped</button>
+        <button class="badge other badge-filter" type="button" data-status="other" data-active="${
+          normalizedFilter === "other" ? "true" : "false"
+        }" aria-pressed="${normalizedFilter === "other" ? "true" : "false"}">${totals.other} other</button>
       </span>
     `;
 
@@ -554,19 +582,25 @@
       statusContext,
       featureCount,
       scenarioCount,
-      statusCounts: { passed, failed, skipped, other },
+      statusCounts: visibleCounts,
     });
 
-    if (filtered.length === 0) {
+    if (visibleFeatures.length === 0) {
       content.innerHTML = `<div class="empty">Aucun résultat. Essayez une autre recherche ou effacez les filtres.</div>`;
       return;
+    }
+
+    const capabilityGroups = new Map();
+    for (const f of visibleFeatures) {
+      if (!capabilityGroups.has(f.capability)) capabilityGroups.set(f.capability, []);
+      capabilityGroups.get(f.capability).push(f);
     }
 
     const orderedCapabilities = [...capabilityGroups.keys()].sort((a, b) => a.localeCompare(b));
     const html = orderedCapabilities
       .map((cap) => {
         const items = capabilityGroups.get(cap) ?? [];
-        const capScenarioCount = items.reduce((sum, f) => sum + f.scenarios.length, 0);
+        const capScenarioCount = items.reduce((sum, f) => sum + (f._scenariosShown?.length ?? 0), 0);
         const capId = `cap-${toSlug(cap)}`;
         const featuresHtml = items
           .sort((a, b) => (a.featureName || a.file).localeCompare(b.featureName || b.file))
@@ -575,7 +609,7 @@
             const featureDesc = f.description
               ? `<div class="feature-desc">${highlightHtml(f.description, query)}</div>`
               : "";
-            const scenariosHtml = f.scenarios
+            const scenariosHtml = (f._scenariosShown ?? [])
               .map((s, idx) => {
                 const tags = s.tags ?? [];
                 const hasWip = tags.some((t) => t.toLowerCase() === "@wip");
@@ -591,9 +625,10 @@
                 const stepsText = (s.steps ?? []).join("\n").trimEnd();
                 const stepCount = (s.steps ?? []).filter((line) => line.trim().length > 0).length;
                 const scenarioId = `${featureId}-s${idx + 1}-${toSlug(s.name || String(idx + 1))}`;
-                const status = statusMap.get(statusKey({ featureTitle: f.featureName || "", scenarioTitle: s.name || "" }));
-                const statusBadge = status
-                  ? `<span class="badge ${statusClass(status)}">${escapeHtml(statusLabel(status))}</span>`
+                const statusBadge = s._statusRaw
+                  ? `<button class="badge ${statusClass(s._status)} badge-filter" type="button" data-status="${
+                      ["passed", "failed", "skipped"].includes(s._status) ? s._status : "other"
+                    }" data-active="false" aria-pressed="false">${escapeHtml(s._status)}</button>`
                   : "";
                 return `
                   <details class="scenario" id="${escapeHtml(scenarioId)}">
@@ -871,6 +906,13 @@
     for (const cap of allCapabilities) counts.set(cap, indexed.filter((f) => f.capability === cap).length);
 
     const activeCapabilities = new Set();
+    let statusFilter = "";
+
+    const normalizeFilter = (value) => {
+      const normalized = statusLabel(value);
+      if (["passed", "failed", "skipped", "other"].includes(normalized)) return normalized;
+      return "other";
+    };
 
     const rerender = () => {
       const query = applyQuery(searchEl ? searchEl.value : "");
@@ -881,6 +923,7 @@
         activeCapabilities,
         statusContext,
         sourceLabel: getSourceLabel?.(),
+        statusFilter,
       });
 
       for (const btn of document.querySelectorAll(".chip[data-cap]")) {
@@ -899,11 +942,25 @@
       clearEl.addEventListener("click", () => {
         searchEl.value = "";
         activeCapabilities.clear();
+        statusFilter = "";
         rerender();
       });
     }
     if (expandAllEl) expandAllEl.addEventListener("click", () => setAllDetailsOpen(true));
     if (collapseAllEl) collapseAllEl.addEventListener("click", () => setAllDetailsOpen(false));
+
+    const mainEl = document.getElementById("mainContent");
+    if (mainEl) {
+      mainEl.addEventListener("click", (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const btn = target.closest(".badge-filter[data-status]");
+        if (!btn) return;
+        const next = normalizeFilter(btn.getAttribute("data-status"));
+        statusFilter = statusFilter === next ? "" : next;
+        rerender();
+      });
+    }
 
     rerender();
   }

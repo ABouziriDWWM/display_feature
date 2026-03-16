@@ -663,6 +663,20 @@
         border: 1px solid var(--border);
         font-variant-numeric: tabular-nums;
         white-space: nowrap;
+        appearance: none;
+        cursor: pointer;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+      }
+
+      .badge:focus-visible {
+        outline: 3px solid color-mix(in oklab, var(--accent) 70%, transparent);
+        outline-offset: 2px;
+      }
+
+      .badge[data-active="true"] {
+        box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 22%, transparent);
       }
 
       .badge.ok {

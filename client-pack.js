@@ -450,6 +450,38 @@
     return files.sort((a, b) => a.filePath.localeCompare(b.filePath));
   }
 
+  async function publishCapabilitiesToRepo({ files }) {
+    const publishMetaEl = document.getElementById("dashboardUpdatedMeta");
+    const previousPublishMeta = publishMetaEl?.textContent ?? "";
+    if (publishMetaEl) publishMetaEl.textContent = "Déploiement: envoi…";
+
+    try {
+      const publishKey = window.prompt("Clé de publication Netlify (déclenche un déploiement) :");
+      if (!publishKey) return;
+
+      const res = await fetch("/.netlify/functions/publish-capabilities", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-publish-key": publishKey,
+        },
+        body: JSON.stringify({ files }),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || `HTTP ${res.status}`);
+      }
+
+      const data = await res.json();
+      if (publishMetaEl) publishMetaEl.textContent = "Déploiement: déclenché";
+      window.alert(`Déploiement Netlify déclenché.\nCommit: ${data?.commitUrl ?? "OK"}`);
+    } catch (err) {
+      if (publishMetaEl) publishMetaEl.textContent = previousPublishMeta;
+      window.alert(`Impossible de déclencher le déploiement.\n${err instanceof Error ? err.message : String(err)}`);
+    }
+  }
+
   async function loadFeaturesFromDirectoryPicker({ setSourceText }) {
     if (!("showDirectoryPicker" in window)) return null;
     const handle = await window.showDirectoryPicker({ id: "capabilities", mode: "read" });
@@ -458,12 +490,33 @@
     await saveDirHandle(handle);
     const featureFiles = await collectFeatureFilesFromHandle(handle);
     const features = [];
+    const publishFiles = [];
     for (const item of featureFiles) {
       const text = await item.file.text();
       features.push(parseFeatureText({ capability: item.capability, file: item.filePath, text }));
+      publishFiles.push({ path: item.filePath, content: text });
     }
     setSourceText?.("Source: dossier local (capabilities/)");
-    return buildIndex(features);
+    return { indexed: buildIndex(features), publishFiles };
+  }
+
+  async function loadFeaturesFromDirectoryFileList(fileList, { setSourceText }) {
+    const files = [...fileList].filter((f) => String(f.name).toLowerCase().endsWith(".feature"));
+    if (files.length === 0) throw new Error("No .feature file found in the selected directory.");
+    const features = [];
+    const publishFiles = [];
+    for (const file of files) {
+      const relative = String(file.webkitRelativePath || file.name).replace(/^\/+/, "");
+      const normalized = relative.replaceAll("\\", "/");
+      const parts = normalized.split("/").filter(Boolean);
+      const capability = parts.length > 1 ? parts[0] : "misc";
+      const filePath = parts.length > 1 ? `capabilities/${normalized}` : `capabilities/${capability}/${parts[0] || file.name}`;
+      const text = await file.text();
+      features.push(parseFeatureText({ capability, file: filePath, text }));
+      publishFiles.push({ path: filePath, content: text });
+    }
+    setSourceText?.("Source: dossier local (capabilities/)");
+    return { indexed: buildIndex(features), publishFiles };
   }
 
   async function loadFeaturesFromSavedHandle({ setSourceText }) {
@@ -789,8 +842,9 @@
         try {
           if ("showDirectoryPicker" in window) {
             setLoading("Chargement depuis le dossier sélectionné…");
-            const indexed = await loadFeaturesFromDirectoryPicker({ setSourceText });
-            if (!indexed) throw new Error("Sélection de dossier indisponible dans ce navigateur.");
+            const loaded = await loadFeaturesFromDirectoryPicker({ setSourceText });
+            if (!loaded) throw new Error("Sélection de dossier indisponible dans ce navigateur.");
+            const { indexed, publishFiles } = loaded;
             startUi({
               indexed,
               searchEl,
@@ -800,6 +854,9 @@
               getSourceLabel: () => sourceLabel,
               statusContext,
             });
+            if (Array.isArray(publishFiles) && publishFiles.length > 0) {
+              await publishCapabilitiesToRepo({ files: publishFiles });
+            }
             return;
           }
           if (pickDirInputEl) {
@@ -820,7 +877,7 @@
         if (!pickDirInputEl.files || pickDirInputEl.files.length === 0) return;
         setLoading("Chargement depuis le dossier sélectionné…");
         try {
-          const indexed = await loadFeaturesFromFileList(pickDirInputEl.files, { setSourceText });
+          const { indexed, publishFiles } = await loadFeaturesFromDirectoryFileList(pickDirInputEl.files, { setSourceText });
           startUi({
             indexed,
             searchEl,
@@ -830,6 +887,9 @@
             getSourceLabel: () => sourceLabel,
             statusContext,
           });
+          if (Array.isArray(publishFiles) && publishFiles.length > 0) {
+            await publishCapabilitiesToRepo({ files: publishFiles });
+          }
         } catch (err) {
           setError(err);
         }

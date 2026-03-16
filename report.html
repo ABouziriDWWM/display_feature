@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Client Pack</title>
+    <title>Dashboard Behat</title>
     <style>
       :root {
         color-scheme: light dark;
@@ -13,11 +13,12 @@
         --text: #e8eefc;
         --muted: #a7b3d1;
         --border: rgba(255, 255, 255, 0.12);
-        --accent: #7aa2ff;
-        --accent-2: #60d394;
-        --warning: #ffcc66;
         --shadow: rgba(0, 0, 0, 0.4);
         --radius: 14px;
+        --accent: #7aa2ff;
+        --ok: #60d394;
+        --warn: #ffcc66;
+        --bad: #ff5c7a;
       }
 
       @media (prefers-color-scheme: light) {
@@ -28,10 +29,11 @@
           --text: #0e1a33;
           --muted: #52617f;
           --border: rgba(14, 26, 51, 0.14);
-          --accent: #275dff;
-          --accent-2: #0b7a46;
-          --warning: #b35c00;
           --shadow: rgba(14, 26, 51, 0.14);
+          --accent: #275dff;
+          --ok: #0b7a46;
+          --warn: #b35c00;
+          --bad: #d1304c;
         }
       }
 
@@ -49,8 +51,7 @@
         font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
           "Apple Color Emoji", "Segoe UI Emoji";
         background: radial-gradient(1200px 700px at 30% -10%, rgba(122, 162, 255, 0.25), transparent 60%),
-          radial-gradient(1000px 600px at 80% 0%, rgba(96, 211, 148, 0.16), transparent 55%),
-          var(--bg);
+          radial-gradient(1000px 600px at 80% 0%, rgba(96, 211, 148, 0.16), transparent 55%), var(--bg);
         color: var(--text);
       }
 
@@ -83,18 +84,6 @@
         outline-offset: 2px;
       }
 
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
-
       .container {
         max-width: 1180px;
         margin: 0 auto;
@@ -121,13 +110,14 @@
 
       @media (min-width: 900px) {
         .header-inner {
-          grid-template-columns: 320px 1fr;
+          grid-template-columns: 420px 1fr;
           align-items: center;
         }
       }
 
       .brand {
         display: flex;
+        flex-wrap: wrap;
         align-items: baseline;
         gap: 10px;
       }
@@ -139,7 +129,7 @@
         letter-spacing: 0.2px;
       }
 
-      .brand .hint {
+      .hint {
         margin: 0;
         color: var(--muted);
         font-size: 12px;
@@ -195,9 +185,7 @@
 
       input[type="search"]:focus-visible,
       .btn:focus-visible,
-      .chip:focus-visible,
-      details.feature > summary:focus-visible,
-      details.scenario > summary:focus-visible {
+      details.feature > summary:focus-visible {
         outline: 3px solid color-mix(in oklab, var(--accent) 70%, transparent);
         outline-offset: 2px;
       }
@@ -233,26 +221,25 @@
         font-size: 12px;
       }
 
-      main {
-        padding-top: 18px;
-      }
-
-      .summary {
-        color: var(--muted);
-        font-size: 14px;
-        margin: 0 0 14px;
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-
       .grid {
         display: grid;
         gap: 14px;
       }
 
-      .capability {
+      .top-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      @media (min-width: 900px) {
+        .top-grid {
+          grid-template-columns: 1.15fr 0.85fr;
+        }
+      }
+
+      .card {
         border: 1px solid var(--border);
         background: linear-gradient(
           180deg,
@@ -264,40 +251,93 @@
         overflow: hidden;
       }
 
-      .capability-header {
-        padding: 14px 14px 10px;
+      .card-inner {
+        padding: 14px;
+      }
+
+      .title-row {
         display: flex;
-        align-items: baseline;
         justify-content: space-between;
         gap: 12px;
-        border-bottom: 1px solid var(--border);
+        flex-wrap: wrap;
+        align-items: baseline;
       }
 
-      .capability-title {
+      .title-row h2 {
         margin: 0;
-        font-size: 14px;
+        font-size: 15px;
+        font-weight: 760;
         letter-spacing: 0.2px;
-        text-transform: uppercase;
-        font-weight: 750;
-        color: color-mix(in oklab, var(--text) 90%, var(--muted));
       }
 
-      .capability-meta {
+      .meta {
         color: var(--muted);
         font-size: 12px;
         font-variant-numeric: tabular-nums;
-        white-space: nowrap;
       }
 
-      .features {
+      .kpis {
         display: grid;
-        gap: 12px;
-        padding: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      @media (min-width: 680px) {
+        .kpis {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .kpi {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--panel);
+        padding: 10px 10px 8px;
+      }
+
+      .kpi .label {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .kpi .value {
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .bar {
+        height: 10px;
+        border-radius: 999px;
+        background: color-mix(in oklab, var(--panel-2) 86%, transparent);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        margin-top: 10px;
+      }
+
+      .bar > .seg {
+        height: 100%;
+        float: left;
+      }
+
+      .seg.ok {
+        background: color-mix(in oklab, var(--ok) 85%, transparent);
+      }
+      .seg.bad {
+        background: color-mix(in oklab, var(--bad) 85%, transparent);
+      }
+      .seg.warn {
+        background: color-mix(in oklab, var(--warn) 85%, transparent);
+      }
+      .seg.other {
+        background: color-mix(in oklab, var(--accent) 55%, transparent);
       }
 
       details.feature {
         border: 1px solid var(--border);
-        border-radius: 12px;
+        border-radius: var(--radius);
         background: var(--panel);
         overflow: hidden;
       }
@@ -305,172 +345,107 @@
       details.feature > summary {
         list-style: none;
         cursor: pointer;
+        padding: 12px 12px 10px;
         display: grid;
         gap: 6px;
-        padding: 12px 12px 10px;
       }
 
       details.feature > summary::-webkit-details-marker {
         display: none;
       }
 
-      .feature-title {
+      .feature-head {
         display: flex;
-        gap: 10px;
-        align-items: baseline;
         justify-content: space-between;
+        gap: 12px;
+        align-items: baseline;
+        flex-wrap: wrap;
       }
 
-      .feature-title h2 {
+      .feature-head .name {
         margin: 0;
         font-size: 15px;
         font-weight: 760;
         letter-spacing: 0.2px;
       }
 
-      .feature-path {
+      .feature-head .counts {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: baseline;
         color: var(--muted);
         font-size: 12px;
+        font-variant-numeric: tabular-nums;
         white-space: nowrap;
+      }
+
+      .feature-sub {
+        color: var(--muted);
+        font-size: 12px;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 52vw;
-      }
-
-      @media (min-width: 900px) {
-        .feature-path {
-          max-width: 520px;
-        }
-      }
-
-      .feature-desc {
-        padding: 0 12px 10px;
-        color: var(--muted);
+        white-space: nowrap;
       }
 
       .scenario-list {
         border-top: 1px solid var(--border);
         padding: 10px 12px 12px;
         display: grid;
-        gap: 10px;
+        gap: 8px;
       }
 
-      details.scenario {
+      .scenario {
         border: 1px solid var(--border);
-        background: color-mix(in oklab, var(--panel-2) 82%, transparent);
         border-radius: 12px;
-        overflow: hidden;
-      }
-
-      details.scenario > summary {
-        list-style: none;
-        cursor: pointer;
         padding: 10px 10px 9px;
+        background: color-mix(in oklab, var(--panel-2) 82%, transparent);
         display: flex;
         justify-content: space-between;
         gap: 10px;
         align-items: baseline;
       }
 
-      details.scenario > summary::-webkit-details-marker {
-        display: none;
-      }
-
-      .scenario-name {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        align-items: baseline;
+      .scenario .name {
         min-width: 0;
-      }
-
-      .scenario-name .keyword {
-        color: color-mix(in oklab, var(--accent-2) 75%, var(--text));
-        font-weight: 750;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.2px;
-      }
-
-      .scenario-name .title {
-        font-weight: 650;
         overflow-wrap: anywhere;
+        font-weight: 650;
       }
 
-      .pill {
-        padding: 3px 8px;
+      .badge {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
         border-radius: 999px;
-        font-size: 12px;
+        padding: 3px 8px;
         border: 1px solid var(--border);
-        color: var(--muted);
-        background: color-mix(in oklab, var(--panel) 80%, transparent);
-      }
-
-      .pill.warn {
-        color: color-mix(in oklab, var(--warning) 92%, var(--text));
-        border-color: color-mix(in oklab, var(--warning) 45%, var(--border));
-        background: color-mix(in oklab, var(--warning) 10%, var(--panel));
-      }
-
-      .scenario-meta {
-        display: inline-flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
-        color: var(--muted);
-        font-size: 12px;
         font-variant-numeric: tabular-nums;
+        white-space: nowrap;
       }
 
-      pre.steps {
-        margin: 0;
-        padding: 12px 12px 13px;
-        border: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
-        border-top-color: color-mix(in oklab, var(--border) 90%, transparent);
-        border-radius: 12px;
-        font: 14px/1.7 ui-monospace, "Cascadia Mono", "JetBrains Mono", "SF Mono", Menlo, Monaco, Consolas,
-          "Liberation Mono", "Courier New", monospace;
-        letter-spacing: 0.1px;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        tab-size: 2;
-        white-space: pre-wrap;
-        word-break: break-word;
-        background: black;
-        color: #adb4c7;
-        overflow: auto;
-        scrollbar-color: color-mix(in oklab, var(--accent) 45%, transparent) color-mix(in oklab, #0a0f1f 92%, transparent);
+      .badge.ok {
+        color: color-mix(in oklab, var(--ok) 90%, var(--text));
+        background: color-mix(in oklab, var(--ok) 14%, transparent);
+        border-color: color-mix(in oklab, var(--ok) 55%, var(--border));
       }
 
-      pre.steps .gkw {
-        color: color-mix(in oklab, var(--accent-2) 88%, #eaf0ff);
-        font-weight: 760;
+      .badge.bad {
+        color: color-mix(in oklab, var(--bad) 92%, var(--text));
+        background: color-mix(in oklab, var(--bad) 12%, transparent);
+        border-color: color-mix(in oklab, var(--bad) 55%, var(--border));
       }
 
-      pre.steps .gpipe {
-        color: color-mix(in oklab, #eaf0ff 55%, transparent);
+      .badge.warn {
+        color: color-mix(in oklab, var(--warn) 92%, var(--text));
+        background: color-mix(in oklab, var(--warn) 16%, transparent);
+        border-color: color-mix(in oklab, var(--warn) 55%, var(--border));
       }
 
-      pre.steps .gcell {
-        color: color-mix(in oklab, #eaf0ff 88%, transparent);
-      }
-
-      pre.steps .gstr {
-        color: color-mix(in oklab, var(--accent) 86%, #eaf0ff);
-      }
-
-      pre.steps mark {
-        background: color-mix(in oklab, var(--accent) 34%, transparent);
-        color: inherit;
-        padding: 0 2px;
-        border-radius: 4px;
-      }
-
-      pre.steps:focus-visible {
-        outline: 3px solid color-mix(in oklab, var(--accent) 70%, transparent);
-        outline-offset: 2px;
+      .badge.other {
+        color: color-mix(in oklab, var(--accent) 90%, var(--text));
+        background: color-mix(in oklab, var(--accent) 12%, transparent);
+        border-color: color-mix(in oklab, var(--accent) 55%, var(--border));
       }
 
       .empty {
@@ -481,14 +456,6 @@
         text-align: center;
         background: color-mix(in oklab, var(--panel) 70%, transparent);
       }
-
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          scroll-behavior: auto !important;
-          transition: none !important;
-          animation: none !important;
-        }
-      }
     </style>
   </head>
   <body>
@@ -496,47 +463,74 @@
     <header>
       <div class="header-inner">
         <div class="brand">
-          <h1>Client Pack</h1>
-          <p class="hint">Capabilities → features → scenarios</p>
+          <h1>Dashboard Behat</h1>
+          <p id="sourceMeta" class="hint">Source: ./capabilities/behat_status.json</p>
         </div>
         <div class="controls">
           <div class="row search">
-            <label class="sr-only" for="search">Rechercher</label>
-            <input id="search" type="search" placeholder='Rechercher (ex: "offline", "@wip", "scoreboard")' />
+            <input id="search" type="search" placeholder='Rechercher (ex: "Judge management", "skipped")' />
             <button id="clear" class="btn" type="button">Effacer</button>
+            <a class="btn" href="./index.html">Retour</a>
           </div>
           <div class="row">
-            <div id="capabilityChips" class="chips" role="list"></div>
-            <button id="pickDir" class="btn" type="button">Choisir capabilities/</button>
-            <a class="btn" href="./report.html">Dashboard</a>
+            <div id="statusChips" class="chips" role="list"></div>
           </div>
         </div>
       </div>
     </header>
 
     <div class="container">
-      <main>
-        <p id="summary" class="summary"></p>
-        <div id="content" class="grid"></div>
+      <main id="content">
+        <div class="top-grid">
+          <section class="card" aria-label="Résumé">
+            <div class="card-inner">
+              <div class="title-row">
+                <h2>Résumé</h2>
+                <div id="runMeta" class="meta"></div>
+              </div>
+              <div class="kpis">
+                <div class="kpi">
+                  <div class="label">Scénarios</div>
+                  <div id="kpiScenarios" class="value">—</div>
+                </div>
+                <div class="kpi">
+                  <div class="label">Features</div>
+                  <div id="kpiFeatures" class="value">—</div>
+                </div>
+                <div class="kpi">
+                  <div class="label">État</div>
+                  <div id="kpiState" class="value">—</div>
+                </div>
+                <div class="kpi">
+                  <div class="label">Durée</div>
+                  <div id="kpiDuration" class="value">—</div>
+                </div>
+              </div>
+              <div class="bar" aria-label="Répartition des statuts">
+                <div id="barPassed" class="seg ok"></div>
+                <div id="barFailed" class="seg bad"></div>
+                <div id="barSkipped" class="seg warn"></div>
+                <div id="barOther" class="seg other"></div>
+              </div>
+              <div id="barLegend" class="meta" style="margin-top: 8px"></div>
+            </div>
+          </section>
+
+          <section class="card" aria-label="Aperçu">
+            <div class="card-inner">
+              <div class="title-row">
+                <h2>Aperçu</h2>
+                <div id="updatedMeta" class="meta"></div>
+              </div>
+              <div id="overview" class="meta" style="margin-top: 10px"></div>
+            </div>
+          </section>
+        </div>
+
+        <div id="featureList" class="grid"></div>
       </main>
     </div>
 
-    <input
-      id="pickDirInput"
-      type="file"
-      webkitdirectory
-      directory
-      multiple
-      style="position: absolute; left: -9999px; width: 1px; height: 1px"
-    />
-    <input
-      id="pickFilesInput"
-      type="file"
-      multiple
-      accept=".feature"
-      style="position: absolute; left: -9999px; width: 1px; height: 1px"
-    />
-
-    <script src="./client-pack.js"></script>
+    <script src="./report.js"></script>
   </body>
 </html>

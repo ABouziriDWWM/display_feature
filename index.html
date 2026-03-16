@@ -653,7 +653,8 @@
         font-weight: 650;
       }
 
-      .badge {
+      .badge,
+      .summary-badge {
         font-size: 12px;
         font-weight: 800;
         letter-spacing: 0.2px;
@@ -663,41 +664,59 @@
         border: 1px solid var(--border);
         font-variant-numeric: tabular-nums;
         white-space: nowrap;
-        appearance: none;
-        cursor: pointer;
         background: transparent;
         color: inherit;
         font: inherit;
       }
 
-      .badge:focus-visible {
+      .badge {
+        cursor: default;
+      }
+
+      .summary-badge {
+        appearance: none;
+        cursor: pointer;
+        touch-action: manipulation;
+      }
+
+      .summary-badge:hover {
+        border-color: color-mix(in oklab, var(--accent) 55%, var(--border));
+      }
+
+      .badge:focus-visible,
+      .summary-badge:focus-visible {
         outline: 3px solid color-mix(in oklab, var(--accent) 70%, transparent);
         outline-offset: 2px;
       }
 
-      .badge[data-active="true"] {
+      .badge[data-active="true"],
+      .summary-badge[data-active="true"] {
         box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 22%, transparent);
       }
 
-      .badge.ok {
+      .badge.ok,
+      .summary-badge.ok {
         color: color-mix(in oklab, var(--accent-2) 85%, var(--text));
         background: color-mix(in oklab, var(--accent-2) 14%, transparent);
         border-color: color-mix(in oklab, var(--accent-2) 55%, var(--border));
       }
 
-      .badge.bad {
+      .badge.bad,
+      .summary-badge.bad {
         color: color-mix(in oklab, #ff5c7a 90%, var(--text));
         background: color-mix(in oklab, #ff5c7a 12%, transparent);
         border-color: color-mix(in oklab, #ff5c7a 55%, var(--border));
       }
 
-      .badge.warn {
+      .badge.warn,
+      .summary-badge.warn {
         color: color-mix(in oklab, var(--warning) 92%, var(--text));
         background: color-mix(in oklab, var(--warning) 16%, transparent);
         border-color: color-mix(in oklab, var(--warning) 55%, var(--border));
       }
 
-      .badge.other {
+      .badge.other,
+      .summary-badge.other {
         color: color-mix(in oklab, var(--accent) 90%, var(--text));
         background: color-mix(in oklab, var(--accent) 12%, transparent);
         border-color: color-mix(in oklab, var(--accent) 55%, var(--border));
@@ -710,9 +729,14 @@
         align-items: center;
       }
 
-      .summary-badges .badge {
-        font-size: 11px;
-        padding: 2px 7px;
+      .summary-badges .summary-badge {
+        font-size: 12px;
+        font-weight: 850;
+        padding: 6px 10px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
       }
 
       @media (prefers-reduced-motion: reduce) {

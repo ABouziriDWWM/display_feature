@@ -298,8 +298,8 @@
 
     if (updatedMetaEl) {
       const bits = [];
-      if (startedAt) bits.push(`début: ${formatDateTime(startedAt)}`);
-      if (updatedAt) bits.push(`fin: ${formatDateTime(updatedAt)}`);
+      if (startedAt) bits.push(`start: ${formatDateTime(startedAt)}`);
+      if (updatedAt) bits.push(`end: ${formatDateTime(updatedAt)}`);
       updatedMetaEl.textContent = bits.join(" · ");
     }
 
@@ -327,7 +327,7 @@
       } else if (failed > 0) {
         overviewEl.textContent = `${failed} échec${failed === 1 ? "" : "s"} détecté${failed === 1 ? "" : "s"}.`;
       } else {
-        overviewEl.textContent = scenarioCount > 0 ? "Aucun échec détecté." : "Aucun scénario.";
+        overviewEl.textContent = scenarioCount > 0 ? "No failure detected." : "No scenario.";
       }
     }
   }
@@ -484,7 +484,7 @@
 
   async function loadFeaturesFromFileList(fileList, { setSourceText }) {
     const files = [...fileList].filter((f) => String(f.name).toLowerCase().endsWith(".feature"));
-    if (files.length === 0) throw new Error("Aucun fichier .feature trouvé dans le dossier sélectionné.");
+    if (files.length === 0) throw new Error("No .feature file found in the selected directory.");
     const features = [];
     for (const file of files) {
       const relative = String(file.webkitRelativePath || file.name).replace(/^\/+/, "");
@@ -563,16 +563,16 @@
       scenarioCount === 1 ? "" : "s"
     }</span>
       <span class="summary-badges" aria-label="Statuts">
-        <button class="badge ok badge-filter" type="button" data-status="passed" data-active="${
+        <button class="summary-badge ok badge-filter" type="button" data-status="passed" data-active="${
           normalizedFilter === "passed" ? "true" : "false"
         }" aria-pressed="${normalizedFilter === "passed" ? "true" : "false"}">${totals.passed} passed</button>
-        <button class="badge bad badge-filter" type="button" data-status="failed" data-active="${
+        <button class="summary-badge bad badge-filter" type="button" data-status="failed" data-active="${
           normalizedFilter === "failed" ? "true" : "false"
         }" aria-pressed="${normalizedFilter === "failed" ? "true" : "false"}">${totals.failed} failed</button>
-        <button class="badge warn badge-filter" type="button" data-status="skipped" data-active="${
+        <button class="summary-badge warn badge-filter" type="button" data-status="skipped" data-active="${
           normalizedFilter === "skipped" ? "true" : "false"
         }" aria-pressed="${normalizedFilter === "skipped" ? "true" : "false"}">${totals.skipped} skipped</button>
-        <button class="badge other badge-filter" type="button" data-status="other" data-active="${
+        <button class="summary-badge other badge-filter" type="button" data-status="other" data-active="${
           normalizedFilter === "other" ? "true" : "false"
         }" aria-pressed="${normalizedFilter === "other" ? "true" : "false"}">${totals.other} other</button>
       </span>
@@ -586,7 +586,7 @@
     });
 
     if (visibleFeatures.length === 0) {
-      content.innerHTML = `<div class="empty">Aucun résultat. Essayez une autre recherche ou effacez les filtres.</div>`;
+      content.innerHTML = `<div class="empty">No result. Try a different search or clear the filters.</div>`;
       return;
     }
 
@@ -626,9 +626,7 @@
                 const stepCount = (s.steps ?? []).filter((line) => line.trim().length > 0).length;
                 const scenarioId = `${featureId}-s${idx + 1}-${toSlug(s.name || String(idx + 1))}`;
                 const statusBadge = s._statusRaw
-                  ? `<button class="badge ${statusClass(s._status)} badge-filter" type="button" data-status="${
-                      ["passed", "failed", "skipped"].includes(s._status) ? s._status : "other"
-                    }" data-active="false" aria-pressed="false">${escapeHtml(s._status)}</button>`
+                  ? `<span class="badge ${statusClass(s._status)}">${escapeHtml(s._status)}</span>`
                   : "";
                 return `
                   <details class="scenario" id="${escapeHtml(scenarioId)}">

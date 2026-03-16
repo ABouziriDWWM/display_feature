@@ -1,9 +1,9 @@
 {
-    "runId": "de1e427bac4dec94",
+    "runId": "7f747e65738d3856",
     "state": "finished",
-    "suite": "realtime",
-    "startedAt": "2026-03-16T10:50:33+00:00",
-    "updatedAt": "2026-03-16T10:50:33+00:00",
+    "suite": "scoring",
+    "startedAt": "2026-03-16T11:37:12+00:00",
+    "updatedAt": "2026-03-16T11:37:12+00:00",
     "scenarios": [
         {
             "id": "features/capabilities/auth/pin_access.feature:7:[Sign in] Judge signs in with a valid PIN",
@@ -173,7 +173,7 @@
             },
             "title": "[Authorization] Deactivated judge cannot submit a score",
             "line": 7,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score",
@@ -183,7 +183,7 @@
             },
             "title": "[Authorization] Active judge can submit a score",
             "line": 13,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge",
@@ -193,7 +193,7 @@
             },
             "title": "[Admin] Referee activates a judge",
             "line": 19,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state",
@@ -203,7 +203,7 @@
             },
             "title": "[Admin] Activating an already active judge does not change state",
             "line": 25,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state",
@@ -213,7 +213,7 @@
             },
             "title": "[Admin] Deactivating an already deactivated judge does not change state",
             "line": 31,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
@@ -333,7 +333,7 @@
             },
             "title": "[Realtime] Judge submission appears on admin feed",
             "line": 7,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event",
@@ -343,7 +343,7 @@
             },
             "title": "[Realtime] Deactivated judge cannot submit and admin receives no score event",
             "line": 15,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score",
@@ -373,7 +373,7 @@
             },
             "title": "[Deductions] Major mistake deduction",
             "line": 6,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction",
@@ -383,7 +383,7 @@
             },
             "title": "[Deductions] Minor mistake deduction",
             "line": 11,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative",
@@ -393,7 +393,7 @@
             },
             "title": "[Deductions] Multiple deductions are cumulative",
             "line": 16,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction",
@@ -403,7 +403,7 @@
             },
             "title": "[Bounds] Score floors at zero on major deduction",
             "line": 23,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction",
@@ -413,7 +413,7 @@
             },
             "title": "[Bounds] Score floors at zero on minor deduction",
             "line": 28,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator",
@@ -423,7 +423,7 @@
             },
             "title": "[Input] Start score accepts comma decimal separator",
             "line": 33,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury",
@@ -1011,7 +1011,7 @@
             "keyword": "Given",
             "text": "judge \"J1\" is deactivated",
             "line": 8,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:7:[Authorization] Deactivated judge cannot submit a score:9:judge \"J1\" tries to send a score",
@@ -1020,7 +1020,7 @@
             "keyword": "When",
             "text": "judge \"J1\" tries to send a score",
             "line": 9,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:7:[Authorization] Deactivated judge cannot submit a score:10:the score should be rejected with message \"Judge is deactivated\"",
@@ -1029,7 +1029,7 @@
             "keyword": "Then",
             "text": "the score should be rejected with message \"Judge is deactivated\"",
             "line": 10,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score:14:judge \"J1\" is active",
@@ -1038,7 +1038,7 @@
             "keyword": "Given",
             "text": "judge \"J1\" is active",
             "line": 14,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score:15:judge \"J1\" tries to send a score",
@@ -1047,7 +1047,7 @@
             "keyword": "When",
             "text": "judge \"J1\" tries to send a score",
             "line": 15,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score:16:the score should be accepted",
@@ -1056,7 +1056,7 @@
             "keyword": "Then",
             "text": "the score should be accepted",
             "line": 16,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge:20:judge \"J1\" is deactivated",
@@ -1065,7 +1065,7 @@
             "keyword": "Given",
             "text": "judge \"J1\" is deactivated",
             "line": 20,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge:21:I activate judge \"J1\"",
@@ -1074,7 +1074,7 @@
             "keyword": "When",
             "text": "I activate judge \"J1\"",
             "line": 21,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge:22:judge \"J1\" should be active",
@@ -1083,7 +1083,7 @@
             "keyword": "Then",
             "text": "judge \"J1\" should be active",
             "line": 22,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state:26:judge \"J1\" is active",
@@ -1092,7 +1092,7 @@
             "keyword": "Given",
             "text": "judge \"J1\" is active",
             "line": 26,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state:27:I activate judge \"J1\"",
@@ -1101,7 +1101,7 @@
             "keyword": "When",
             "text": "I activate judge \"J1\"",
             "line": 27,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state:28:judge \"J1\" should be active",
@@ -1110,7 +1110,7 @@
             "keyword": "Then",
             "text": "judge \"J1\" should be active",
             "line": 28,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state:32:judge \"J1\" is deactivated",
@@ -1119,7 +1119,7 @@
             "keyword": "Given",
             "text": "judge \"J1\" is deactivated",
             "line": 32,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state:33:I deactivate judge \"J1\"",
@@ -1128,7 +1128,7 @@
             "keyword": "When",
             "text": "I deactivate judge \"J1\"",
             "line": 33,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state:34:judge \"J1\" should be deactivated",
@@ -1137,7 +1137,7 @@
             "keyword": "Then",
             "text": "judge \"J1\" should be deactivated",
             "line": 34,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:8:I am signed in as a judge",
@@ -1605,7 +1605,7 @@
             "keyword": "Given",
             "text": "the system is reset for realtime tests",
             "line": 8,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed:9:judge \"J1\" is active and signed in",
@@ -1614,7 +1614,7 @@
             "keyword": "And",
             "text": "judge \"J1\" is active and signed in",
             "line": 9,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed:10:the admin is listening to live events",
@@ -1623,7 +1623,7 @@
             "keyword": "And",
             "text": "the admin is listening to live events",
             "line": 10,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed:11:judge \"J1\" submits a score \"9.9\"",
@@ -1632,7 +1632,7 @@
             "keyword": "When",
             "text": "judge \"J1\" submits a score \"9.9\"",
             "line": 11,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed:12:the admin should receive a \"score_submitted\" event for judge \"J1\"",
@@ -1641,7 +1641,7 @@
             "keyword": "Then",
             "text": "the admin should receive a \"score_submitted\" event for judge \"J1\"",
             "line": 12,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:16:the system is reset for realtime tests",
@@ -1650,7 +1650,7 @@
             "keyword": "Given",
             "text": "the system is reset for realtime tests",
             "line": 16,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:17:judge \"J1\" is active and signed in",
@@ -1659,7 +1659,7 @@
             "keyword": "And",
             "text": "judge \"J1\" is active and signed in",
             "line": 17,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:18:the admin is listening to live events",
@@ -1668,7 +1668,7 @@
             "keyword": "And",
             "text": "the admin is listening to live events",
             "line": 18,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:19:the admin deactivates judge \"J1\"",
@@ -1677,7 +1677,7 @@
             "keyword": "When",
             "text": "the admin deactivates judge \"J1\"",
             "line": 19,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:20:judge \"J1\" submits a score \"9.9\"",
@@ -1686,7 +1686,7 @@
             "keyword": "And",
             "text": "judge \"J1\" submits a score \"9.9\"",
             "line": 20,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:21:the submission should be rejected",
@@ -1695,7 +1695,7 @@
             "keyword": "Then",
             "text": "the submission should be rejected",
             "line": 21,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:22:the admin should not receive any \"score_submitted\" event for judge \"J1\"",
@@ -1704,7 +1704,7 @@
             "keyword": "And",
             "text": "the admin should not receive any \"score_submitted\" event for judge \"J1\"",
             "line": 22,
-            "status": "skipped"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score:7:a competition exists with a 5-judge jury",
@@ -1794,7 +1794,7 @@
             "keyword": "Given",
             "text": "a player starts with 10.0 points",
             "line": 7,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction:8:the player commits a major mistake",
@@ -1803,7 +1803,7 @@
             "keyword": "When",
             "text": "the player commits a major mistake",
             "line": 8,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction:9:the score should be 9.7",
@@ -1812,7 +1812,7 @@
             "keyword": "Then",
             "text": "the score should be 9.7",
             "line": 9,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction:12:a player starts with 10.0 points",
@@ -1821,7 +1821,7 @@
             "keyword": "Given",
             "text": "a player starts with 10.0 points",
             "line": 12,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction:13:the player commits a minor mistake",
@@ -1830,7 +1830,7 @@
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 13,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction:14:the score should be 9.9",
@@ -1839,7 +1839,7 @@
             "keyword": "Then",
             "text": "the score should be 9.9",
             "line": 14,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:17:a player starts with 10.0 points",
@@ -1848,7 +1848,7 @@
             "keyword": "Given",
             "text": "a player starts with 10.0 points",
             "line": 17,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:18:the player commits a minor mistake",
@@ -1857,7 +1857,7 @@
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 18,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:19:the player commits a minor mistake",
@@ -1866,7 +1866,7 @@
             "keyword": "And",
             "text": "the player commits a minor mistake",
             "line": 19,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:20:the player commits a major mistake",
@@ -1875,7 +1875,7 @@
             "keyword": "And",
             "text": "the player commits a major mistake",
             "line": 20,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:21:the score should be 9.5",
@@ -1884,7 +1884,7 @@
             "keyword": "Then",
             "text": "the score should be 9.5",
             "line": 21,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction:24:a player starts with 0.2 points",
@@ -1893,7 +1893,7 @@
             "keyword": "Given",
             "text": "a player starts with 0.2 points",
             "line": 24,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction:25:the player commits a major mistake",
@@ -1902,7 +1902,7 @@
             "keyword": "When",
             "text": "the player commits a major mistake",
             "line": 25,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction:26:the score should be 0.0",
@@ -1911,7 +1911,7 @@
             "keyword": "Then",
             "text": "the score should be 0.0",
             "line": 26,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction:29:a player starts with 0.0 points",
@@ -1920,7 +1920,7 @@
             "keyword": "Given",
             "text": "a player starts with 0.0 points",
             "line": 29,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction:30:the player commits a minor mistake",
@@ -1929,7 +1929,7 @@
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 30,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction:31:the score should be 0.0",
@@ -1938,7 +1938,7 @@
             "keyword": "Then",
             "text": "the score should be 0.0",
             "line": 31,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator:34:a player starts with 10,0 points",
@@ -1947,7 +1947,7 @@
             "keyword": "Given",
             "text": "a player starts with 10,0 points",
             "line": 34,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator:35:the player commits a minor mistake",
@@ -1956,7 +1956,7 @@
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 35,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator:36:the score should be 9.9",
@@ -1965,7 +1965,7 @@
             "keyword": "Then",
             "text": "the score should be 9.9",
             "line": 36,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury:7:the following judge totals:",
@@ -2353,21 +2353,21 @@
     },
     "counts": {
         "scenarios": {
-            "passed": 0,
+            "passed": 6,
             "failed": 0,
-            "skipped": 7,
+            "skipped": 0,
             "pending": 0,
             "undefined": 0
         },
         "steps": {
-            "passed": 0,
+            "passed": 20,
             "failed": 0,
-            "skipped": 27,
+            "skipped": 0,
             "pending": 0,
             "undefined": 0
         }
     },
     "lastError": null,
-    "finishedAt": "2026-03-16T10:50:33+00:00",
-    "result": "skipped"
+    "finishedAt": "2026-03-16T11:37:12+00:00",
+    "result": "passed"
 }

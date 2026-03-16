@@ -3,7 +3,6 @@ Feature: Scoreboard table
   As a referee
   I want to see judge scores per athlete and the computed final score
 
-  @wip
   Scenario: Scoreboard shows an athlete row with judge totals and final score
     Given a competition exists with a 5-judge jury
     And athlete "Kim Minji" is the current athlete
@@ -16,7 +15,6 @@ Feature: Scoreboard table
       | J5    | 9.5   |
     Then the scoreboard should show final score 9.8 for "Kim Minji"
 
-  @wip
   Scenario: Final score is recalculated whenever a judge score arrives
     Given a competition exists with a 5-judge jury
     And athlete "Kim Minji" is the current athlete

@@ -14,6 +14,10 @@ Feature: Poomsae Referee PWA
     When I go to "/sw.js"
     Then the response should contain "caches.open"
 
+  Scenario: [Haptics] Judges score buttons trigger vibration feedback
+    Given I am on the home page
+    Then score buttons should trigger vibration feedback
+
   @wip @javascript
   Scenario: [Offline] Home page loads from cache when offline after first visit
     Given I am on the home page

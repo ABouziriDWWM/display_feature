@@ -1,9 +1,9 @@
 {
-    "runId": "7f747e65738d3856",
+    "runId": "72f11cd83055ec9f",
     "state": "finished",
     "suite": "scoring",
-    "startedAt": "2026-03-16T11:37:12+00:00",
-    "updatedAt": "2026-03-16T11:37:12+00:00",
+    "startedAt": "2026-03-17T10:02:13+00:00",
+    "updatedAt": "2026-03-17T10:02:14+00:00",
     "scenarios": [
         {
             "id": "features/capabilities/auth/pin_access.feature:7:[Sign in] Judge signs in with a valid PIN",
@@ -96,33 +96,33 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:7:Create a competition with basic information",
+            "id": "features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information",
             "feature": {
                 "title": "Competition setup",
                 "file": "features/capabilities/competition/competition_setup.feature"
             },
             "title": "Create a competition with basic information",
-            "line": 7,
+            "line": 6,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:15:Configure the jury size in official mode",
+            "id": "features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode",
             "feature": {
                 "title": "Competition setup",
                 "file": "features/capabilities/competition/competition_setup.feature"
             },
             "title": "Configure the jury size in official mode",
-            "line": 15,
+            "line": 13,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:21:Add athletes with club and group information",
+            "id": "features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information",
             "feature": {
                 "title": "Competition setup",
                 "file": "features/capabilities/competition/competition_setup.feature"
             },
             "title": "Add athletes with club and group information",
-            "line": 21,
+            "line": 18,
             "status": "not_executed"
         },
         {
@@ -373,7 +373,7 @@
             },
             "title": "[Deductions] Major mistake deduction",
             "line": 6,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction",
@@ -383,7 +383,7 @@
             },
             "title": "[Deductions] Minor mistake deduction",
             "line": 11,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative",
@@ -393,7 +393,7 @@
             },
             "title": "[Deductions] Multiple deductions are cumulative",
             "line": 16,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction",
@@ -403,7 +403,7 @@
             },
             "title": "[Bounds] Score floors at zero on major deduction",
             "line": 23,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction",
@@ -413,7 +413,7 @@
             },
             "title": "[Bounds] Score floors at zero on minor deduction",
             "line": 28,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator",
@@ -423,7 +423,7 @@
             },
             "title": "[Input] Start score accepts comma decimal separator",
             "line": 33,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury",
@@ -798,84 +798,84 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:7:Create a competition with basic information:8:I am signed in as a referee",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information:7:I am signed in as a referee",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:7:Create a competition with basic information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information",
             "keyword": "Given",
             "text": "I am signed in as a referee",
+            "line": 7,
+            "status": "not_executed"
+        },
+        {
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information:8:I create a competition with:",
+            "featureFile": "features/capabilities/competition/competition_setup.feature",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information",
+            "keyword": "When",
+            "text": "I create a competition with:",
             "line": 8,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:7:Create a competition with basic information:9:I create a competition with:",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information:11:the competition should be created",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:7:Create a competition with basic information",
-            "keyword": "When",
-            "text": "I create a competition with:",
-            "line": 9,
-            "status": "not_executed"
-        },
-        {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:7:Create a competition with basic information:12:the competition should be created",
-            "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:7:Create a competition with basic information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information",
             "keyword": "Then",
             "text": "the competition should be created",
-            "line": 12,
+            "line": 11,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:15:Configure the jury size in official mode:16:a competition exists",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode:14:a competition exists",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:15:Configure the jury size in official mode",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode",
             "keyword": "Given",
             "text": "a competition exists",
+            "line": 14,
+            "status": "not_executed"
+        },
+        {
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode:15:I set the jury size to 5 in official mode",
+            "featureFile": "features/capabilities/competition/competition_setup.feature",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode",
+            "keyword": "When",
+            "text": "I set the jury size to 5 in official mode",
+            "line": 15,
+            "status": "not_executed"
+        },
+        {
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode:16:the jury size should be 5",
+            "featureFile": "features/capabilities/competition/competition_setup.feature",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode",
+            "keyword": "Then",
+            "text": "the jury size should be 5",
             "line": 16,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:15:Configure the jury size in official mode:17:I set the jury size to 5 in official mode",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information:19:a competition exists",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:15:Configure the jury size in official mode",
-            "keyword": "When",
-            "text": "I set the jury size to 5 in official mode",
-            "line": 17,
-            "status": "not_executed"
-        },
-        {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:15:Configure the jury size in official mode:18:the jury size should be 5",
-            "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:15:Configure the jury size in official mode",
-            "keyword": "Then",
-            "text": "the jury size should be 5",
-            "line": 18,
-            "status": "not_executed"
-        },
-        {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:21:Add athletes with club and group information:22:a competition exists",
-            "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:21:Add athletes with club and group information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information",
             "keyword": "Given",
             "text": "a competition exists",
-            "line": 22,
+            "line": 19,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:21:Add athletes with club and group information:23:I add the following athletes:",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information:20:I add the following athletes:",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:21:Add athletes with club and group information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information",
             "keyword": "When",
             "text": "I add the following athletes:",
-            "line": 23,
+            "line": 20,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:21:Add athletes with club and group information:27:the athlete list should contain 2 athletes",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information:24:the athlete list should contain 2 athletes",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:21:Add athletes with club and group information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information",
             "keyword": "Then",
             "text": "the athlete list should contain 2 athletes",
-            "line": 27,
+            "line": 24,
             "status": "not_executed"
         },
         {
@@ -1794,7 +1794,7 @@
             "keyword": "Given",
             "text": "a player starts with 10.0 points",
             "line": 7,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction:8:the player commits a major mistake",
@@ -1803,7 +1803,7 @@
             "keyword": "When",
             "text": "the player commits a major mistake",
             "line": 8,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction:9:the score should be 9.7",
@@ -1812,7 +1812,7 @@
             "keyword": "Then",
             "text": "the score should be 9.7",
             "line": 9,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction:12:a player starts with 10.0 points",
@@ -1821,7 +1821,7 @@
             "keyword": "Given",
             "text": "a player starts with 10.0 points",
             "line": 12,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction:13:the player commits a minor mistake",
@@ -1830,7 +1830,7 @@
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 13,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction:14:the score should be 9.9",
@@ -1839,7 +1839,7 @@
             "keyword": "Then",
             "text": "the score should be 9.9",
             "line": 14,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:17:a player starts with 10.0 points",
@@ -1848,7 +1848,7 @@
             "keyword": "Given",
             "text": "a player starts with 10.0 points",
             "line": 17,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:18:the player commits a minor mistake",
@@ -1857,7 +1857,7 @@
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 18,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:19:the player commits a minor mistake",
@@ -1866,7 +1866,7 @@
             "keyword": "And",
             "text": "the player commits a minor mistake",
             "line": 19,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:20:the player commits a major mistake",
@@ -1875,7 +1875,7 @@
             "keyword": "And",
             "text": "the player commits a major mistake",
             "line": 20,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:21:the score should be 9.5",
@@ -1884,7 +1884,7 @@
             "keyword": "Then",
             "text": "the score should be 9.5",
             "line": 21,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction:24:a player starts with 0.2 points",
@@ -1893,7 +1893,7 @@
             "keyword": "Given",
             "text": "a player starts with 0.2 points",
             "line": 24,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction:25:the player commits a major mistake",
@@ -1902,7 +1902,7 @@
             "keyword": "When",
             "text": "the player commits a major mistake",
             "line": 25,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction:26:the score should be 0.0",
@@ -1911,7 +1911,7 @@
             "keyword": "Then",
             "text": "the score should be 0.0",
             "line": 26,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction:29:a player starts with 0.0 points",
@@ -1920,7 +1920,7 @@
             "keyword": "Given",
             "text": "a player starts with 0.0 points",
             "line": 29,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction:30:the player commits a minor mistake",
@@ -1929,7 +1929,7 @@
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 30,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction:31:the score should be 0.0",
@@ -1938,7 +1938,7 @@
             "keyword": "Then",
             "text": "the score should be 0.0",
             "line": 31,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator:34:a player starts with 10,0 points",
@@ -1947,7 +1947,7 @@
             "keyword": "Given",
             "text": "a player starts with 10,0 points",
             "line": 34,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator:35:the player commits a minor mistake",
@@ -1956,7 +1956,7 @@
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 35,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator:36:the score should be 9.9",
@@ -1965,7 +1965,7 @@
             "keyword": "Then",
             "text": "the score should be 9.9",
             "line": 36,
-            "status": "passed"
+            "status": "not_executed"
         },
         {
             "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury:7:the following judge totals:",
@@ -2353,14 +2353,14 @@
     },
     "counts": {
         "scenarios": {
-            "passed": 6,
+            "passed": 0,
             "failed": 0,
             "skipped": 0,
             "pending": 0,
             "undefined": 0
         },
         "steps": {
-            "passed": 20,
+            "passed": 0,
             "failed": 0,
             "skipped": 0,
             "pending": 0,
@@ -2368,6 +2368,6 @@
         }
     },
     "lastError": null,
-    "finishedAt": "2026-03-16T11:37:12+00:00",
-    "result": "passed"
+    "finishedAt": "2026-03-17T10:02:14+00:00",
+    "result": "unknown"
 }

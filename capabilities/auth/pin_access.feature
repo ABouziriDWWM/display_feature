@@ -3,7 +3,6 @@ Feature: PIN access
   As a user
   I want to sign in using a PIN with rate limiting and device binding
 
-  @wip
   Scenario: [Sign in] Judge signs in with a valid PIN
     Given a judge PIN "1234" is active
     When I sign in as a judge with PIN "1234"

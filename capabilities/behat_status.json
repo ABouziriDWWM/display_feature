@@ -1,12 +1,12 @@
 {
-    "runId": "f6b6baf49331631b",
+    "runId": "d36f5b5b8dd1d141",
     "state": "finished",
     "suite": "scoring",
-    "startedAt": "2026-03-17T10:49:51+00:00",
-    "updatedAt": "2026-03-17T10:50:05+00:00",
+    "startedAt": "2026-03-17T11:13:29+00:00",
+    "updatedAt": "2026-03-17T11:13:43+00:00",
     "scenarios": [
         {
-            "id": "features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN",
+            "id": "features/capabilities/auth/pin_access.feature:6",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
@@ -16,7 +16,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN",
+            "id": "features/capabilities/auth/pin_access.feature:12",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
@@ -26,7 +26,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN",
+            "id": "features/capabilities/auth/pin_access.feature:18",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
@@ -36,7 +36,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length",
+            "id": "features/capabilities/auth/pin_access.feature:24",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
@@ -46,7 +46,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
+            "id": "features/capabilities/auth/pin_access.feature:30",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
@@ -56,7 +56,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "id": "features/capabilities/auth/pin_access.feature:36",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
@@ -66,7 +66,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "id": "features/capabilities/auth/pin_access.feature:43",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
@@ -76,7 +76,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
+            "id": "features/capabilities/auth/pin_access.feature:50",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
@@ -86,7 +86,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session",
+            "id": "features/capabilities/auth/pin_access.feature:57",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
@@ -96,7 +96,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information",
+            "id": "features/capabilities/competition/competition_setup.feature:6",
             "feature": {
                 "title": "Competition setup",
                 "file": "features/capabilities/competition/competition_setup.feature"
@@ -106,7 +106,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode",
+            "id": "features/capabilities/competition/competition_setup.feature:13",
             "feature": {
                 "title": "Competition setup",
                 "file": "features/capabilities/competition/competition_setup.feature"
@@ -116,7 +116,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information",
+            "id": "features/capabilities/competition/competition_setup.feature:18",
             "feature": {
                 "title": "Competition setup",
                 "file": "features/capabilities/competition/competition_setup.feature"
@@ -126,7 +126,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:7:[Defaults] Default language is French",
+            "id": "features/capabilities/i18n/language_toggle.feature:7",
             "feature": {
                 "title": "Language toggle",
                 "file": "features/capabilities/i18n/language_toggle.feature"
@@ -136,7 +136,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI",
+            "id": "features/capabilities/i18n/language_toggle.feature:12",
             "feature": {
                 "title": "Language toggle",
                 "file": "features/capabilities/i18n/language_toggle.feature"
@@ -146,7 +146,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:20:[Persistence] Language choice is persisted after refresh",
+            "id": "features/capabilities/i18n/language_toggle.feature:20",
             "feature": {
                 "title": "Language toggle",
                 "file": "features/capabilities/i18n/language_toggle.feature"
@@ -156,7 +156,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:27:[Fallback] Unsupported language falls back to French",
+            "id": "features/capabilities/i18n/language_toggle.feature:27",
             "feature": {
                 "title": "Language toggle",
                 "file": "features/capabilities/i18n/language_toggle.feature"
@@ -166,7 +166,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:7:[Authorization] Deactivated judge cannot submit a score",
+            "id": "features/capabilities/judges/judge_management.feature:7",
             "feature": {
                 "title": "Judge management",
                 "file": "features/capabilities/judges/judge_management.feature"
@@ -176,7 +176,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score",
+            "id": "features/capabilities/judges/judge_management.feature:13",
             "feature": {
                 "title": "Judge management",
                 "file": "features/capabilities/judges/judge_management.feature"
@@ -186,7 +186,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge",
+            "id": "features/capabilities/judges/judge_management.feature:19",
             "feature": {
                 "title": "Judge management",
                 "file": "features/capabilities/judges/judge_management.feature"
@@ -196,7 +196,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state",
+            "id": "features/capabilities/judges/judge_management.feature:25",
             "feature": {
                 "title": "Judge management",
                 "file": "features/capabilities/judges/judge_management.feature"
@@ -206,7 +206,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state",
+            "id": "features/capabilities/judges/judge_management.feature:31",
             "feature": {
                 "title": "Judge management",
                 "file": "features/capabilities/judges/judge_management.feature"
@@ -216,7 +216,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "feature": {
                 "title": "Judge scoring flow",
                 "file": "features/capabilities/judge_input/judge_scoring_flow.feature"
@@ -226,7 +226,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:19",
             "feature": {
                 "title": "Judge scoring flow",
                 "file": "features/capabilities/judge_input/judge_scoring_flow.feature"
@@ -236,7 +236,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:29:Send prevents accidental double submit",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:29",
             "feature": {
                 "title": "Judge scoring flow",
                 "file": "features/capabilities/judge_input/judge_scoring_flow.feature"
@@ -246,7 +246,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/public_display/public_results.feature:7:Public page is accessible without authentication",
+            "id": "features/capabilities/public_display/public_results.feature:7",
             "feature": {
                 "title": "Public results display",
                 "file": "features/capabilities/public_display/public_results.feature"
@@ -256,7 +256,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/public_display/public_results.feature:13:Public page does not allow score editing",
+            "id": "features/capabilities/public_display/public_results.feature:13",
             "feature": {
                 "title": "Public results display",
                 "file": "features/capabilities/public_display/public_results.feature"
@@ -266,7 +266,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:6:[Installability] Application is installable",
+            "id": "features/capabilities/pwa/pwa.feature:6",
             "feature": {
                 "title": "Poomsae Referee PWA",
                 "file": "features/capabilities/pwa/pwa.feature"
@@ -276,7 +276,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:12:[Offline] Service worker is available for offline mode",
+            "id": "features/capabilities/pwa/pwa.feature:12",
             "feature": {
                 "title": "Poomsae Referee PWA",
                 "file": "features/capabilities/pwa/pwa.feature"
@@ -286,7 +286,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:17:[Haptics] Judges score buttons trigger vibration feedback",
+            "id": "features/capabilities/pwa/pwa.feature:17",
             "feature": {
                 "title": "Poomsae Referee PWA",
                 "file": "features/capabilities/pwa/pwa.feature"
@@ -296,7 +296,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit",
+            "id": "features/capabilities/pwa/pwa.feature:22",
             "feature": {
                 "title": "Poomsae Referee PWA",
                 "file": "features/capabilities/pwa/pwa.feature"
@@ -306,7 +306,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline",
+            "id": "features/capabilities/pwa/pwa.feature:30",
             "feature": {
                 "title": "Poomsae Referee PWA",
                 "file": "features/capabilities/pwa/pwa.feature"
@@ -316,7 +316,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:39:Scoring updates the score display",
+            "id": "features/capabilities/pwa/pwa.feature:39",
             "feature": {
                 "title": "Poomsae Referee PWA",
                 "file": "features/capabilities/pwa/pwa.feature"
@@ -326,7 +326,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:7",
             "feature": {
                 "title": "Realtime judges and admin",
                 "file": "features/capabilities/realtime/realtime_judges_admin.feature"
@@ -336,7 +336,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:15",
             "feature": {
                 "title": "Realtime judges and admin",
                 "file": "features/capabilities/realtime/realtime_judges_admin.feature"
@@ -346,7 +346,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:6",
             "feature": {
                 "title": "Scoreboard table",
                 "file": "features/capabilities/scoreboard/scoreboard_table.feature"
@@ -356,7 +356,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:18",
             "feature": {
                 "title": "Scoreboard table",
                 "file": "features/capabilities/scoreboard/scoreboard_table.feature"
@@ -366,7 +366,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:6",
             "feature": {
                 "title": "Poomsae Scoring",
                 "file": "features/capabilities/scoring/poomsae_scoring.feature"
@@ -376,7 +376,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:11",
             "feature": {
                 "title": "Poomsae Scoring",
                 "file": "features/capabilities/scoring/poomsae_scoring.feature"
@@ -386,7 +386,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:16",
             "feature": {
                 "title": "Poomsae Scoring",
                 "file": "features/capabilities/scoring/poomsae_scoring.feature"
@@ -396,7 +396,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:23",
             "feature": {
                 "title": "Poomsae Scoring",
                 "file": "features/capabilities/scoring/poomsae_scoring.feature"
@@ -406,7 +406,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:28",
             "feature": {
                 "title": "Poomsae Scoring",
                 "file": "features/capabilities/scoring/poomsae_scoring.feature"
@@ -416,7 +416,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:33",
             "feature": {
                 "title": "Poomsae Scoring",
                 "file": "features/capabilities/scoring/poomsae_scoring.feature"
@@ -426,7 +426,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury",
+            "id": "features/capabilities/scoring/score_calculation.feature:6",
             "feature": {
                 "title": "Score calculation",
                 "file": "features/capabilities/scoring/score_calculation.feature"
@@ -436,7 +436,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:17:Final score discards the highest and lowest for a 7-judge jury",
+            "id": "features/capabilities/scoring/score_calculation.feature:17",
             "feature": {
                 "title": "Score calculation",
                 "file": "features/capabilities/scoring/score_calculation.feature"
@@ -446,7 +446,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:30:Final round averages two performances",
+            "id": "features/capabilities/scoring/score_calculation.feature:30",
             "feature": {
                 "title": "Score calculation",
                 "file": "features/capabilities/scoring/score_calculation.feature"
@@ -456,7 +456,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:36:Tie-break uses presentation score first, then the sum of all judges points",
+            "id": "features/capabilities/scoring/score_calculation.feature:36",
             "feature": {
                 "title": "Score calculation",
                 "file": "features/capabilities/scoring/score_calculation.feature"
@@ -466,7 +466,7 @@
             "status": "passed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network",
+            "id": "features/capabilities/sync/offline_queue.feature:7",
             "feature": {
                 "title": "Offline queue and sync",
                 "file": "features/capabilities/sync/offline_queue.feature"
@@ -476,7 +476,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available",
+            "id": "features/capabilities/sync/offline_queue.feature:16",
             "feature": {
                 "title": "Offline queue and sync",
                 "file": "features/capabilities/sync/offline_queue.feature"
@@ -486,7 +486,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates",
+            "id": "features/capabilities/sync/offline_queue.feature:25",
             "feature": {
                 "title": "Offline queue and sync",
                 "file": "features/capabilities/sync/offline_queue.feature"
@@ -496,7 +496,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:33:[Queueing] Queued scores persist after refresh",
+            "id": "features/capabilities/sync/offline_queue.feature:33",
             "feature": {
                 "title": "Offline queue and sync",
                 "file": "features/capabilities/sync/offline_queue.feature"
@@ -506,7 +506,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:39:[Sync] Queued scores are synced when the network comes back",
+            "id": "features/capabilities/sync/offline_queue.feature:39",
             "feature": {
                 "title": "Offline queue and sync",
                 "file": "features/capabilities/sync/offline_queue.feature"
@@ -516,7 +516,7 @@
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued",
+            "id": "features/capabilities/sync/offline_queue.feature:46",
             "feature": {
                 "title": "Offline queue and sync",
                 "file": "features/capabilities/sync/offline_queue.feature"
@@ -528,1818 +528,1818 @@
     ],
     "steps": [
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN:7:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:6:7:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:6",
             "keyword": "Given",
             "text": "a judge PIN \"1234\" is active",
             "line": 7,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN:8:I sign in as a judge with PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:6:8:I sign in as a judge with PIN \"1234\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:6",
             "keyword": "When",
             "text": "I sign in as a judge with PIN \"1234\"",
             "line": 8,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN:9:I should be signed in as a judge",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:6:9:I should be signed in as a judge",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:6",
             "keyword": "Then",
             "text": "I should be signed in as a judge",
             "line": 9,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN:13:a judge PIN \"1234\" is inactive",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:12:13:a judge PIN \"1234\" is inactive",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:12",
             "keyword": "Given",
             "text": "a judge PIN \"1234\" is inactive",
             "line": 13,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN:14:I sign in as a judge with PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:12:14:I sign in as a judge with PIN \"1234\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:12",
             "keyword": "When",
             "text": "I sign in as a judge with PIN \"1234\"",
             "line": 14,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN:15:I should see an error \"Invalid PIN\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:12:15:I should see an error \"Invalid PIN\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:12",
             "keyword": "Then",
             "text": "I should see an error \"Invalid PIN\"",
             "line": 15,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN:19:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:18:19:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:18",
             "keyword": "Given",
             "text": "a judge PIN \"1234\" is active",
             "line": 19,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN:20:I sign in as a judge with PIN \"12ab\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:18:20:I sign in as a judge with PIN \"12ab\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:18",
             "keyword": "When",
             "text": "I sign in as a judge with PIN \"12ab\"",
             "line": 20,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN:21:I should see an error \"Invalid PIN format\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:18:21:I should see an error \"Invalid PIN format\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:18",
             "keyword": "Then",
             "text": "I should see an error \"Invalid PIN format\"",
             "line": 21,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length:25:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:24:25:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:24",
             "keyword": "Given",
             "text": "a judge PIN \"1234\" is active",
             "line": 25,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length:26:I sign in as a judge with PIN \"123\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:24:26:I sign in as a judge with PIN \"123\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:24",
             "keyword": "When",
             "text": "I sign in as a judge with PIN \"123\"",
             "line": 26,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length:27:I should see an error \"Invalid PIN format\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:24:27:I should see an error \"Invalid PIN format\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:24",
             "keyword": "Then",
             "text": "I should see an error \"Invalid PIN format\"",
             "line": 27,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN:31:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:30:31:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:30",
             "keyword": "Given",
             "text": "a judge PIN \"1234\" is active",
             "line": 31,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN:32:I enter an invalid PIN 5 times",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:30:32:I enter an invalid PIN 5 times",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:30",
             "keyword": "When",
             "text": "I enter an invalid PIN 5 times",
             "line": 32,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN:33:the judge sign-in should be temporarily blocked",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:30:33:the judge sign-in should be temporarily blocked",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:30",
             "keyword": "Then",
             "text": "the judge sign-in should be temporarily blocked",
             "line": 33,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter:37:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:37:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:36",
             "keyword": "Given",
             "text": "a judge PIN \"1234\" is active",
             "line": 37,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter:38:I entered an invalid PIN 2 times",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:38:I entered an invalid PIN 2 times",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:36",
             "keyword": "And",
             "text": "I entered an invalid PIN 2 times",
             "line": 38,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter:39:I sign in as a judge with PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:39:I sign in as a judge with PIN \"1234\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:36",
             "keyword": "When",
             "text": "I sign in as a judge with PIN \"1234\"",
             "line": 39,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter:40:the judge sign-in should not be temporarily blocked",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:40:the judge sign-in should not be temporarily blocked",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:36",
             "keyword": "Then",
             "text": "the judge sign-in should not be temporarily blocked",
             "line": 40,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time:44:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:44:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:43",
             "keyword": "Given",
             "text": "a judge PIN \"1234\" is active",
             "line": 44,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time:45:the PIN \"1234\" is already bound to device \"device-a\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:45:the PIN \"1234\" is already bound to device \"device-a\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:43",
             "keyword": "And",
             "text": "the PIN \"1234\" is already bound to device \"device-a\"",
             "line": 45,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time:46:I sign in as a judge with PIN \"1234\" from device \"device-b\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:46:I sign in as a judge with PIN \"1234\" from device \"device-b\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:43",
             "keyword": "When",
             "text": "I sign in as a judge with PIN \"1234\" from device \"device-b\"",
             "line": 46,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time:47:I should see an error \"PIN already in use on another device\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:47:I should see an error \"PIN already in use on another device\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:43",
             "keyword": "Then",
             "text": "I should see an error \"PIN already in use on another device\"",
             "line": 47,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN:51:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:51:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:50",
             "keyword": "Given",
             "text": "a judge PIN \"1234\" is active",
             "line": 51,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN:52:the PIN \"1234\" is already bound to device \"device-a\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:52:the PIN \"1234\" is already bound to device \"device-a\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:50",
             "keyword": "And",
             "text": "the PIN \"1234\" is already bound to device \"device-a\"",
             "line": 52,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN:53:I sign in as a judge with PIN \"1234\" from device \"device-a\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:53:I sign in as a judge with PIN \"1234\" from device \"device-a\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:50",
             "keyword": "When",
             "text": "I sign in as a judge with PIN \"1234\" from device \"device-a\"",
             "line": 53,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN:54:I should be signed in as a judge",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:54:I should be signed in as a judge",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:50",
             "keyword": "Then",
             "text": "I should be signed in as a judge",
             "line": 54,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session:58:a judge session exists for PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:57:58:a judge session exists for PIN \"1234\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:57",
             "keyword": "Given",
             "text": "a judge session exists for PIN \"1234\"",
             "line": 58,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session:59:I revoke the session for PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:57:59:I revoke the session for PIN \"1234\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:57",
             "keyword": "When",
             "text": "I revoke the session for PIN \"1234\"",
             "line": 59,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session:60:the judge session for PIN \"1234\" should be revoked",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:57:60:the judge session for PIN \"1234\" should be revoked",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:57",
             "keyword": "Then",
             "text": "the judge session for PIN \"1234\" should be revoked",
             "line": 60,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information:7:I am signed in as a referee",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:7:I am signed in as a referee",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:6",
             "keyword": "Given",
             "text": "I am signed in as a referee",
             "line": 7,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information:8:I create a competition with:",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:8:I create a competition with:",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:6",
             "keyword": "When",
             "text": "I create a competition with:",
             "line": 8,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information:11:the competition should be created",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:11:the competition should be created",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:6",
             "keyword": "Then",
             "text": "the competition should be created",
             "line": 11,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode:14:a competition exists",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:14:a competition exists",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:13",
             "keyword": "Given",
             "text": "a competition exists",
             "line": 14,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode:15:I set the jury size to 5 in official mode",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:15:I set the jury size to 5 in official mode",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:13",
             "keyword": "When",
             "text": "I set the jury size to 5 in official mode",
             "line": 15,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode:16:the jury size should be 5",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:16:the jury size should be 5",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:13",
             "keyword": "Then",
             "text": "the jury size should be 5",
             "line": 16,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information:19:a competition exists",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:19:a competition exists",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:18",
             "keyword": "Given",
             "text": "a competition exists",
             "line": 19,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information:20:I add the following athletes:",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:20:I add the following athletes:",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:18",
             "keyword": "When",
             "text": "I add the following athletes:",
             "line": 20,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information:24:the athlete list should contain 2 athletes",
+            "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:24:the athlete list should contain 2 athletes",
             "featureFile": "features/capabilities/competition/competition_setup.feature",
-            "scenarioId": "features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information",
+            "scenarioId": "features/capabilities/competition/competition_setup.feature:18",
             "keyword": "Then",
             "text": "the athlete list should contain 2 athletes",
             "line": 24,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:7:[Defaults] Default language is French:8:I am on the home page",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:7:8:I am on the home page",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:7:[Defaults] Default language is French",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:7",
             "keyword": "Given",
             "text": "I am on the home page",
             "line": 8,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:7:[Defaults] Default language is French:9:the UI language should be \"fr\"",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:7:9:the UI language should be \"fr\"",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:7:[Defaults] Default language is French",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:7",
             "keyword": "Then",
             "text": "the UI language should be \"fr\"",
             "line": 9,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI:13:I am on the home page",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:13:I am on the home page",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12",
             "keyword": "Given",
             "text": "I am on the home page",
             "line": 13,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI:14:I switch the language to \"en\"",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:14:I switch the language to \"en\"",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12",
             "keyword": "When",
             "text": "I switch the language to \"en\"",
             "line": 14,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI:15:the UI language should be \"en\"",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:15:the UI language should be \"en\"",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12",
             "keyword": "Then",
             "text": "the UI language should be \"en\"",
             "line": 15,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI:16:I should see \"Current score\"",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:16:I should see \"Current score\"",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12",
             "keyword": "And",
             "text": "I should see \"Current score\"",
             "line": 16,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI:17:I should see a button \"Reset\"",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:12:17:I should see a button \"Reset\"",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12:[Switching] User switches to English and it applies to the whole UI",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:12",
             "keyword": "And",
             "text": "I should see a button \"Reset\"",
             "line": 17,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:20:[Persistence] Language choice is persisted after refresh:21:I am on the home page",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:20:21:I am on the home page",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:20:[Persistence] Language choice is persisted after refresh",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:20",
             "keyword": "Given",
             "text": "I am on the home page",
             "line": 21,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:20:[Persistence] Language choice is persisted after refresh:22:I switch the language to \"en\"",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:20:22:I switch the language to \"en\"",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:20:[Persistence] Language choice is persisted after refresh",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:20",
             "keyword": "When",
             "text": "I switch the language to \"en\"",
             "line": 22,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:20:[Persistence] Language choice is persisted after refresh:23:I refresh the page",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:20:23:I refresh the page",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:20:[Persistence] Language choice is persisted after refresh",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:20",
             "keyword": "And",
             "text": "I refresh the page",
             "line": 23,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:20:[Persistence] Language choice is persisted after refresh:24:the UI language should be \"en\"",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:20:24:the UI language should be \"en\"",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:20:[Persistence] Language choice is persisted after refresh",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:20",
             "keyword": "Then",
             "text": "the UI language should be \"en\"",
             "line": 24,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:27:[Fallback] Unsupported language falls back to French:28:I am on the home page",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:27:28:I am on the home page",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:27:[Fallback] Unsupported language falls back to French",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:27",
             "keyword": "Given",
             "text": "I am on the home page",
             "line": 28,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:27:[Fallback] Unsupported language falls back to French:29:I switch the language to \"es\"",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:27:29:I switch the language to \"es\"",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:27:[Fallback] Unsupported language falls back to French",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:27",
             "keyword": "When",
             "text": "I switch the language to \"es\"",
             "line": 29,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:27:[Fallback] Unsupported language falls back to French:30:the UI language should be \"fr\"",
+            "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:27:30:the UI language should be \"fr\"",
             "featureFile": "features/capabilities/i18n/language_toggle.feature",
-            "scenarioId": "features/capabilities/i18n/language_toggle.feature:27:[Fallback] Unsupported language falls back to French",
+            "scenarioId": "features/capabilities/i18n/language_toggle.feature:27",
             "keyword": "Then",
             "text": "the UI language should be \"fr\"",
             "line": 30,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:7:[Authorization] Deactivated judge cannot submit a score:8:judge \"J1\" is deactivated",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:7:8:judge \"J1\" is deactivated",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:7:[Authorization] Deactivated judge cannot submit a score",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:7",
             "keyword": "Given",
             "text": "judge \"J1\" is deactivated",
             "line": 8,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:7:[Authorization] Deactivated judge cannot submit a score:9:judge \"J1\" tries to send a score",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:7:9:judge \"J1\" tries to send a score",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:7:[Authorization] Deactivated judge cannot submit a score",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:7",
             "keyword": "When",
             "text": "judge \"J1\" tries to send a score",
             "line": 9,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:7:[Authorization] Deactivated judge cannot submit a score:10:the score should be rejected with message \"Judge is deactivated\"",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:7:10:the score should be rejected with message \"Judge is deactivated\"",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:7:[Authorization] Deactivated judge cannot submit a score",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:7",
             "keyword": "Then",
             "text": "the score should be rejected with message \"Judge is deactivated\"",
             "line": 10,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score:14:judge \"J1\" is active",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:13:14:judge \"J1\" is active",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:13",
             "keyword": "Given",
             "text": "judge \"J1\" is active",
             "line": 14,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score:15:judge \"J1\" tries to send a score",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:13:15:judge \"J1\" tries to send a score",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:13",
             "keyword": "When",
             "text": "judge \"J1\" tries to send a score",
             "line": 15,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score:16:the score should be accepted",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:13:16:the score should be accepted",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:13:[Authorization] Active judge can submit a score",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:13",
             "keyword": "Then",
             "text": "the score should be accepted",
             "line": 16,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge:20:judge \"J1\" is deactivated",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:19:20:judge \"J1\" is deactivated",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:19",
             "keyword": "Given",
             "text": "judge \"J1\" is deactivated",
             "line": 20,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge:21:I activate judge \"J1\"",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:19:21:I activate judge \"J1\"",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:19",
             "keyword": "When",
             "text": "I activate judge \"J1\"",
             "line": 21,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge:22:judge \"J1\" should be active",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:19:22:judge \"J1\" should be active",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:19:[Admin] Referee activates a judge",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:19",
             "keyword": "Then",
             "text": "judge \"J1\" should be active",
             "line": 22,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state:26:judge \"J1\" is active",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:25:26:judge \"J1\" is active",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:25",
             "keyword": "Given",
             "text": "judge \"J1\" is active",
             "line": 26,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state:27:I activate judge \"J1\"",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:25:27:I activate judge \"J1\"",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:25",
             "keyword": "When",
             "text": "I activate judge \"J1\"",
             "line": 27,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state:28:judge \"J1\" should be active",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:25:28:judge \"J1\" should be active",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:25:[Admin] Activating an already active judge does not change state",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:25",
             "keyword": "Then",
             "text": "judge \"J1\" should be active",
             "line": 28,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state:32:judge \"J1\" is deactivated",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:31:32:judge \"J1\" is deactivated",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:31",
             "keyword": "Given",
             "text": "judge \"J1\" is deactivated",
             "line": 32,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state:33:I deactivate judge \"J1\"",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:31:33:I deactivate judge \"J1\"",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:31",
             "keyword": "When",
             "text": "I deactivate judge \"J1\"",
             "line": 33,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state:34:judge \"J1\" should be deactivated",
+            "id": "features/capabilities/judges/judge_management.feature:features/capabilities/judges/judge_management.feature:31:34:judge \"J1\" should be deactivated",
             "featureFile": "features/capabilities/judges/judge_management.feature",
-            "scenarioId": "features/capabilities/judges/judge_management.feature:31:[Admin] Deactivating an already deactivated judge does not change state",
+            "scenarioId": "features/capabilities/judges/judge_management.feature:31",
             "keyword": "Then",
             "text": "judge \"J1\" should be deactivated",
             "line": 34,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:8:I am signed in as a judge",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:8:I am signed in as a judge",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "keyword": "Given",
             "text": "I am signed in as a judge",
             "line": 8,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:9:I am scoring the current athlete",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:9:I am scoring the current athlete",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "keyword": "And",
             "text": "I am scoring the current athlete",
             "line": 9,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:10:I start the accuracy step",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:10:I start the accuracy step",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "keyword": "When",
             "text": "I start the accuracy step",
             "line": 10,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:11:the accuracy score should be 4.0",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:11:the accuracy score should be 4.0",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "keyword": "Then",
             "text": "the accuracy score should be 4.0",
             "line": 11,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:12:I tap \"-0.3\" 3 times",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:12:I tap \"-0.3\" 3 times",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "keyword": "When",
             "text": "I tap \"-0.3\" 3 times",
             "line": 12,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:13:the accuracy score should be 3.1",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:13:the accuracy score should be 3.1",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "keyword": "Then",
             "text": "the accuracy score should be 3.1",
             "line": 13,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:14:I tap \"+0.1\" once",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:14:I tap \"+0.1\" once",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "keyword": "When",
             "text": "I tap \"+0.1\" once",
             "line": 14,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:15:the accuracy score should be 3.2",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:15:the accuracy score should be 3.2",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "keyword": "Then",
             "text": "the accuracy score should be 3.2",
             "line": 15,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections:16:the accuracy score should be between 0.0 and 4.0",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:7:16:the accuracy score should be between 0.0 and 4.0",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7:Accuracy starts at 4.0 and applies deductions and corrections",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:7",
             "keyword": "And",
             "text": "the accuracy score should be between 0.0 and 4.0",
             "line": 16,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each:20:I am signed in as a judge",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:20:I am signed in as a judge",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19",
             "keyword": "Given",
             "text": "I am signed in as a judge",
             "line": 20,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each:21:I am on the presentation step",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:21:I am on the presentation step",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19",
             "keyword": "And",
             "text": "I am on the presentation step",
             "line": 21,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each:22:I set \"Speed & Power\" to 1.9",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:22:I set \"Speed & Power\" to 1.9",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19",
             "keyword": "When",
             "text": "I set \"Speed & Power\" to 1.9",
             "line": 22,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each:23:I set \"Rhythm & Tempo\" to 1.8",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:23:I set \"Rhythm & Tempo\" to 1.8",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19",
             "keyword": "And",
             "text": "I set \"Rhythm & Tempo\" to 1.8",
             "line": 23,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each:24:I set \"Energy Expression\" to 2.0",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:24:I set \"Energy Expression\" to 2.0",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19",
             "keyword": "And",
             "text": "I set \"Energy Expression\" to 2.0",
             "line": 24,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each:25:the presentation total should be 5.7",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:25:the presentation total should be 5.7",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19",
             "keyword": "Then",
             "text": "the presentation total should be 5.7",
             "line": 25,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each:26:the presentation score should be between 0.0 and 6.0",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:19:26:the presentation score should be between 0.0 and 6.0",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19:Presentation is entered as three sub-scores on 2.0 each",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:19",
             "keyword": "And",
             "text": "the presentation score should be between 0.0 and 6.0",
             "line": 26,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:29:Send prevents accidental double submit:30:I am signed in as a judge",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:29:30:I am signed in as a judge",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:29:Send prevents accidental double submit",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:29",
             "keyword": "Given",
             "text": "I am signed in as a judge",
             "line": 30,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:29:Send prevents accidental double submit:31:I have a complete score ready to send",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:29:31:I have a complete score ready to send",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:29:Send prevents accidental double submit",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:29",
             "keyword": "And",
             "text": "I have a complete score ready to send",
             "line": 31,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:29:Send prevents accidental double submit:32:I tap \"Send\" twice quickly",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:29:32:I tap \"Send\" twice quickly",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:29:Send prevents accidental double submit",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:29",
             "keyword": "When",
             "text": "I tap \"Send\" twice quickly",
             "line": 32,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:29:Send prevents accidental double submit:33:the score should be sent only once",
+            "id": "features/capabilities/judge_input/judge_scoring_flow.feature:features/capabilities/judge_input/judge_scoring_flow.feature:29:33:the score should be sent only once",
             "featureFile": "features/capabilities/judge_input/judge_scoring_flow.feature",
-            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:29:Send prevents accidental double submit",
+            "scenarioId": "features/capabilities/judge_input/judge_scoring_flow.feature:29",
             "keyword": "Then",
             "text": "the score should be sent only once",
             "line": 33,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:7:Public page is accessible without authentication:8:I am on the public results page",
+            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:7:8:I am on the public results page",
             "featureFile": "features/capabilities/public_display/public_results.feature",
-            "scenarioId": "features/capabilities/public_display/public_results.feature:7:Public page is accessible without authentication",
+            "scenarioId": "features/capabilities/public_display/public_results.feature:7",
             "keyword": "Given",
             "text": "I am on the public results page",
             "line": 8,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:7:Public page is accessible without authentication:9:I should see the current category",
+            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:7:9:I should see the current category",
             "featureFile": "features/capabilities/public_display/public_results.feature",
-            "scenarioId": "features/capabilities/public_display/public_results.feature:7:Public page is accessible without authentication",
+            "scenarioId": "features/capabilities/public_display/public_results.feature:7",
             "keyword": "Then",
             "text": "I should see the current category",
             "line": 9,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:7:Public page is accessible without authentication:10:I should see the ranking table",
+            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:7:10:I should see the ranking table",
             "featureFile": "features/capabilities/public_display/public_results.feature",
-            "scenarioId": "features/capabilities/public_display/public_results.feature:7:Public page is accessible without authentication",
+            "scenarioId": "features/capabilities/public_display/public_results.feature:7",
             "keyword": "And",
             "text": "I should see the ranking table",
             "line": 10,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:13:Public page does not allow score editing:14:I am on the public results page",
+            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:13:14:I am on the public results page",
             "featureFile": "features/capabilities/public_display/public_results.feature",
-            "scenarioId": "features/capabilities/public_display/public_results.feature:13:Public page does not allow score editing",
+            "scenarioId": "features/capabilities/public_display/public_results.feature:13",
             "keyword": "Given",
             "text": "I am on the public results page",
             "line": 14,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:13:Public page does not allow score editing:15:I should not see any editable score inputs",
+            "id": "features/capabilities/public_display/public_results.feature:features/capabilities/public_display/public_results.feature:13:15:I should not see any editable score inputs",
             "featureFile": "features/capabilities/public_display/public_results.feature",
-            "scenarioId": "features/capabilities/public_display/public_results.feature:13:Public page does not allow score editing",
+            "scenarioId": "features/capabilities/public_display/public_results.feature:13",
             "keyword": "Then",
             "text": "I should not see any editable score inputs",
             "line": 15,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:6:[Installability] Application is installable:7:I am on the home page",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:6:7:I am on the home page",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:6:[Installability] Application is installable",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:6",
             "keyword": "Given",
             "text": "I am on the home page",
             "line": 7,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:6:[Installability] Application is installable:8:I should see the manifest file linked",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:6:8:I should see the manifest file linked",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:6:[Installability] Application is installable",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:6",
             "keyword": "Then",
             "text": "I should see the manifest file linked",
             "line": 8,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:6:[Installability] Application is installable:9:I should see the service worker registration",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:6:9:I should see the service worker registration",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:6:[Installability] Application is installable",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:6",
             "keyword": "And",
             "text": "I should see the service worker registration",
             "line": 9,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:6:[Installability] Application is installable:10:the theme color should be \"#0d6efd\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:6:10:the theme color should be \"#0d6efd\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:6:[Installability] Application is installable",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:6",
             "keyword": "And",
             "text": "the theme color should be \"#0d6efd\"",
             "line": 10,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:12:[Offline] Service worker is available for offline mode:13:I am on the home page",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:12:13:I am on the home page",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:12:[Offline] Service worker is available for offline mode",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:12",
             "keyword": "Given",
             "text": "I am on the home page",
             "line": 13,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:12:[Offline] Service worker is available for offline mode:14:I go to \"/sw.js\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:12:14:I go to \"/sw.js\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:12:[Offline] Service worker is available for offline mode",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:12",
             "keyword": "When",
             "text": "I go to \"/sw.js\"",
             "line": 14,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:12:[Offline] Service worker is available for offline mode:15:the response should contain \"caches.open\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:12:15:the response should contain \"caches.open\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:12:[Offline] Service worker is available for offline mode",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:12",
             "keyword": "Then",
             "text": "the response should contain \"caches.open\"",
             "line": 15,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:17:[Haptics] Judges score buttons trigger vibration feedback:18:I am on the home page",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:17:18:I am on the home page",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:17:[Haptics] Judges score buttons trigger vibration feedback",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:17",
             "keyword": "Given",
             "text": "I am on the home page",
             "line": 18,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:17:[Haptics] Judges score buttons trigger vibration feedback:19:score buttons should trigger vibration feedback",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:17:19:score buttons should trigger vibration feedback",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:17:[Haptics] Judges score buttons trigger vibration feedback",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:17",
             "keyword": "Then",
             "text": "score buttons should trigger vibration feedback",
             "line": 19,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit:23:I am on the home page",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:23:I am on the home page",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:22",
             "keyword": "Given",
             "text": "I am on the home page",
             "line": 23,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit:24:I have already loaded the app once",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:24:I have already loaded the app once",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:22",
             "keyword": "And",
             "text": "I have already loaded the app once",
             "line": 24,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit:25:the network is offline",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:25:the network is offline",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:22",
             "keyword": "And",
             "text": "the network is offline",
             "line": 25,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit:26:I refresh the page",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:26:I refresh the page",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:22",
             "keyword": "When",
             "text": "I refresh the page",
             "line": 26,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit:27:the score display should show \"10.0\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:22:27:the score display should show \"10.0\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:22:[Offline] Home page loads from cache when offline after first visit",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:22",
             "keyword": "Then",
             "text": "the score display should show \"10.0\"",
             "line": 27,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline:31:I have already loaded the app once",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:31:I have already loaded the app once",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:30",
             "keyword": "Given",
             "text": "I have already loaded the app once",
             "line": 31,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline:32:the network is offline",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:32:the network is offline",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:30",
             "keyword": "And",
             "text": "the network is offline",
             "line": 32,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline:33:I go to \"/manifest.json\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:33:I go to \"/manifest.json\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:30",
             "keyword": "When",
             "text": "I go to \"/manifest.json\"",
             "line": 33,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline:34:the response should contain \"Poomsae Referee\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:34:the response should contain \"Poomsae Referee\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:30",
             "keyword": "Then",
             "text": "the response should contain \"Poomsae Referee\"",
             "line": 34,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline:35:I go to \"/icons/icon.svg\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:35:I go to \"/icons/icon.svg\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:30",
             "keyword": "When",
             "text": "I go to \"/icons/icon.svg\"",
             "line": 35,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline:36:the response should contain \"<svg\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:30:36:the response should contain \"<svg\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:30:[Offline] Core assets are available offline",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:30",
             "keyword": "Then",
             "text": "the response should contain \"<svg\"",
             "line": 36,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:Scoring updates the score display:40:I am on the home page",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:40:I am on the home page",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:39:Scoring updates the score display",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:39",
             "keyword": "Given",
             "text": "I am on the home page",
             "line": 40,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:Scoring updates the score display:41:the score display should show \"10.0\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:41:the score display should show \"10.0\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:39:Scoring updates the score display",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:39",
             "keyword": "Then",
             "text": "the score display should show \"10.0\"",
             "line": 41,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:Scoring updates the score display:42:I click \"Faute Mineure (-0.1)\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:42:I click \"Faute Mineure (-0.1)\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:39:Scoring updates the score display",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:39",
             "keyword": "When",
             "text": "I click \"Faute Mineure (-0.1)\"",
             "line": 42,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:Scoring updates the score display:43:the score display should show \"9.9\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:43:the score display should show \"9.9\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:39:Scoring updates the score display",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:39",
             "keyword": "Then",
             "text": "the score display should show \"9.9\"",
             "line": 43,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:Scoring updates the score display:44:I click \"Réinitialiser\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:44:I click \"Réinitialiser\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:39:Scoring updates the score display",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:39",
             "keyword": "When",
             "text": "I click \"Réinitialiser\"",
             "line": 44,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:Scoring updates the score display:45:the score display should show \"10.0\"",
+            "id": "features/capabilities/pwa/pwa.feature:features/capabilities/pwa/pwa.feature:39:45:the score display should show \"10.0\"",
             "featureFile": "features/capabilities/pwa/pwa.feature",
-            "scenarioId": "features/capabilities/pwa/pwa.feature:39:Scoring updates the score display",
+            "scenarioId": "features/capabilities/pwa/pwa.feature:39",
             "keyword": "Then",
             "text": "the score display should show \"10.0\"",
             "line": 45,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed:8:the system is reset for realtime tests",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:8:the system is reset for realtime tests",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7",
             "keyword": "Given",
             "text": "the system is reset for realtime tests",
             "line": 8,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed:9:judge \"J1\" is active and signed in",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:9:judge \"J1\" is active and signed in",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7",
             "keyword": "And",
             "text": "judge \"J1\" is active and signed in",
             "line": 9,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed:10:the admin is listening to live events",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:10:the admin is listening to live events",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7",
             "keyword": "And",
             "text": "the admin is listening to live events",
             "line": 10,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed:11:judge \"J1\" submits a score \"9.9\"",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:11:judge \"J1\" submits a score \"9.9\"",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7",
             "keyword": "When",
             "text": "judge \"J1\" submits a score \"9.9\"",
             "line": 11,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed:12:the admin should receive a \"score_submitted\" event for judge \"J1\"",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:7:12:the admin should receive a \"score_submitted\" event for judge \"J1\"",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7:[Realtime] Judge submission appears on admin feed",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:7",
             "keyword": "Then",
             "text": "the admin should receive a \"score_submitted\" event for judge \"J1\"",
             "line": 12,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:16:the system is reset for realtime tests",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:16:the system is reset for realtime tests",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15",
             "keyword": "Given",
             "text": "the system is reset for realtime tests",
             "line": 16,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:17:judge \"J1\" is active and signed in",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:17:judge \"J1\" is active and signed in",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15",
             "keyword": "And",
             "text": "judge \"J1\" is active and signed in",
             "line": 17,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:18:the admin is listening to live events",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:18:the admin is listening to live events",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15",
             "keyword": "And",
             "text": "the admin is listening to live events",
             "line": 18,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:19:the admin deactivates judge \"J1\"",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:19:the admin deactivates judge \"J1\"",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15",
             "keyword": "When",
             "text": "the admin deactivates judge \"J1\"",
             "line": 19,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:20:judge \"J1\" submits a score \"9.9\"",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:20:judge \"J1\" submits a score \"9.9\"",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15",
             "keyword": "And",
             "text": "judge \"J1\" submits a score \"9.9\"",
             "line": 20,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:21:the submission should be rejected",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:21:the submission should be rejected",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15",
             "keyword": "Then",
             "text": "the submission should be rejected",
             "line": 21,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event:22:the admin should not receive any \"score_submitted\" event for judge \"J1\"",
+            "id": "features/capabilities/realtime/realtime_judges_admin.feature:features/capabilities/realtime/realtime_judges_admin.feature:15:22:the admin should not receive any \"score_submitted\" event for judge \"J1\"",
             "featureFile": "features/capabilities/realtime/realtime_judges_admin.feature",
-            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15:[Realtime] Deactivated judge cannot submit and admin receives no score event",
+            "scenarioId": "features/capabilities/realtime/realtime_judges_admin.feature:15",
             "keyword": "And",
             "text": "the admin should not receive any \"score_submitted\" event for judge \"J1\"",
             "line": 22,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score:7:a competition exists with a 5-judge jury",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:6:7:a competition exists with a 5-judge jury",
             "featureFile": "features/capabilities/scoreboard/scoreboard_table.feature",
-            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score",
+            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:6",
             "keyword": "Given",
             "text": "a competition exists with a 5-judge jury",
             "line": 7,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score:8:athlete \"Kim Minji\" is the current athlete",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:6:8:athlete \"Kim Minji\" is the current athlete",
             "featureFile": "features/capabilities/scoreboard/scoreboard_table.feature",
-            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score",
+            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:6",
             "keyword": "And",
             "text": "athlete \"Kim Minji\" is the current athlete",
             "line": 8,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score:9:the PC receives judge totals:",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:6:9:the PC receives judge totals:",
             "featureFile": "features/capabilities/scoreboard/scoreboard_table.feature",
-            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score",
+            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:6",
             "keyword": "When",
             "text": "the PC receives judge totals:",
             "line": 9,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score:16:the scoreboard should show final score 9.8 for \"Kim Minji\"",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:6:16:the scoreboard should show final score 9.8 for \"Kim Minji\"",
             "featureFile": "features/capabilities/scoreboard/scoreboard_table.feature",
-            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:6:Scoreboard shows an athlete row with judge totals and final score",
+            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:6",
             "keyword": "Then",
             "text": "the scoreboard should show final score 9.8 for \"Kim Minji\"",
             "line": 16,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives:19:a competition exists with a 5-judge jury",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:19:a competition exists with a 5-judge jury",
             "featureFile": "features/capabilities/scoreboard/scoreboard_table.feature",
-            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives",
+            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18",
             "keyword": "Given",
             "text": "a competition exists with a 5-judge jury",
             "line": 19,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives:20:athlete \"Kim Minji\" is the current athlete",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:20:athlete \"Kim Minji\" is the current athlete",
             "featureFile": "features/capabilities/scoreboard/scoreboard_table.feature",
-            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives",
+            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18",
             "keyword": "And",
             "text": "athlete \"Kim Minji\" is the current athlete",
             "line": 20,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives:21:the PC receives judge total 9.9 from \"J1\"",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:21:the PC receives judge total 9.9 from \"J1\"",
             "featureFile": "features/capabilities/scoreboard/scoreboard_table.feature",
-            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives",
+            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18",
             "keyword": "When",
             "text": "the PC receives judge total 9.9 from \"J1\"",
             "line": 21,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives:22:the PC receives judge total 9.8 from \"J2\"",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:22:the PC receives judge total 9.8 from \"J2\"",
             "featureFile": "features/capabilities/scoreboard/scoreboard_table.feature",
-            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives",
+            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18",
             "keyword": "And",
             "text": "the PC receives judge total 9.8 from \"J2\"",
             "line": 22,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives:23:the scoreboard should show \"waiting for scores\"",
+            "id": "features/capabilities/scoreboard/scoreboard_table.feature:features/capabilities/scoreboard/scoreboard_table.feature:18:23:the scoreboard should show \"waiting for scores\"",
             "featureFile": "features/capabilities/scoreboard/scoreboard_table.feature",
-            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18:Final score is recalculated whenever a judge score arrives",
+            "scenarioId": "features/capabilities/scoreboard/scoreboard_table.feature:18",
             "keyword": "Then",
             "text": "the scoreboard should show \"waiting for scores\"",
             "line": 23,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction:7:a player starts with 10.0 points",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:7:a player starts with 10.0 points",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:6",
             "keyword": "Given",
             "text": "a player starts with 10.0 points",
             "line": 7,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction:8:the player commits a major mistake",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:8:the player commits a major mistake",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:6",
             "keyword": "When",
             "text": "the player commits a major mistake",
             "line": 8,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction:9:the score should be 9.7",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:6:9:the score should be 9.7",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:6:[Deductions] Major mistake deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:6",
             "keyword": "Then",
             "text": "the score should be 9.7",
             "line": 9,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction:12:a player starts with 10.0 points",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:12:a player starts with 10.0 points",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:11",
             "keyword": "Given",
             "text": "a player starts with 10.0 points",
             "line": 12,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction:13:the player commits a minor mistake",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:13:the player commits a minor mistake",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:11",
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 13,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction:14:the score should be 9.9",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:11:14:the score should be 9.9",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:11:[Deductions] Minor mistake deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:11",
             "keyword": "Then",
             "text": "the score should be 9.9",
             "line": 14,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:17:a player starts with 10.0 points",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:17:a player starts with 10.0 points",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16",
             "keyword": "Given",
             "text": "a player starts with 10.0 points",
             "line": 17,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:18:the player commits a minor mistake",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:18:the player commits a minor mistake",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16",
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 18,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:19:the player commits a minor mistake",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:19:the player commits a minor mistake",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16",
             "keyword": "And",
             "text": "the player commits a minor mistake",
             "line": 19,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:20:the player commits a major mistake",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:20:the player commits a major mistake",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16",
             "keyword": "And",
             "text": "the player commits a major mistake",
             "line": 20,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative:21:the score should be 9.5",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:16:21:the score should be 9.5",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16:[Deductions] Multiple deductions are cumulative",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:16",
             "keyword": "Then",
             "text": "the score should be 9.5",
             "line": 21,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction:24:a player starts with 0.2 points",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:24:a player starts with 0.2 points",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:23",
             "keyword": "Given",
             "text": "a player starts with 0.2 points",
             "line": 24,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction:25:the player commits a major mistake",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:25:the player commits a major mistake",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:23",
             "keyword": "When",
             "text": "the player commits a major mistake",
             "line": 25,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction:26:the score should be 0.0",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:23:26:the score should be 0.0",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:23:[Bounds] Score floors at zero on major deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:23",
             "keyword": "Then",
             "text": "the score should be 0.0",
             "line": 26,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction:29:a player starts with 0.0 points",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:29:a player starts with 0.0 points",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:28",
             "keyword": "Given",
             "text": "a player starts with 0.0 points",
             "line": 29,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction:30:the player commits a minor mistake",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:30:the player commits a minor mistake",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:28",
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 30,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction:31:the score should be 0.0",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:28:31:the score should be 0.0",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:28:[Bounds] Score floors at zero on minor deduction",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:28",
             "keyword": "Then",
             "text": "the score should be 0.0",
             "line": 31,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator:34:a player starts with 10,0 points",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:34:a player starts with 10,0 points",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:33",
             "keyword": "Given",
             "text": "a player starts with 10,0 points",
             "line": 34,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator:35:the player commits a minor mistake",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:35:the player commits a minor mistake",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:33",
             "keyword": "When",
             "text": "the player commits a minor mistake",
             "line": 35,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator:36:the score should be 9.9",
+            "id": "features/capabilities/scoring/poomsae_scoring.feature:features/capabilities/scoring/poomsae_scoring.feature:33:36:the score should be 9.9",
             "featureFile": "features/capabilities/scoring/poomsae_scoring.feature",
-            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:33:[Input] Start score accepts comma decimal separator",
+            "scenarioId": "features/capabilities/scoring/poomsae_scoring.feature:33",
             "keyword": "Then",
             "text": "the score should be 9.9",
             "line": 36,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury:7:the following judge totals:",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:6:7:the following judge totals:",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:6",
             "keyword": "Given",
             "text": "the following judge totals:",
             "line": 7,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury:14:I calculate the final score",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:6:14:I calculate the final score",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:6",
             "keyword": "When",
             "text": "I calculate the final score",
             "line": 14,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury:15:the final score should be 9.8",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:6:15:the final score should be 9.8",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:6:Final score discards the highest and lowest for a 5-judge jury",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:6",
             "keyword": "Then",
             "text": "the final score should be 9.8",
             "line": 15,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:17:Final score discards the highest and lowest for a 7-judge jury:18:the following judge totals:",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:17:18:the following judge totals:",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:17:Final score discards the highest and lowest for a 7-judge jury",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:17",
             "keyword": "Given",
             "text": "the following judge totals:",
             "line": 18,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:17:Final score discards the highest and lowest for a 7-judge jury:27:I calculate the final score",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:17:27:I calculate the final score",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:17:Final score discards the highest and lowest for a 7-judge jury",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:17",
             "keyword": "When",
             "text": "I calculate the final score",
             "line": 27,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:17:Final score discards the highest and lowest for a 7-judge jury:28:the final score should be 9.7",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:17:28:the final score should be 9.7",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:17:Final score discards the highest and lowest for a 7-judge jury",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:17",
             "keyword": "Then",
             "text": "the final score should be 9.7",
             "line": 28,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:30:Final round averages two performances:31:performance 1 final score is 9.8",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:30:31:performance 1 final score is 9.8",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:30:Final round averages two performances",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:30",
             "keyword": "Given",
             "text": "performance 1 final score is 9.8",
             "line": 31,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:30:Final round averages two performances:32:performance 2 final score is 9.6",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:30:32:performance 2 final score is 9.6",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:30:Final round averages two performances",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:30",
             "keyword": "And",
             "text": "performance 2 final score is 9.6",
             "line": 32,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:30:Final round averages two performances:33:I calculate the final round score",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:30:33:I calculate the final round score",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:30:Final round averages two performances",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:30",
             "keyword": "When",
             "text": "I calculate the final round score",
             "line": 33,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:30:Final round averages two performances:34:the final round score should be 9.7",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:30:34:the final round score should be 9.7",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:30:Final round averages two performances",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:30",
             "keyword": "Then",
             "text": "the final round score should be 9.7",
             "line": 34,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:36:Tie-break uses presentation score first, then the sum of all judges points:37:the following tied competitors:",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:36:37:the following tied competitors:",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:36:Tie-break uses presentation score first, then the sum of all judges points",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:36",
             "keyword": "Given",
             "text": "the following tied competitors:",
             "line": 37,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:36:Tie-break uses presentation score first, then the sum of all judges points:41:I apply tie-break rules",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:36:41:I apply tie-break rules",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:36:Tie-break uses presentation score first, then the sum of all judges points",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:36",
             "keyword": "When",
             "text": "I apply tie-break rules",
             "line": 41,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:36:Tie-break uses presentation score first, then the sum of all judges points:42:the winner should be Alice",
+            "id": "features/capabilities/scoring/score_calculation.feature:features/capabilities/scoring/score_calculation.feature:36:42:the winner should be Alice",
             "featureFile": "features/capabilities/scoring/score_calculation.feature",
-            "scenarioId": "features/capabilities/scoring/score_calculation.feature:36:Tie-break uses presentation score first, then the sum of all judges points",
+            "scenarioId": "features/capabilities/scoring/score_calculation.feature:36",
             "keyword": "Then",
             "text": "the winner should be Alice",
             "line": 42,
             "status": "passed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network:8:I am signed in as a judge",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:8:I am signed in as a judge",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:7",
             "keyword": "Given",
             "text": "I am signed in as a judge",
             "line": 8,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network:9:the network is offline",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:9:the network is offline",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:7",
             "keyword": "And",
             "text": "the network is offline",
             "line": 9,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network:10:I have a complete score ready to send",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:10:I have a complete score ready to send",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:7",
             "keyword": "And",
             "text": "I have a complete score ready to send",
             "line": 10,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network:11:I tap \"Send\"",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:11:I tap \"Send\"",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:7",
             "keyword": "When",
             "text": "I tap \"Send\"",
             "line": 11,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network:12:the score should be queued locally",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:12:the score should be queued locally",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:7",
             "keyword": "Then",
             "text": "the score should be queued locally",
             "line": 12,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network:13:I should see a badge \"to sync\"",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:7:13:I should see a badge \"to sync\"",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:7:[Queueing] Score is queued when sending without network",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:7",
             "keyword": "And",
             "text": "I should see a badge \"to sync\"",
             "line": 13,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available:17:I am signed in as a judge",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:17:I am signed in as a judge",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:16",
             "keyword": "Given",
             "text": "I am signed in as a judge",
             "line": 17,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available:18:the network is back online",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:18:the network is back online",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:16",
             "keyword": "And",
             "text": "the network is back online",
             "line": 18,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available:19:I have a complete score ready to send",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:19:I have a complete score ready to send",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:16",
             "keyword": "And",
             "text": "I have a complete score ready to send",
             "line": 19,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available:20:I tap \"Send\"",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:20:I tap \"Send\"",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:16",
             "keyword": "When",
             "text": "I tap \"Send\"",
             "line": 20,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available:21:the score should be sent to the PC",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:21:the score should be sent to the PC",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:16",
             "keyword": "Then",
             "text": "the score should be sent to the PC",
             "line": 21,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available:22:the score should not be queued locally",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:16:22:the score should not be queued locally",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:16:[Queueing] Score is sent immediately when network is available",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:16",
             "keyword": "And",
             "text": "the score should not be queued locally",
             "line": 22,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates:26:I am signed in as a judge",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:26:I am signed in as a judge",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:25",
             "keyword": "Given",
             "text": "I am signed in as a judge",
             "line": 26,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates:27:the network is offline",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:27:the network is offline",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:25",
             "keyword": "And",
             "text": "the network is offline",
             "line": 27,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates:28:I have a complete score ready to send",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:28:I have a complete score ready to send",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:25",
             "keyword": "And",
             "text": "I have a complete score ready to send",
             "line": 28,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates:29:I tap \"Send\" twice",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:29:I tap \"Send\" twice",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:25",
             "keyword": "When",
             "text": "I tap \"Send\" twice",
             "line": 29,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates:30:only 1 score should be queued locally",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:25:30:only 1 score should be queued locally",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:25:[Queueing] Double tap does not queue duplicates",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:25",
             "keyword": "Then",
             "text": "only 1 score should be queued locally",
             "line": 30,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:33:[Queueing] Queued scores persist after refresh:34:I have 2 queued scores",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:33:34:I have 2 queued scores",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:33:[Queueing] Queued scores persist after refresh",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:33",
             "keyword": "Given",
             "text": "I have 2 queued scores",
             "line": 34,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:33:[Queueing] Queued scores persist after refresh:35:I refresh the page",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:33:35:I refresh the page",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:33:[Queueing] Queued scores persist after refresh",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:33",
             "keyword": "When",
             "text": "I refresh the page",
             "line": 35,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:33:[Queueing] Queued scores persist after refresh:36:I should still have 2 queued scores",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:33:36:I should still have 2 queued scores",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:33:[Queueing] Queued scores persist after refresh",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:33",
             "keyword": "Then",
             "text": "I should still have 2 queued scores",
             "line": 36,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:39:[Sync] Queued scores are synced when the network comes back:40:I have 2 queued scores",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:39:40:I have 2 queued scores",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:39:[Sync] Queued scores are synced when the network comes back",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:39",
             "keyword": "Given",
             "text": "I have 2 queued scores",
             "line": 40,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:39:[Sync] Queued scores are synced when the network comes back:41:the network is back online",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:39:41:the network is back online",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:39:[Sync] Queued scores are synced when the network comes back",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:39",
             "keyword": "And",
             "text": "the network is back online",
             "line": 41,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:39:[Sync] Queued scores are synced when the network comes back:42:the app syncs",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:39:42:the app syncs",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:39:[Sync] Queued scores are synced when the network comes back",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:39",
             "keyword": "When",
             "text": "the app syncs",
             "line": 42,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:39:[Sync] Queued scores are synced when the network comes back:43:the queued scores should be sent to the PC",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:39:43:the queued scores should be sent to the PC",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:39:[Sync] Queued scores are synced when the network comes back",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:39",
             "keyword": "Then",
             "text": "the queued scores should be sent to the PC",
             "line": 43,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued:47:I have 2 queued scores",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:47:I have 2 queued scores",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:46",
             "keyword": "Given",
             "text": "I have 2 queued scores",
             "line": 47,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued:48:the network is back online",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:48:the network is back online",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:46",
             "keyword": "And",
             "text": "the network is back online",
             "line": 48,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued:49:1 queued score will fail to send",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:49:1 queued score will fail to send",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:46",
             "keyword": "And",
             "text": "1 queued score will fail to send",
             "line": 49,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued:50:the app syncs",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:50:the app syncs",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:46",
             "keyword": "When",
             "text": "the app syncs",
             "line": 50,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued:51:1 queued score should remain locally",
+            "id": "features/capabilities/sync/offline_queue.feature:features/capabilities/sync/offline_queue.feature:46:51:1 queued score should remain locally",
             "featureFile": "features/capabilities/sync/offline_queue.feature",
-            "scenarioId": "features/capabilities/sync/offline_queue.feature:46:[Sync] Partial sync keeps failed items queued",
+            "scenarioId": "features/capabilities/sync/offline_queue.feature:46",
             "keyword": "Then",
             "text": "1 queued score should remain locally",
             "line": 51,
@@ -2368,6 +2368,6 @@
         }
     },
     "lastError": null,
-    "finishedAt": "2026-03-17T10:50:05+00:00",
+    "finishedAt": "2026-03-17T11:13:43+00:00",
     "result": "passed"
 }

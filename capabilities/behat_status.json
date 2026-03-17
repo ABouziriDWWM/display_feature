@@ -1,98 +1,98 @@
 {
-    "runId": "72f11cd83055ec9f",
+    "runId": "d1b9b0662f9ddb05",
     "state": "finished",
     "suite": "scoring",
-    "startedAt": "2026-03-17T10:02:13+00:00",
-    "updatedAt": "2026-03-17T10:02:14+00:00",
+    "startedAt": "2026-03-17T10:34:27+00:00",
+    "updatedAt": "2026-03-17T10:34:32+00:00",
     "scenarios": [
         {
-            "id": "features/capabilities/auth/pin_access.feature:7:[Sign in] Judge signs in with a valid PIN",
+            "id": "features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
             },
             "title": "[Sign in] Judge signs in with a valid PIN",
-            "line": 7,
+            "line": 6,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:13:[Sign in] Judge cannot sign in with an inactive PIN",
+            "id": "features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
             },
             "title": "[Sign in] Judge cannot sign in with an inactive PIN",
-            "line": 13,
+            "line": 12,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:19:[Sign in] Judge cannot sign in with a non-numeric PIN",
+            "id": "features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
             },
             "title": "[Sign in] Judge cannot sign in with a non-numeric PIN",
-            "line": 19,
+            "line": 18,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:25:[Sign in] Judge cannot sign in with a PIN of the wrong length",
+            "id": "features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
             },
             "title": "[Sign in] Judge cannot sign in with a PIN of the wrong length",
-            "line": 25,
+            "line": 24,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:31:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
+            "id": "features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
             },
             "title": "[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
-            "line": 31,
+            "line": 30,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:37:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "id": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
             },
             "title": "[Rate limiting] A successful sign-in resets the invalid attempt counter",
-            "line": 37,
+            "line": 36,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:44:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "id": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
             },
             "title": "[Device binding] The same PIN cannot be used on two devices at the same time",
-            "line": 44,
+            "line": 43,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:51:[Device binding] The same device can sign in again with the same PIN",
+            "id": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
             },
             "title": "[Device binding] The same device can sign in again with the same PIN",
-            "line": 51,
+            "line": 50,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:58:[Sessions] A referee can revoke a judge session",
+            "id": "features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session",
             "feature": {
                 "title": "PIN access",
                 "file": "features/capabilities/auth/pin_access.feature"
             },
             "title": "[Sessions] A referee can revoke a judge session",
-            "line": 58,
+            "line": 57,
             "status": "not_executed"
         },
         {
@@ -103,7 +103,7 @@
             },
             "title": "Create a competition with basic information",
             "line": 6,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode",
@@ -113,7 +113,7 @@
             },
             "title": "Configure the jury size in official mode",
             "line": 13,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information",
@@ -123,7 +123,7 @@
             },
             "title": "Add athletes with club and group information",
             "line": 18,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/i18n/language_toggle.feature:7:[Defaults] Default language is French",
@@ -528,273 +528,273 @@
     ],
     "steps": [
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:7:[Sign in] Judge signs in with a valid PIN:8:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN:7:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:7:[Sign in] Judge signs in with a valid PIN",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN",
             "keyword": "Given",
             "text": "a judge PIN \"1234\" is active",
+            "line": 7,
+            "status": "not_executed"
+        },
+        {
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN:8:I sign in as a judge with PIN \"1234\"",
+            "featureFile": "features/capabilities/auth/pin_access.feature",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN",
+            "keyword": "When",
+            "text": "I sign in as a judge with PIN \"1234\"",
             "line": 8,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:7:[Sign in] Judge signs in with a valid PIN:9:I sign in as a judge with PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN:9:I should be signed in as a judge",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:7:[Sign in] Judge signs in with a valid PIN",
-            "keyword": "When",
-            "text": "I sign in as a judge with PIN \"1234\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:6:[Sign in] Judge signs in with a valid PIN",
+            "keyword": "Then",
+            "text": "I should be signed in as a judge",
             "line": 9,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:7:[Sign in] Judge signs in with a valid PIN:10:I should be signed in as a judge",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN:13:a judge PIN \"1234\" is inactive",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:7:[Sign in] Judge signs in with a valid PIN",
-            "keyword": "Then",
-            "text": "I should be signed in as a judge",
-            "line": 10,
+            "scenarioId": "features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN",
+            "keyword": "Given",
+            "text": "a judge PIN \"1234\" is inactive",
+            "line": 13,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:13:[Sign in] Judge cannot sign in with an inactive PIN:14:a judge PIN \"1234\" is inactive",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN:14:I sign in as a judge with PIN \"1234\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:13:[Sign in] Judge cannot sign in with an inactive PIN",
-            "keyword": "Given",
-            "text": "a judge PIN \"1234\" is inactive",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN",
+            "keyword": "When",
+            "text": "I sign in as a judge with PIN \"1234\"",
             "line": 14,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:13:[Sign in] Judge cannot sign in with an inactive PIN:15:I sign in as a judge with PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN:15:I should see an error \"Invalid PIN\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:13:[Sign in] Judge cannot sign in with an inactive PIN",
-            "keyword": "When",
-            "text": "I sign in as a judge with PIN \"1234\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:12:[Sign in] Judge cannot sign in with an inactive PIN",
+            "keyword": "Then",
+            "text": "I should see an error \"Invalid PIN\"",
             "line": 15,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:13:[Sign in] Judge cannot sign in with an inactive PIN:16:I should see an error \"Invalid PIN\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN:19:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:13:[Sign in] Judge cannot sign in with an inactive PIN",
-            "keyword": "Then",
-            "text": "I should see an error \"Invalid PIN\"",
-            "line": 16,
+            "scenarioId": "features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN",
+            "keyword": "Given",
+            "text": "a judge PIN \"1234\" is active",
+            "line": 19,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:19:[Sign in] Judge cannot sign in with a non-numeric PIN:20:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN:20:I sign in as a judge with PIN \"12ab\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:19:[Sign in] Judge cannot sign in with a non-numeric PIN",
-            "keyword": "Given",
-            "text": "a judge PIN \"1234\" is active",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN",
+            "keyword": "When",
+            "text": "I sign in as a judge with PIN \"12ab\"",
             "line": 20,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:19:[Sign in] Judge cannot sign in with a non-numeric PIN:21:I sign in as a judge with PIN \"12ab\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN:21:I should see an error \"Invalid PIN format\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:19:[Sign in] Judge cannot sign in with a non-numeric PIN",
-            "keyword": "When",
-            "text": "I sign in as a judge with PIN \"12ab\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:18:[Sign in] Judge cannot sign in with a non-numeric PIN",
+            "keyword": "Then",
+            "text": "I should see an error \"Invalid PIN format\"",
             "line": 21,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:19:[Sign in] Judge cannot sign in with a non-numeric PIN:22:I should see an error \"Invalid PIN format\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length:25:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:19:[Sign in] Judge cannot sign in with a non-numeric PIN",
-            "keyword": "Then",
-            "text": "I should see an error \"Invalid PIN format\"",
-            "line": 22,
+            "scenarioId": "features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length",
+            "keyword": "Given",
+            "text": "a judge PIN \"1234\" is active",
+            "line": 25,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:25:[Sign in] Judge cannot sign in with a PIN of the wrong length:26:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length:26:I sign in as a judge with PIN \"123\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:25:[Sign in] Judge cannot sign in with a PIN of the wrong length",
-            "keyword": "Given",
-            "text": "a judge PIN \"1234\" is active",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length",
+            "keyword": "When",
+            "text": "I sign in as a judge with PIN \"123\"",
             "line": 26,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:25:[Sign in] Judge cannot sign in with a PIN of the wrong length:27:I sign in as a judge with PIN \"123\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length:27:I should see an error \"Invalid PIN format\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:25:[Sign in] Judge cannot sign in with a PIN of the wrong length",
-            "keyword": "When",
-            "text": "I sign in as a judge with PIN \"123\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:24:[Sign in] Judge cannot sign in with a PIN of the wrong length",
+            "keyword": "Then",
+            "text": "I should see an error \"Invalid PIN format\"",
             "line": 27,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:25:[Sign in] Judge cannot sign in with a PIN of the wrong length:28:I should see an error \"Invalid PIN format\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN:31:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:25:[Sign in] Judge cannot sign in with a PIN of the wrong length",
-            "keyword": "Then",
-            "text": "I should see an error \"Invalid PIN format\"",
-            "line": 28,
+            "scenarioId": "features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
+            "keyword": "Given",
+            "text": "a judge PIN \"1234\" is active",
+            "line": 31,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:31:[Rate limiting] Too many invalid attempts temporarily blocks the PIN:32:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN:32:I enter an invalid PIN 5 times",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:31:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
-            "keyword": "Given",
-            "text": "a judge PIN \"1234\" is active",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
+            "keyword": "When",
+            "text": "I enter an invalid PIN 5 times",
             "line": 32,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:31:[Rate limiting] Too many invalid attempts temporarily blocks the PIN:33:I enter an invalid PIN 5 times",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN:33:the judge sign-in should be temporarily blocked",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:31:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
-            "keyword": "When",
-            "text": "I enter an invalid PIN 5 times",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:30:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
+            "keyword": "Then",
+            "text": "the judge sign-in should be temporarily blocked",
             "line": 33,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:31:[Rate limiting] Too many invalid attempts temporarily blocks the PIN:34:the judge sign-in should be temporarily blocked",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter:37:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:31:[Rate limiting] Too many invalid attempts temporarily blocks the PIN",
-            "keyword": "Then",
-            "text": "the judge sign-in should be temporarily blocked",
-            "line": 34,
+            "scenarioId": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "keyword": "Given",
+            "text": "a judge PIN \"1234\" is active",
+            "line": 37,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:37:[Rate limiting] A successful sign-in resets the invalid attempt counter:38:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter:38:I entered an invalid PIN 2 times",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:37:[Rate limiting] A successful sign-in resets the invalid attempt counter",
-            "keyword": "Given",
-            "text": "a judge PIN \"1234\" is active",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "keyword": "And",
+            "text": "I entered an invalid PIN 2 times",
             "line": 38,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:37:[Rate limiting] A successful sign-in resets the invalid attempt counter:39:I entered an invalid PIN 2 times",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter:39:I sign in as a judge with PIN \"1234\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:37:[Rate limiting] A successful sign-in resets the invalid attempt counter",
-            "keyword": "And",
-            "text": "I entered an invalid PIN 2 times",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "keyword": "When",
+            "text": "I sign in as a judge with PIN \"1234\"",
             "line": 39,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:37:[Rate limiting] A successful sign-in resets the invalid attempt counter:40:I sign in as a judge with PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter:40:the judge sign-in should not be temporarily blocked",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:37:[Rate limiting] A successful sign-in resets the invalid attempt counter",
-            "keyword": "When",
-            "text": "I sign in as a judge with PIN \"1234\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:36:[Rate limiting] A successful sign-in resets the invalid attempt counter",
+            "keyword": "Then",
+            "text": "the judge sign-in should not be temporarily blocked",
             "line": 40,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:37:[Rate limiting] A successful sign-in resets the invalid attempt counter:41:the judge sign-in should not be temporarily blocked",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time:44:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:37:[Rate limiting] A successful sign-in resets the invalid attempt counter",
-            "keyword": "Then",
-            "text": "the judge sign-in should not be temporarily blocked",
-            "line": 41,
+            "scenarioId": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "keyword": "Given",
+            "text": "a judge PIN \"1234\" is active",
+            "line": 44,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:44:[Device binding] The same PIN cannot be used on two devices at the same time:45:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time:45:the PIN \"1234\" is already bound to device \"device-a\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:44:[Device binding] The same PIN cannot be used on two devices at the same time",
-            "keyword": "Given",
-            "text": "a judge PIN \"1234\" is active",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "keyword": "And",
+            "text": "the PIN \"1234\" is already bound to device \"device-a\"",
             "line": 45,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:44:[Device binding] The same PIN cannot be used on two devices at the same time:46:the PIN \"1234\" is already bound to device \"device-a\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time:46:I sign in as a judge with PIN \"1234\" from device \"device-b\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:44:[Device binding] The same PIN cannot be used on two devices at the same time",
-            "keyword": "And",
-            "text": "the PIN \"1234\" is already bound to device \"device-a\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "keyword": "When",
+            "text": "I sign in as a judge with PIN \"1234\" from device \"device-b\"",
             "line": 46,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:44:[Device binding] The same PIN cannot be used on two devices at the same time:47:I sign in as a judge with PIN \"1234\" from device \"device-b\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time:47:I should see an error \"PIN already in use on another device\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:44:[Device binding] The same PIN cannot be used on two devices at the same time",
-            "keyword": "When",
-            "text": "I sign in as a judge with PIN \"1234\" from device \"device-b\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:43:[Device binding] The same PIN cannot be used on two devices at the same time",
+            "keyword": "Then",
+            "text": "I should see an error \"PIN already in use on another device\"",
             "line": 47,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:44:[Device binding] The same PIN cannot be used on two devices at the same time:48:I should see an error \"PIN already in use on another device\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN:51:a judge PIN \"1234\" is active",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:44:[Device binding] The same PIN cannot be used on two devices at the same time",
-            "keyword": "Then",
-            "text": "I should see an error \"PIN already in use on another device\"",
-            "line": 48,
+            "scenarioId": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
+            "keyword": "Given",
+            "text": "a judge PIN \"1234\" is active",
+            "line": 51,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:51:[Device binding] The same device can sign in again with the same PIN:52:a judge PIN \"1234\" is active",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN:52:the PIN \"1234\" is already bound to device \"device-a\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:51:[Device binding] The same device can sign in again with the same PIN",
-            "keyword": "Given",
-            "text": "a judge PIN \"1234\" is active",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
+            "keyword": "And",
+            "text": "the PIN \"1234\" is already bound to device \"device-a\"",
             "line": 52,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:51:[Device binding] The same device can sign in again with the same PIN:53:the PIN \"1234\" is already bound to device \"device-a\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN:53:I sign in as a judge with PIN \"1234\" from device \"device-a\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:51:[Device binding] The same device can sign in again with the same PIN",
-            "keyword": "And",
-            "text": "the PIN \"1234\" is already bound to device \"device-a\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
+            "keyword": "When",
+            "text": "I sign in as a judge with PIN \"1234\" from device \"device-a\"",
             "line": 53,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:51:[Device binding] The same device can sign in again with the same PIN:54:I sign in as a judge with PIN \"1234\" from device \"device-a\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN:54:I should be signed in as a judge",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:51:[Device binding] The same device can sign in again with the same PIN",
-            "keyword": "When",
-            "text": "I sign in as a judge with PIN \"1234\" from device \"device-a\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:50:[Device binding] The same device can sign in again with the same PIN",
+            "keyword": "Then",
+            "text": "I should be signed in as a judge",
             "line": 54,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:51:[Device binding] The same device can sign in again with the same PIN:55:I should be signed in as a judge",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session:58:a judge session exists for PIN \"1234\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:51:[Device binding] The same device can sign in again with the same PIN",
-            "keyword": "Then",
-            "text": "I should be signed in as a judge",
-            "line": 55,
+            "scenarioId": "features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session",
+            "keyword": "Given",
+            "text": "a judge session exists for PIN \"1234\"",
+            "line": 58,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:58:[Sessions] A referee can revoke a judge session:59:a judge session exists for PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session:59:I revoke the session for PIN \"1234\"",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:58:[Sessions] A referee can revoke a judge session",
-            "keyword": "Given",
-            "text": "a judge session exists for PIN \"1234\"",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session",
+            "keyword": "When",
+            "text": "I revoke the session for PIN \"1234\"",
             "line": 59,
             "status": "not_executed"
         },
         {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:58:[Sessions] A referee can revoke a judge session:60:I revoke the session for PIN \"1234\"",
+            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session:60:the judge session for PIN \"1234\" should be revoked",
             "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:58:[Sessions] A referee can revoke a judge session",
-            "keyword": "When",
-            "text": "I revoke the session for PIN \"1234\"",
-            "line": 60,
-            "status": "not_executed"
-        },
-        {
-            "id": "features/capabilities/auth/pin_access.feature:features/capabilities/auth/pin_access.feature:58:[Sessions] A referee can revoke a judge session:61:the judge session for PIN \"1234\" should be revoked",
-            "featureFile": "features/capabilities/auth/pin_access.feature",
-            "scenarioId": "features/capabilities/auth/pin_access.feature:58:[Sessions] A referee can revoke a judge session",
+            "scenarioId": "features/capabilities/auth/pin_access.feature:57:[Sessions] A referee can revoke a judge session",
             "keyword": "Then",
             "text": "the judge session for PIN \"1234\" should be revoked",
-            "line": 61,
+            "line": 60,
             "status": "not_executed"
         },
         {
@@ -804,7 +804,7 @@
             "keyword": "Given",
             "text": "I am signed in as a referee",
             "line": 7,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information:8:I create a competition with:",
@@ -813,7 +813,7 @@
             "keyword": "When",
             "text": "I create a competition with:",
             "line": 8,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:6:Create a competition with basic information:11:the competition should be created",
@@ -822,7 +822,7 @@
             "keyword": "Then",
             "text": "the competition should be created",
             "line": 11,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode:14:a competition exists",
@@ -831,7 +831,7 @@
             "keyword": "Given",
             "text": "a competition exists",
             "line": 14,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode:15:I set the jury size to 5 in official mode",
@@ -840,7 +840,7 @@
             "keyword": "When",
             "text": "I set the jury size to 5 in official mode",
             "line": 15,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:13:Configure the jury size in official mode:16:the jury size should be 5",
@@ -849,7 +849,7 @@
             "keyword": "Then",
             "text": "the jury size should be 5",
             "line": 16,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information:19:a competition exists",
@@ -858,7 +858,7 @@
             "keyword": "Given",
             "text": "a competition exists",
             "line": 19,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information:20:I add the following athletes:",
@@ -867,7 +867,7 @@
             "keyword": "When",
             "text": "I add the following athletes:",
             "line": 20,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/competition/competition_setup.feature:features/capabilities/competition/competition_setup.feature:18:Add athletes with club and group information:24:the athlete list should contain 2 athletes",
@@ -876,7 +876,7 @@
             "keyword": "Then",
             "text": "the athlete list should contain 2 athletes",
             "line": 24,
-            "status": "not_executed"
+            "status": "passed"
         },
         {
             "id": "features/capabilities/i18n/language_toggle.feature:features/capabilities/i18n/language_toggle.feature:7:[Defaults] Default language is French:8:I am on the home page",
@@ -2353,14 +2353,14 @@
     },
     "counts": {
         "scenarios": {
-            "passed": 0,
+            "passed": 3,
             "failed": 0,
             "skipped": 0,
             "pending": 0,
             "undefined": 0
         },
         "steps": {
-            "passed": 0,
+            "passed": 9,
             "failed": 0,
             "skipped": 0,
             "pending": 0,
@@ -2368,6 +2368,6 @@
         }
     },
     "lastError": null,
-    "finishedAt": "2026-03-17T10:02:14+00:00",
-    "result": "unknown"
+    "finishedAt": "2026-03-17T10:34:32+00:00",
+    "result": "passed"
 }

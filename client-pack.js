@@ -276,6 +276,7 @@
     const barFailedEl = document.getElementById("dashboardBarFailed");
     const barSkippedEl = document.getElementById("dashboardBarSkipped");
     const barOtherEl = document.getElementById("dashboardBarOther");
+    const barPassedPctEl = document.getElementById("dashboardBarPassedPct");
     const barLegendEl = document.getElementById("dashboardBarLegend");
     const overviewEl = document.getElementById("dashboardOverview");
 
@@ -315,6 +316,7 @@
     if (barFailedEl) barFailedEl.style.width = `${pct(failed)}%`;
     if (barSkippedEl) barSkippedEl.style.width = `${pct(skipped)}%`;
     if (barOtherEl) barOtherEl.style.width = `${pct(other)}%`;
+    if (barPassedPctEl) barPassedPctEl.textContent = `${Math.round(pct(passed))}% passed`;
 
     if (barLegendEl) {
       const parts = [`${passed} passed`, `${failed} failed`, `${skipped} skipped`, `${other} other`];

@@ -584,6 +584,24 @@
         float: left;
       }
 
+      .bar-scale {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        margin-top: 6px;
+        font-size: 12px;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .bar-scale .center {
+        justify-self: center;
+      }
+
+      .bar-scale .right {
+        justify-self: end;
+      }
+
       .seg.ok {
         background: color-mix(in oklab, var(--accent-2) 70%, transparent);
       }
@@ -820,6 +838,11 @@
                   <div id="dashboardBarFailed" class="seg bad"></div>
                   <div id="dashboardBarSkipped" class="seg warn"></div>
                   <div id="dashboardBarOther" class="seg other"></div>
+                </div>
+                <div class="bar-scale">
+                  <div>0%</div>
+                  <div id="dashboardBarPassedPct" class="center">passed en 0%</div>
+                  <div class="right">100%</div>
                 </div>
                 <div id="dashboardBarLegend" class="meta" style="margin-top: 8px"></div>
               </div>

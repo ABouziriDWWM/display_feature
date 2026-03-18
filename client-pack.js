@@ -1027,7 +1027,56 @@
     rerender();
   }
 
+  function setupAutoReloadOnEnter() {
+    const KEY = "client-pack:autoReloadAt";
+    const MIN_HIDDEN_MS = 30_000;
+    let hiddenAt = null;
+
+    const recentlyReloaded = () => {
+      try {
+        const value = Number(sessionStorage.getItem(KEY));
+        return Number.isFinite(value) && Date.now() - value < 5000;
+      } catch {
+        return false;
+      }
+    };
+
+    const markReload = () => {
+      try {
+        sessionStorage.setItem(KEY, String(Date.now()));
+      } catch {}
+    };
+
+    const triggerReload = () => {
+      if (recentlyReloaded()) return;
+      markReload();
+      window.location.reload();
+    };
+
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) {
+        triggerReload();
+        return;
+      }
+      try {
+        const navEntry = performance.getEntriesByType?.("navigation")?.[0];
+        if (navEntry?.type === "back_forward") triggerReload();
+      } catch {}
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") {
+        hiddenAt = Date.now();
+        return;
+      }
+      if (document.visibilityState !== "visible") return;
+      if (hiddenAt && Date.now() - hiddenAt >= MIN_HIDDEN_MS) triggerReload();
+      hiddenAt = null;
+    });
+  }
+
   window.addEventListener("error", (event) => setError(event.error || event.message));
   window.addEventListener("unhandledrejection", (event) => setError(event.reason));
+  setupAutoReloadOnEnter();
   main();
 })();

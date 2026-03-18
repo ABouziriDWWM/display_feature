@@ -6,33 +6,37 @@
     <title>Client Pack</title>
     <style>
       :root {
-        --dash: beige;
-        color-scheme: light dark;
-        --bg: #0b0f19;
-        --panel: #12182a;
-        --panel-2: #0f1526;
-        --text: #e8eefc;
-        --muted: #a7b3d1;
-        --border: rgba(255, 255, 255, 0.12);
-        --accent: #7aa2ff;
-        --accent-2: #60d394;
-        --warning: #ffcc66;
-        --shadow: rgba(0, 0, 0, 0.4);
+        --card-inner-bg: beige;
+        --capability-header-bg: cornsilk;
+        color-scheme: light;
+        --bg: #f6f7fb;
+        --panel: #ffffff;
+        --panel-2: #f2f4fb;
+        --text: #0e1a33;
+        --muted: #52617f;
+        --border: rgba(14, 26, 51, 0.14);
+        --accent: #275dff;
+        --accent-2: #0b7a46;
+        --warning: #b35c00;
+        --shadow: rgba(14, 26, 51, 0.14);
         --radius: 14px;
       }
 
-      @media (prefers-color-scheme: light) {
+      @media (prefers-color-scheme: dark) {
         :root {
-          --bg: #f6f7fb;
-          --panel: #ffffff;
-          --panel-2: #f2f4fb;
-          --text: #0e1a33;
-          --muted: #52617f;
-          --border: rgba(14, 26, 51, 0.14);
-          --accent: #275dff;
-          --accent-2: #0b7a46;
-          --warning: #b35c00;
-          --shadow: rgba(14, 26, 51, 0.14);
+          color-scheme: dark;
+          --card-inner-bg: color-mix(in oklab, var(--panel) 92%, var(--accent) 8%);
+          --capability-header-bg: color-mix(in oklab, var(--panel) 90%, var(--warning) 10%);
+          --bg: #0b0f19;
+          --panel: #12182a;
+          --panel-2: #0f1526;
+          --text: #e8eefc;
+          --muted: #a7b3d1;
+          --border: rgba(255, 255, 255, 0.12);
+          --accent: #7aa2ff;
+          --accent-2: #60d394;
+          --warning: #ffcc66;
+          --shadow: rgba(0, 0, 0, 0.4);
         }
       }
 
@@ -272,7 +276,7 @@
       }
 
       .capability-header {
-        background-color: cornsilk;
+        background-color: var(--capability-header-bg);
         padding: 14px 14px 10px;
         display: flex;
         align-items: baseline;
@@ -516,7 +520,7 @@
       }
 
       .card-inner {
-        background-color: var(--dash);
+        background-color: var(--card-inner-bg);
         padding: 14px;
       }
 

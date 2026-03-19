@@ -1,9 +1,9 @@
 {
-    "runId": "d36f5b5b8dd1d141",
+    "runId": "ff32c0bcf407529d",
     "state": "finished",
     "suite": "scoring",
-    "startedAt": "2026-03-17T11:13:29+00:00",
-    "updatedAt": "2026-03-17T11:13:43+00:00",
+    "startedAt": "2026-03-19T08:51:48+00:00",
+    "updatedAt": "2026-03-19T08:52:11+00:00",
     "scenarios": [
         {
             "id": "features/capabilities/auth/pin_access.feature:6",
@@ -2353,14 +2353,14 @@
     },
     "counts": {
         "scenarios": {
-            "passed": 29,
+            "passed": 19,
             "failed": 0,
             "skipped": 0,
             "pending": 0,
             "undefined": 0
         },
         "steps": {
-            "passed": 96,
+            "passed": 63,
             "failed": 0,
             "skipped": 0,
             "pending": 0,
@@ -2368,6 +2368,6 @@
         }
     },
     "lastError": null,
-    "finishedAt": "2026-03-17T11:13:43+00:00",
+    "finishedAt": "2026-03-19T08:52:11+00:00",
     "result": "passed"
 }

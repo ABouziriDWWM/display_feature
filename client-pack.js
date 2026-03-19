@@ -33,6 +33,24 @@
 
   const applyQuery = (value) => String(value ?? "").trim().toLowerCase();
 
+  const normalizeForKey = (value) => {
+    const s = String(value ?? "");
+    const normalized = typeof s.normalize === "function" ? s.normalize("NFKC") : s;
+    return normalized.trim().toLowerCase().replace(/\s+/g, " ");
+  };
+
+  const normalizePathForStatus = (value) => {
+    const raw = String(value ?? "");
+    const normalized = typeof raw.normalize === "function" ? raw.normalize("NFKC") : raw;
+    const withSlashes = normalized.replaceAll("\\", "/").trim().replace(/^\.\/+/, "");
+    const lower = withSlashes.toLowerCase();
+    const capsIdx = lower.lastIndexOf("capabilities/");
+    if (capsIdx >= 0) return lower.slice(capsIdx);
+    const featuresPrefix = "features/";
+    if (lower.startsWith(featuresPrefix)) return lower.slice(featuresPrefix.length);
+    return lower;
+  };
+
   const statusLabel = (status) => {
     const s = applyQuery(status);
     if (!s) return "unknown";
@@ -78,7 +96,13 @@
   };
 
   const statusKey = ({ featureTitle, scenarioTitle }) =>
-    `${applyQuery(featureTitle)}||${applyQuery(scenarioTitle)}`;
+    `${normalizeForKey(featureTitle)}||${normalizeForKey(scenarioTitle)}`;
+
+  const statusKeyByFileLine = ({ featureFile, line }) => {
+    const file = normalizePathForStatus(featureFile);
+    const ln = Number.isFinite(line) ? String(line) : "";
+    return `file:${file}::${ln}`;
+  };
 
   const highlightHtml = (text, query) => {
     const safe = escapeHtml(text);
@@ -157,7 +181,9 @@
       currentScenario = null;
     };
 
-    for (const rawLine of lines) {
+    for (let idx = 0; idx < lines.length; idx += 1) {
+      const lineNumber = idx + 1;
+      const rawLine = lines[idx];
       const line = rawLine.replace(/\s+$/g, "");
       const trimmed = line.trim();
 
@@ -187,6 +213,7 @@
         currentScenario = {
           keyword: scenarioMatch[1],
           name: scenarioMatch[2].trim(),
+          line: lineNumber,
           tags: pendingTags,
           steps: [],
         };
@@ -259,6 +286,11 @@
       const featureTitle = s?.feature?.title ?? "";
       const scenarioTitle = s?.title ?? "";
       map.set(statusKey({ featureTitle, scenarioTitle }), statusLabel(s?.status));
+      const featureFile = s?.feature?.file ?? s?.featureFile ?? "";
+      const line = s?.line;
+      if (featureFile && Number.isFinite(line)) {
+        map.set(statusKeyByFileLine({ featureFile, line }), statusLabel(s?.status));
+      }
     }
     return { data: statusData ?? null, map };
   }
@@ -452,35 +484,47 @@
     return files.sort((a, b) => a.filePath.localeCompare(b.filePath));
   }
 
-  async function publishCapabilitiesToRepo({ files }) {
-    const publishMetaEl = document.getElementById("dashboardUpdatedMeta");
-    const previousPublishMeta = publishMetaEl?.textContent ?? "";
-    if (publishMetaEl) publishMetaEl.textContent = "Déploiement: envoi…";
-
+  async function tryReadBehatStatusFromDirectoryHandle(handle) {
     try {
-      const publishKey = window.prompt("Clé de publication Netlify (déclenche un déploiement) :");
-      if (!publishKey) return;
+      let statusFile = null;
+      try {
+        const statusHandle = await handle.getFileHandle("behat_status.json");
+        statusFile = await statusHandle.getFile();
+      } catch {}
 
-      const res = await fetch("/.netlify/functions/publish-capabilities", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-          "x-publish-key": publishKey,
-        },
-        body: JSON.stringify({ files }),
-      });
-
-      if (!res.ok) {
-        const text = await res.text();
-        throw new Error(text || `HTTP ${res.status}`);
+      if (!statusFile) {
+        try {
+          const capsDir = await handle.getDirectoryHandle("capabilities");
+          const statusHandle = await capsDir.getFileHandle("behat_status.json");
+          statusFile = await statusHandle.getFile();
+        } catch {}
       }
 
-      const data = await res.json();
-      if (publishMetaEl) publishMetaEl.textContent = "Déploiement: déclenché";
-      window.alert(`Déploiement Netlify déclenché.\nCommit: ${data?.commitUrl ?? "OK"}`);
-    } catch (err) {
-      if (publishMetaEl) publishMetaEl.textContent = previousPublishMeta;
-      window.alert(`Impossible de déclencher le déploiement.\n${err instanceof Error ? err.message : String(err)}`);
+      if (!statusFile) return null;
+      const text = await statusFile.text();
+      const parsed = JSON.parse(text);
+      return parsed ?? null;
+    } catch {
+      return null;
+    }
+  }
+
+  async function tryReadBehatStatusFromFileList(fileList) {
+    try {
+      const items = [...fileList];
+      const statusFile =
+        items.find((f) =>
+          String(f.webkitRelativePath || "").replaceAll("\\", "/").toLowerCase().endsWith("/capabilities/behat_status.json")
+        ) ??
+        items.find((f) => String(f.webkitRelativePath || "").replaceAll("\\", "/").toLowerCase().endsWith("/behat_status.json")) ??
+        items.find((f) => String(f.name || "").toLowerCase() === "behat_status.json") ??
+        null;
+      if (!statusFile) return null;
+      const text = await statusFile.text();
+      const parsed = JSON.parse(text);
+      return parsed ?? null;
+    } catch {
+      return null;
     }
   }
 
@@ -490,23 +534,22 @@
     const ok = await ensureHandlePermission(handle);
     if (!ok) throw new Error("Permission refusée pour lire le dossier sélectionné.");
     await saveDirHandle(handle);
+    const statusData = await tryReadBehatStatusFromDirectoryHandle(handle);
     const featureFiles = await collectFeatureFilesFromHandle(handle);
     const features = [];
-    const publishFiles = [];
     for (const item of featureFiles) {
       const text = await item.file.text();
       features.push(parseFeatureText({ capability: item.capability, file: item.filePath, text }));
-      publishFiles.push({ path: item.filePath, content: text });
     }
     setSourceText?.("Source: dossier local (capabilities/)");
-    return { indexed: buildIndex(features), publishFiles };
+    return { indexed: buildIndex(features), statusData };
   }
 
   async function loadFeaturesFromDirectoryFileList(fileList, { setSourceText }) {
+    const statusData = await tryReadBehatStatusFromFileList(fileList);
     const files = [...fileList].filter((f) => String(f.name).toLowerCase().endsWith(".feature"));
     if (files.length === 0) throw new Error("No .feature file found in the selected directory.");
     const features = [];
-    const publishFiles = [];
     for (const file of files) {
       const relative = String(file.webkitRelativePath || file.name).replace(/^\/+/, "");
       const normalized = relative.replaceAll("\\", "/");
@@ -515,10 +558,9 @@
       const filePath = parts.length > 1 ? `capabilities/${normalized}` : `capabilities/${capability}/${parts[0] || file.name}`;
       const text = await file.text();
       features.push(parseFeatureText({ capability, file: filePath, text }));
-      publishFiles.push({ path: filePath, content: text });
     }
     setSourceText?.("Source: dossier local (capabilities/)");
-    return { indexed: buildIndex(features), publishFiles };
+    return { indexed: buildIndex(features), statusData };
   }
 
   async function loadFeaturesFromSavedHandle({ setSourceText }) {
@@ -578,10 +620,9 @@
     const decorated = filtered.map((f) => {
       const featureTitle = f.featureName || "";
       const decoratedScenarios = f.scenarios.map((s) => {
-        const raw =
-          statusMap.get(statusKey({ featureTitle, scenarioTitle: s.name || "" })) ??
-          statusMap.get(statusKey({ featureTitle, scenarioTitle: s.name || "" }).replace(/\s+/g, " ")) ??
-          null;
+        const titleKey = statusKey({ featureTitle, scenarioTitle: s.name || "" });
+        const fileLineKey = statusKeyByFileLine({ featureFile: f.file, line: s.line });
+        const raw = statusMap.get(titleKey) ?? statusMap.get(fileLineKey) ?? null;
         const normalized = statusLabel(raw ?? "unknown");
         if (normalized === "passed") totals.passed += 1;
         else if (normalized === "failed") totals.failed += 1;
@@ -682,7 +723,7 @@
                 const stepsText = (s.steps ?? []).join("\n").trimEnd();
                 const stepCount = (s.steps ?? []).filter((line) => line.trim().length > 0).length;
                 const scenarioId = `${featureId}-s${idx + 1}-${toSlug(s.name || String(idx + 1))}`;
-                const statusBadge = s._statusRaw
+                const statusBadge = statusContext?.data
                   ? `<span class="badge ${statusClass(s._status)}">${escapeHtml(s._status)}</span>`
                   : "";
                 return `
@@ -837,7 +878,7 @@
     };
 
     const statusData = await safeTryFetchJson(new URL(DEFAULT_STATUS_SOURCE, window.location.href).toString());
-    const statusContext = buildStatusContext(statusData);
+    const defaultStatusContext = buildStatusContext(statusData);
 
     if (pickDirEl) {
       pickDirEl.addEventListener("click", async () => {
@@ -846,7 +887,8 @@
             setLoading("Chargement depuis le dossier sélectionné…");
             const loaded = await loadFeaturesFromDirectoryPicker({ setSourceText });
             if (!loaded) throw new Error("Sélection de dossier indisponible dans ce navigateur.");
-            const { indexed, publishFiles } = loaded;
+            const { indexed, statusData: localStatusData } = loaded;
+            const statusContext = localStatusData ? buildStatusContext(localStatusData) : defaultStatusContext;
             startUi({
               indexed,
               searchEl,
@@ -856,9 +898,6 @@
               getSourceLabel: () => sourceLabel,
               statusContext,
             });
-            if (Array.isArray(publishFiles) && publishFiles.length > 0) {
-              await publishCapabilitiesToRepo({ files: publishFiles });
-            }
             return;
           }
           if (pickDirInputEl) {
@@ -879,7 +918,10 @@
         if (!pickDirInputEl.files || pickDirInputEl.files.length === 0) return;
         setLoading("Chargement depuis le dossier sélectionné…");
         try {
-          const { indexed, publishFiles } = await loadFeaturesFromDirectoryFileList(pickDirInputEl.files, { setSourceText });
+          const { indexed, statusData: localStatusData } = await loadFeaturesFromDirectoryFileList(pickDirInputEl.files, {
+            setSourceText,
+          });
+          const statusContext = localStatusData ? buildStatusContext(localStatusData) : defaultStatusContext;
           startUi({
             indexed,
             searchEl,
@@ -889,9 +931,6 @@
             getSourceLabel: () => sourceLabel,
             statusContext,
           });
-          if (Array.isArray(publishFiles) && publishFiles.length > 0) {
-            await publishCapabilitiesToRepo({ files: publishFiles });
-          }
         } catch (err) {
           setError(err);
         }
@@ -922,7 +961,7 @@
             expandAllEl,
             collapseAllEl,
             getSourceLabel: () => sourceLabel,
-            statusContext,
+            statusContext: defaultStatusContext,
           });
         } catch (err) {
           setError(err);
@@ -958,7 +997,7 @@
       expandAllEl,
       collapseAllEl,
       getSourceLabel: () => sourceLabel,
-      statusContext,
+      statusContext: defaultStatusContext,
     });
   }
 

@@ -7,6 +7,7 @@
     "capabilities/judges/judge_management.feature",
     "capabilities/public_display/public_results.feature",
     "capabilities/pwa/pwa.feature",
+    "capabilities/realtime/realtime_judges_admin.feature",
     "capabilities/scoreboard/scoreboard_table.feature",
     "capabilities/scoring/poomsae_scoring.feature",
     "capabilities/scoring/score_calculation.feature",

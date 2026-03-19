@@ -458,14 +458,23 @@
     await kvSet(SAVED_DIR_KEY, handle);
   }
 
-  async function ensureHandlePermission(handle) {
+  async function ensureHandlePermission(handle, { mode = "read", allowRequest = false, optimistic = false } = {}) {
     if (!handle) return false;
-    if (!("queryPermission" in handle) || !("requestPermission" in handle)) return true;
-    const opts = { mode: "read" };
-    const current = await handle.queryPermission(opts);
-    if (current === "granted") return true;
-    const requested = await handle.requestPermission(opts);
-    return requested === "granted";
+    if (!("queryPermission" in handle) || typeof handle.queryPermission !== "function") return true;
+    const opts = { mode };
+    try {
+      const current = await handle.queryPermission(opts);
+      if (current === "granted") return true;
+      if (current === "prompt" && optimistic) return true;
+      if (!allowRequest) return false;
+      if (!("requestPermission" in handle) || typeof handle.requestPermission !== "function") return false;
+      const ua = navigator.userActivation;
+      if (ua && !ua.isActive) return false;
+      const requested = await handle.requestPermission(opts);
+      return requested === "granted";
+    } catch {
+      return false;
+    }
   }
 
   async function collectFeatureFilesFromHandle(handle, baseParts = []) {
@@ -531,7 +540,7 @@
   async function loadFeaturesFromDirectoryPicker({ setSourceText }) {
     if (!("showDirectoryPicker" in window)) return null;
     const handle = await window.showDirectoryPicker({ id: "capabilities", mode: "read" });
-    const ok = await ensureHandlePermission(handle);
+    const ok = await ensureHandlePermission(handle, { optimistic: true });
     if (!ok) throw new Error("Permission refusée pour lire le dossier sélectionné.");
     await saveDirHandle(handle);
     const statusData = await tryReadBehatStatusFromDirectoryHandle(handle);
@@ -567,7 +576,7 @@
     if (!("indexedDB" in window)) return null;
     const handle = await getSavedDirHandle();
     if (!handle) return null;
-    const ok = await ensureHandlePermission(handle);
+    const ok = await ensureHandlePermission(handle, { allowRequest: true });
     if (!ok) return null;
     const featureFiles = await collectFeatureFilesFromHandle(handle);
     const features = [];

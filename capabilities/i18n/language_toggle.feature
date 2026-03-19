@@ -13,8 +13,8 @@ Feature: Language toggle
     Given I am on the home page
     When I switch the language to "en"
     Then the UI language should be "en"
-    And I should see "Current score"
-    And I should see a button "Reset"
+    And I should see "Install the app"
+    And I should see "Sign in"
 
   @javascript
   Scenario: [Persistence] Language choice is persisted after refresh
@@ -22,6 +22,14 @@ Feature: Language toggle
     When I switch the language to "en"
     And I refresh the page
     Then the UI language should be "en"
+
+  @javascript
+  Scenario: [Persistence] Language choice is applied on the login page
+    Given I am on the home page
+    When I switch the language to "en"
+    And I go to "/login.html"
+    Then the UI language should be "en"
+    And I should see "Choose a role"
 
   @javascript
   Scenario: [Fallback] Unsupported language falls back to French

@@ -14,19 +14,15 @@ Feature: Poomsae Referee PWA
     When I go to "/sw.js"
     Then the response should contain "caches.open"
 
-  Scenario: [Haptics] Judges score buttons trigger vibration feedback
-    Given I am on the home page
-    Then score buttons should trigger vibration feedback
-
-  @wip @javascript
+  @javascript
   Scenario: [Offline] Home page loads from cache when offline after first visit
     Given I am on the home page
     And I have already loaded the app once
     And the network is offline
     When I refresh the page
-    Then the score display should show "10.0"
+    Then I should see "Installer l’application"
 
-  @wip @javascript
+  @javascript
   Scenario: [Offline] Core assets are available offline
     Given I have already loaded the app once
     And the network is offline
@@ -34,12 +30,11 @@ Feature: Poomsae Referee PWA
     Then the response should contain "Poomsae Referee"
     When I go to "/icons/icon.svg"
     Then the response should contain "<svg"
+    When I go to "/login.html"
+    Then the response should contain "Connexion"
 
   @javascript
-  Scenario: Scoring updates the score display
+  Scenario: Login page is accessible from the home page
     Given I am on the home page
-    Then the score display should show "10.0"
-    When I click "Faute Mineure (-0.1)"
-    Then the score display should show "9.9"
-    When I click "Réinitialiser"
-    Then the score display should show "10.0"
+    When I follow "Se connecter"
+    Then I should see "Choisir un rôle"

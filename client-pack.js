@@ -16,6 +16,212 @@
 
   const escapeRegex = (value) => String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
+  const GHERKIN_KEYWORDS = {
+    feature: [
+      "Feature",
+      "Business Need",
+      "Ability",
+      "Fonctionnalité",
+      "Fonctionnalite",
+      "Fonctionnalit\u00E9",
+      "Caractéristique",
+      "Caracteristique",
+    ],
+    background: [
+      "Background",
+      "Contexte",
+    ],
+    rule: [
+      "Rule",
+      "Règle",
+      "Regle",
+    ],
+    scenario: [
+      "Scenario",
+      "Example",
+      "Scénario",
+    ],
+    scenarioOutline: [
+      "Scenario Outline",
+      "Scenario Template",
+      "Plan du Scénario",
+      "Plan du scénario",
+      "Plan du Scenario",
+      "Plan du scenario",
+      "Plan de Scénario",
+      "Plan de scénario",
+      "Plan de scenario",
+      "Schéma du Scénario",
+      "Schéma du scénario",
+    ],
+    examples: [
+      "Examples",
+      "Scenarios",
+      "Exemples",
+      "Exemple",
+      "Scénarios",
+      "Scenarios",
+    ],
+    given: [
+      "Given",
+      "Soit",
+      "Étant donné que",
+      "Étant donné qu'",
+      "Étant donné",
+      "Etant donné que",
+      "Etant donné qu'",
+      "Etant donné",
+      "Étant donnée que",
+      "Étant donnée qu'",
+      "Étant donnée",
+      "Etant donnée que",
+      "Etant donnée qu'",
+      "Etant donnée",
+      "Étant donnés que",
+      "Étant donnés qu'",
+      "Étant donnés",
+      "Etant donnés que",
+      "Etant donnés qu'",
+      "Etant donnés",
+      "Étant données que",
+      "Étant données qu'",
+      "Étant données",
+      "Etant données que",
+      "Etant données qu'",
+      "Etant données",
+    ],
+    when: [
+      "When",
+      "Quand",
+      "Lorsque",
+      "Lorsqu'",
+    ],
+    then: [
+      "Then",
+      "Alors",
+      "Donc",
+    ],
+    and: [
+      "And",
+      "Et",
+      "De plus",
+      "En outre",
+    ],
+    but: [
+      "But",
+      "Mais",
+      "Par contre",
+      "Cependant",
+      "Toutefois",
+      "Néanmoins",
+      "Neanmoins",
+    ],
+    star: ["*"],
+  };
+
+  const GHERKIN_STEP_KEYWORDS = [
+    ...GHERKIN_KEYWORDS.given,
+    ...GHERKIN_KEYWORDS.when,
+    ...GHERKIN_KEYWORDS.then,
+    ...GHERKIN_KEYWORDS.and,
+    ...GHERKIN_KEYWORDS.but,
+  ];
+
+  const normalizeGherkinKeyword = (value) => {
+    const s = String(value ?? "").trim();
+    if (!s) return "";
+    const lower = s.toLowerCase();
+    const has = (list) => list.some((kw) => kw.toLowerCase() === lower);
+    if (has(GHERKIN_KEYWORDS.feature)) return "Feature";
+    if (has(GHERKIN_KEYWORDS.background)) return "Background";
+    if (has(GHERKIN_KEYWORDS.rule)) return "Rule";
+    if (has(GHERKIN_KEYWORDS.scenarioOutline)) return "Scenario Outline";
+    if (has(GHERKIN_KEYWORDS.scenario)) return "Scenario";
+    if (has(GHERKIN_KEYWORDS.examples)) return "Examples";
+    if (has(GHERKIN_KEYWORDS.given)) return "Given";
+    if (has(GHERKIN_KEYWORDS.when)) return "When";
+    if (has(GHERKIN_KEYWORDS.then)) return "Then";
+    if (has(GHERKIN_KEYWORDS.and)) return "And";
+    if (has(GHERKIN_KEYWORDS.but)) return "But";
+    return s;
+  };
+
+  const buildGherkinStepKeywordPattern = () => {
+    const parts = [];
+    const add = (list) => {
+      for (const kw of list) {
+        if (!kw) continue;
+        if (kw === "*") {
+          parts.push(`\\*`);
+          continue;
+        }
+        const escaped = String(kw)
+          .split("")
+          .map((ch) => {
+            if (/[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžæœ]/i.test(ch)) {
+              const variants = [escapeRegex(ch)];
+              if (typeof ch.normalize === "function") {
+                const stripped = ch.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                if (stripped !== ch) variants.push(escapeRegex(stripped));
+              }
+              return `(?:${variants.join("|")})`;
+            }
+            return escapeRegex(ch);
+          })
+          .join("");
+        parts.push(escaped);
+      }
+    };
+    add(GHERKIN_KEYWORDS.given);
+    add(GHERKIN_KEYWORDS.when);
+    add(GHERKIN_KEYWORDS.then);
+    add(GHERKIN_KEYWORDS.and);
+    add(GHERKIN_KEYWORDS.but);
+    const dedup = Array.from(new Set(parts));
+    dedup.sort((a, b) => b.length - a.length);
+    return `^(${dedup.join("|")})\\b`;
+  };
+
+  const GHERKIN_STEP_KEYWORD_REGEX = new RegExp(buildGherkinStepKeywordPattern(), "i");
+
+  const buildGherkinHeaderPattern = (kind) => {
+    const list =
+      kind === "scenario"
+        ? [...GHERKIN_KEYWORDS.scenarioOutline, ...GHERKIN_KEYWORDS.scenario, ...GHERKIN_KEYWORDS.background]
+        : kind === "feature"
+        ? [...GHERKIN_KEYWORDS.feature]
+        : kind === "rule"
+        ? [...GHERKIN_KEYWORDS.rule]
+        : [...GHERKIN_KEYWORDS.examples];
+    const parts = list
+      .filter(Boolean)
+      .map((kw) => {
+        const escaped = String(kw)
+          .split("")
+          .map((ch) => {
+            if (/[a-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžæœ]/i.test(ch)) {
+              const variants = [escapeRegex(ch)];
+              if (typeof ch.normalize === "function") {
+                const stripped = ch.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                if (stripped !== ch) variants.push(escapeRegex(stripped));
+              }
+              return `(?:${variants.join("|")})`;
+            }
+            return escapeRegex(ch);
+          })
+          .join("");
+        return escaped;
+      });
+    const dedup = Array.from(new Set(parts));
+    dedup.sort((a, b) => b.length - a.length);
+    return `^(${dedup.join("|")}):\\s*(.*)$`;
+  };
+
+  const GHERKIN_FEATURE_REGEX = new RegExp(buildGherkinHeaderPattern("feature"), "i");
+  const GHERKIN_RULE_REGEX = new RegExp(buildGherkinHeaderPattern("rule"), "i");
+  const GHERKIN_SCENARIO_REGEX = new RegExp(buildGherkinHeaderPattern("scenario"), "i");
+  const GHERKIN_EXAMPLES_REGEX = new RegExp(buildGherkinHeaderPattern("examples"), "i");
+
   const toSlug = (value) =>
     String(value)
       .toLowerCase()
@@ -129,9 +335,30 @@
         .join("");
     };
 
-    const keywordMatch = /^(Given|When|Then|And|But|Soit|Quand|Alors|Et|Mais|\*)\b/i.exec(trimmed);
+    const keywordMatch = GHERKIN_STEP_KEYWORD_REGEX.exec(trimmed);
+    if (!keywordMatch && /^\*\s+/.test(trimmed)) {
+      const match = /^(\*)\s+(.*)$/.exec(trimmed);
+      if (match) {
+        const kw = match[1];
+        const rest = " " + match[2];
+        const leadingSpaces = line.slice(0, line.length - trimmed.length);
+        return `${escapeHtml(leadingSpaces)}<span class="gkw">${highlightHtml(kw, query)}</span>${quoteHighlight(rest)}`;
+      }
+    }
     if (keywordMatch) {
-      const kw = keywordMatch[0];
+      const kw = keywordMatch[1];
+      const rest = trimmed.slice(kw.length);
+      const leadingSpaces = line.slice(0, line.length - trimmed.length);
+      return `${escapeHtml(leadingSpaces)}<span class="gkw">${highlightHtml(kw, query)}</span>${quoteHighlight(rest)}`;
+    }
+
+    const headerMatch =
+      GHERKIN_FEATURE_REGEX.exec(trimmed) ||
+      GHERKIN_RULE_REGEX.exec(trimmed) ||
+      GHERKIN_SCENARIO_REGEX.exec(trimmed) ||
+      GHERKIN_EXAMPLES_REGEX.exec(trimmed);
+    if (headerMatch) {
+      const kw = headerMatch[1];
       const rest = trimmed.slice(kw.length);
       const leadingSpaces = line.slice(0, line.length - trimmed.length);
       return `${escapeHtml(leadingSpaces)}<span class="gkw">${highlightHtml(kw, query)}</span>${quoteHighlight(rest)}`;
@@ -171,6 +398,8 @@
     let scenarios = [];
     let currentScenario = null;
     let afterFeatureHeader = false;
+    let currentRule = null;
+    let afterRuleHeader = false;
 
     const flushScenario = () => {
       if (!currentScenario) return;
@@ -195,35 +424,78 @@
         continue;
       }
 
+      if (trimmed.startsWith("#")) {
+        continue;
+      }
+
       if (trimmed.startsWith("@")) {
         pendingTags = [...pendingTags, ...splitTags(trimmed)];
         continue;
       }
 
-      const featureMatch = /^Feature:\s*(.*)$/i.exec(trimmed);
+      const featureMatch = GHERKIN_FEATURE_REGEX.exec(trimmed);
       if (featureMatch) {
-        featureName = featureMatch[1].trim();
+        flushScenario();
+        featureName = featureMatch[2].trim();
         afterFeatureHeader = true;
+        afterRuleHeader = false;
+        currentRule = null;
         continue;
       }
 
-      const scenarioMatch = /^(Scenario Outline|Scenario|Background):\s*(.*)$/i.exec(trimmed);
+      const ruleMatch = GHERKIN_RULE_REGEX.exec(trimmed);
+      if (ruleMatch) {
+        flushScenario();
+        currentRule = {
+          keyword: normalizeGherkinKeyword(ruleMatch[1]),
+          rawKeyword: ruleMatch[1],
+          name: ruleMatch[2].trim(),
+          line: lineNumber,
+        };
+        afterRuleHeader = true;
+        continue;
+      }
+
+      const scenarioMatch = GHERKIN_SCENARIO_REGEX.exec(trimmed);
       if (scenarioMatch) {
         flushScenario();
+        const rawKeyword = scenarioMatch[1];
+        const keyword = normalizeGherkinKeyword(rawKeyword);
         currentScenario = {
-          keyword: scenarioMatch[1],
+          keyword,
+          rawKeyword,
           name: scenarioMatch[2].trim(),
           line: lineNumber,
           tags: pendingTags,
           steps: [],
+          rule: currentRule
+            ? {
+                keyword: currentRule.keyword,
+                rawKeyword: currentRule.rawKeyword,
+                name: currentRule.name,
+                line: currentRule.line,
+              }
+            : null,
         };
         pendingTags = [];
+        afterRuleHeader = false;
+        continue;
+      }
+
+      const examplesMatch = GHERKIN_EXAMPLES_REGEX.exec(trimmed);
+      if (examplesMatch && currentScenario) {
+        const display = line.startsWith("    ") ? line.slice(4) : line.trimStart();
+        currentScenario.steps.push(display);
         continue;
       }
 
       if (currentScenario) {
         const display = line.startsWith("    ") ? line.slice(4) : line.trimStart();
         currentScenario.steps.push(display);
+        continue;
+      }
+
+      if (afterRuleHeader) {
         continue;
       }
 
@@ -1125,6 +1397,20 @@
 
   window.addEventListener("error", (event) => setError(event.error || event.message));
   window.addEventListener("unhandledrejection", (event) => setError(event.reason));
-  setupAutoReloadOnEnter();
-  main();
+  if (typeof globalThis !== "undefined" && typeof globalThis.__export === "function") {
+    globalThis.__export({
+      parseFeatureText,
+      renderGherkinLineHtml,
+      GHERKIN_FEATURE_REGEX,
+      GHERKIN_RULE_REGEX,
+      GHERKIN_SCENARIO_REGEX,
+      GHERKIN_EXAMPLES_REGEX,
+      GHERKIN_STEP_KEYWORD_REGEX,
+      normalizeGherkinKeyword,
+      GHERKIN_KEYWORDS,
+    });
+  } else {
+    setupAutoReloadOnEnter();
+    main();
+  }
 })();

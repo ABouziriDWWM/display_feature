@@ -1,16 +1,25 @@
 {
-  "files": [
-    "capabilities/auth/pin_access.feature",
-    "capabilities/competition/competition_setup.feature",
-    "capabilities/i18n/language_toggle.feature",
-    "capabilities/judge_input/judge_scoring_flow.feature",
-    "capabilities/judges/judge_management.feature",
-    "capabilities/public_display/public_results.feature",
-    "capabilities/pwa/pwa.feature",
-    "capabilities/realtime/realtime_judges_admin.feature",
-    "capabilities/scoreboard/scoreboard_table.feature",
-    "capabilities/scoring/poomsae_scoring.feature",
-    "capabilities/scoring/score_calculation.feature",
-    "capabilities/sync/offline_queue.feature"
-  ]
+    "generatedAt": "2026-08-08T16:18:00+00:00",
+    "files": [
+        "capabilities/acces_nom_reseau_local_https/dns_local_mkcert_ssl.feature",
+        "capabilities/application_desktop/pwa_desktop_electron_tauri.feature",
+        "capabilities/authentification/controle_appareil_gerant.feature",
+        "capabilities/authentification/login_gerant.feature",
+        "capabilities/authentification/login_serveur_pin.feature",
+        "capabilities/flux_service/marquer_a_servir_servi.feature",
+        "capabilities/flux_service/surlignage_vert_lignes.feature",
+        "capabilities/gestion_caisse/ouverture_fermeture_mouvements.feature",
+        "capabilities/gestion_commandes/ardoise_articles.feature",
+        "capabilities/gestion_commandes/cycle_de_vie_commande.feature",
+        "capabilities/gestion_produits/crud_produits.feature",
+        "capabilities/gestion_tables/crud_tables.feature",
+        "capabilities/gestion_tables/statuts_et_transitions.feature",
+        "capabilities/gestion_utilisateurs/crud_utilisateurs.feature",
+        "capabilities/hors_ligne_synchronisation/queue_indexeddb_rejeu.feature",
+        "capabilities/paiements/encaissement_contraintes.feature",
+        "capabilities/paiements/methodes_de_paiement.feature",
+        "capabilities/pwa_installabilite/installabilite_hors_ligne.feature",
+        "capabilities/rapports/rapports_performance.feature",
+        "capabilities/websocket_temps_reel/synchro_multi_appareils.feature"
+    ]
 }

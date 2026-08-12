@@ -10,51 +10,51 @@ Fonctionnalité: PWA installable et mode hors-ligne (manifest + service worker)
     """
   Scénario: [Installabilité] manifest.json est bien lié dans le <head> des pages
     Étant donné une page gérant tables.php ou une page serveur commandes.php
-    Alors le <head> contient un lien vers manifest.json
-    Et les meta tags theme-color / apple-touch-icon sont présents
-    Et le manifest déclare name="Caisse Café", short_name, start_url, display="standalone", theme_color, background_color, icônes multiples
+    Alors je constate que le <head> contient un lien vers manifest.json.
+    Et alors je constate que les meta tags theme-color / apple-touch-icon sont présents.
+    Et alors je constate que le manifest déclare name="Caisse Café", short_name, start_url, display="standalone", theme_color, background_color, icônes multiples.
 
   Scénario: [Installabilité] Service Worker enregistré au chargement
-    Quand je charge la page pour la première fois
-    Alors le navigateur enregistre sw.js
-    Et le Service Worker devient contrôleur de la page
-    Et dans Chrome/Edge le bouton "Installer l'application" apparaît dans la barre d'adresse
+    Quand je décide de charger la page pour la première fois.
+    Alors je constate que le navigateur enregistre sw.js.
+    Et alors je constate que le Service Worker devient contrôleur de la page.
+    Et alors je constate que dans Chrome/Edge le bouton "Installer l'application" apparaît dans la barre d'adresse.
 
   Scénario: [Installabilité] Installation de l'app depuis Chrome/Edge sur PC
     Étant donné que l'application est servie en HTTPS et que le SW est enregistré
-    Quand je clique sur "Installer Caisse Café"
-    Alors l'application est ajoutée au menu Démarrer / Bureau
-    Et je peux la lancer comme une app classique (fenêtre standalone, pas d'onglet)
+    Quand l'utilisateur clique sur "Installer l'application" + accepte la modale Chrome
+    Alors la popup d'installation PWA (Chrome/Edge) doit être installable et s'ajouter au menu Démarrer
+    Et PWA doit être installable
 
   Scénario: [Installabilité] Installation sur Android via Chrome
-    Quand je visite l'app depuis un Android avec Chrome
+    Quand je décide de visiter l'app depuis un Android avec Chrome.
     Et que HTTPS + SW + manifest sont OK
-    Alors une bannière "Ajouter à l'écran d'accueil" est proposée
-    Et une icône apparaît sur l'écran d'accueil du téléphone
-    Et l'app s'ouvre en plein écran sans chrome navigateur
+    Alors je constate qu'une bannière "Ajouter à l'écran d'accueil" est proposée.
+    Et alors je constate qu'une icône apparaît sur l'écran d'accueil du téléphone.
+    Et alors je constate que l'app s'ouvre en plein écran sans chrome navigateur.
 
   Scénario: [Offline] Premier chargement avec réseau OK, puis hors ligne
     Étant donné que j'ai déjà chargé l'application une fois avec le réseau
     Et que le Service Worker a mis en cache les assets essentiels (HTML/CSS/JS/manifest)
-    Quand je coupe le réseau et que je rafraîchis
-    Alors les pages principales (login, gérant/tables, serveur/commandes) continuent de s'afficher
-    Et le layout + styles sont corrects (pas d'erreur 404 sur CSS/JS)
+    Quand je décide de couper le réseau et de rafraîchir la page.
+    Alors je constate que les pages principales (login, gérant/tables, serveur/commandes) continuent de s'afficher.
+    Et alors je constate que le layout + styles sont corrects (pas d'erreur 404 sur CSS/JS).
 
   Scénario: [Offline] API GET mises en cache (hors-ligne lecture)
     Étant donné que j'ai déjà chargé la liste des tables / produits une fois
     Et que le réseau est coupé
-    Quand je consulte à nouveau la liste des tables
-    Alors les données précédentes sont lues depuis le cache (stratégie network-first fallback cache)
-    Et un petit badge indique "Mode hors-ligne — données potentiellement périmées"
+    Quand je décide de consulter à nouveau la liste des tables.
+    Alors je constate que les données précédentes sont lues depuis le cache (stratégie network-first fallback cache).
+    Et alors je constate qu'un petit badge indique "Mode hors-ligne — données potentiellement périmées".
 
   Scénario: [Offline] API POST: tentatives de paiement hors ligne mises en file d'attente
   Et le contexte suivant s'applique.
   """
     Si le réseau est coupé au moment d'un paiement
   """
-    Alors l'utilisateur est prévenu "Paiement en attente — rejoué automatiquement au retour réseau"
-    Et l'action est ajoutée à la queue IndexedDB (via BackgroundSync si dispo)
-    Et au retour réseau, les paiements sont rejoués dans l'ordre
+    Alors je constate que l'utilisateur est prévenu "Paiement en attente — rejoué automatiquement au retour réseau".
+    Et alors je constate que l'action est ajoutée à la queue IndexedDB (via BackgroundSync si dispo).
+    Et alors je constate qu'au retour réseau, les paiements sont rejoués dans l'ordre.
 
   Scénario: [Manifest] Icônes multiples et splash screen
   Et le contexte suivant s'applique.
@@ -73,5 +73,5 @@ Fonctionnalité: PWA installable et mode hors-ligne (manifest + service worker)
   """
     Pendant le développement, l'application tourne en http://localhost ou en HTTPS local via mkcert
   """
-    Et dans les 2 cas: manifest + SW fonctionnent
-    Et l'installabilité fonctionne (localhost est secure context)
+    Alors je constate que dans les 2 cas: manifest + SW fonctionnent.
+    Et alors je constate que l'installabilité fonctionne (localhost est secure context).

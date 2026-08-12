@@ -11,22 +11,23 @@ Fonctionnalité: Application bureau / desktop (PWA installable + option Electron
   Scénario: [Desktop PWA] Chrome/Edge installent l'app sur Windows
     Étant donné Chrome ou Edge sur Windows 10/11
     Et HTTPS + manifest + service worker sont présents
-    Quand je clique sur "Installer Caisse Café" dans le menu du navigateur
-    Alors une icône "Caisse Café" est ajoutée au bureau et au menu Démarrer
-    Et l'application s'ouvre dans une fenêtre standalone sans barre d'adresse
-    Et la taille fenêtre est mémorisée (width/height)
+    Quand l'utilisateur clique sur "Installer l'application" + accepte la modale Chrome
+    Alors la popup d'installation PWA doit être installable
+    Et alors je constate qu'une icône "Caisse Café" est ajoutée au bureau et au menu Démarrer.
+    Et alors je constate que l'application s'ouvre dans une fenêtre standalone sans barre d'adresse.
+    Et alors je constate que la taille fenêtre est mémorisée (width/height).
 
   Scénario: [Desktop PWA] Lancement automatique de l'app caisse après démarrage
   Et le contexte suivant s'applique.
   """
     Je peux ajouter le raccourci PWA "Caisse Café" dans le dossier shell:startup de Windows
   """
-    Et l'application se lance automatiquement à l'ouverture de session du poste caisse
+    Alors je constate que l'application se lance automatiquement à l'ouverture de session du poste caisse.
 
   Scénario: [Desktop PWA] Icône barre des tâches + badge
-    Quand l'app PWA est ouverte
-    Alors elle apparaît dans la barre des tâches Windows comme toute application native
-    Et un badge peut être affiché (ex: nombre de tables "À servir" en attente)
+    Quand je décide d'ouvrir l'app PWA.
+    Alors je constate qu'elle apparaît dans la barre des tâches Windows comme toute application native.
+    Et alors je constate qu'un badge peut être affiché (ex: nombre de tables "À servir" en attente).
 
   Scénario: [Option Electron] Packaging .exe avec Electron (alternative lourde)
   Et le contexte suivant s'applique.
@@ -35,18 +36,18 @@ Fonctionnalité: Application bureau / desktop (PWA installable + option Electron
       - Accès direct imprimantes USB / ESC/POS sans navigateur
       - Accès direct au dossier Documents pour exports locaux
   """
-    Alors le frontend web est encapsulé dans un conteneur Electron
-    Et un serveur PHP local (WAMP embarqué ou serveur PHP interne) est lancé au démarrage
-    Et l'Electron main window charge http://localhost:<port>
+    Alors je constate que le frontend web est encapsulé dans un conteneur Electron.
+    Et alors je constate qu'un serveur PHP local (WAMP embarqué ou serveur PHP interne) est lancé au démarrage.
+    Et alors je constate que l'Electron main window charge http://localhost:<port>.
 
   Scénario: [Option Tauri] Packaging ultra-léger (alternative moderne Rust)
   Et le contexte suivant s'applique.
   """
     Si on préfère un binaire < 10Mo au lieu de ~150Mo
   """
-    Alors on utilise Tauri avec backend Rust
-    Et le frontend web chargé est le même que pour la PWA
-    Et l'app dispose d'APIs natives (système de fichiers, imprimantes...) via Rust <-> pont JS
+    Alors je constate qu'on utilise Tauri avec backend Rust.
+    Et alors je constate que le frontend web chargé est le même que pour la PWA.
+    Et alors je constate que l'app dispose d'APIs natives (système de fichiers, imprimantes...) via Rust <-> pont JS.
 
   Scénario: [Cohérence UX] Les 3 options (PWA / Electron / Tauri) utilisent le même front
   Et le contexte suivant s'applique.
@@ -54,4 +55,4 @@ Fonctionnalité: Application bureau / desktop (PWA installable + option Electron
     La partie PHP backend + Vanilla JS frontend est strictement identique
     Seule change la couche de "packaging"
   """
-    Donc 1 seule base de code à maintenir
+    Alors je constate qu'il y a 1 seule base de code à maintenir.
